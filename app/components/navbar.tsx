@@ -21,7 +21,6 @@ export function Navbar() {
             Chiozzi
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="text-text-secondary hover:text-white transition-colors">
@@ -30,7 +29,6 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" className="md:hidden" size="icon">
