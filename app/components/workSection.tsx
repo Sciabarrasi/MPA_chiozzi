@@ -10,39 +10,41 @@ const WorkForYouSection: React.FC = () => {
           Trabajamos para Usted
         </h2>
         <p className="text-text-secondary max-w-3xl mb-16 mx-auto text-center">
-          Nos especializamos en la producción de etiquetas de alta calidad para diversos sectores industriales. Nuestro
-          compromiso con la excelencia y la innovación nos permite ofrecer soluciones personalizadas que satisfacen las
-          necesidades específicas de cada cliente.
+          Nos especializamos en la producción de{" "}
+          <span className="text-highlight font-semibold">etiquetas de alta calidad</span> para diversos sectores
+          industriales. Nuestro compromiso con la{" "}
+          <span className="text-highlight font-semibold">excelencia y la innovación</span> nos permite ofrecer
+          soluciones personalizadas que satisfacen las necesidades específicas de cada cliente.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
           <FeatureItem
-            icon={<Printer className="w-8 h-8 text-primary" />}
+            icon={<Printer className="w-8 h-8 text-highlight" />}
             title="Impresión de Alta Calidad"
             description="Tecnología de última generación"
           />
           <FeatureItem
-            icon={<Settings className="w-8 h-8 text-primary" />}
+            icon={<Settings className="w-8 h-8 text-highlight" />}
             title="Personalización Total"
             description="Soluciones a medida"
           />
           <FeatureItem
-            icon={<Users className="w-8 h-8 text-primary" />}
+            icon={<Users className="w-8 h-8 text-highlight" />}
             title="Atención Personalizada"
             description="Equipo especializado"
           />
           <FeatureItem
-            icon={<BarChart2 className="w-8 h-8 text-primary" />}
+            icon={<BarChart2 className="w-8 h-8 text-highlight" />}
             title="Control de Calidad"
             description="Estándares rigurosos"
           />
           <FeatureItem
-            icon={<Shield className="w-8 h-8 text-primary" />}
+            icon={<Shield className="w-8 h-8 text-highlight" />}
             title="Garantía de Calidad"
             description="Resultados garantizados"
           />
           <FeatureItem
-            icon={<Zap className="w-8 h-8 text-primary" />}
+            icon={<Zap className="w-8 h-8 text-highlight" />}
             title="Entrega Rápida"
             description="Tiempos optimizados"
           />
