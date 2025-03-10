@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Navbar() {
   const links = [
+    { href: "Nuestra Empresa", label: "Nuestra Empresa" },
     { href: "/productos", label: "Productos" },
     { href: "/servicios", label: "Servicios" },
     { href: "/blog", label: "Blog" },

@@ -10,43 +10,40 @@ const WorkForYouSection: React.FC = () => {
           Trabajamos para Usted
         </h2>
         <p className="text-text-secondary max-w-3xl mb-16 mx-auto text-center">
-          Nos especializamos en la producción de{" "}
-          <span className="text-highlight font-semibold">etiquetas de alta calidad</span> para diversos sectores
-          industriales. Nuestro compromiso con la{" "}
-          <span className="text-highlight font-semibold">excelencia y la innovación</span> nos permite ofrecer
-          soluciones personalizadas que satisfacen las necesidades específicas de cada cliente.
+          Nos especializamos en producir etiquetas de alta calidad.
+          Siendo pioneros en la región hace más de 30 años realizamos impresiones flexográficas de alta calidad para todo tipo de industrias alimenticias, frigoríficas, de bebidas, laboratorios farmacéuticos y cosméticos, pinturas y lubricantes.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
           <FeatureItem
             icon={<Printer className="w-8 h-8 text-highlight" />}
-            title="Impresión de Alta Calidad"
+            title="Impresiones de Alta Calidad"
             description="Tecnología de última generación"
           />
           <FeatureItem
             icon={<Settings className="w-8 h-8 text-highlight" />}
-            title="Personalización Total"
-            description="Soluciones a medida"
+            title="Soluciones a Medida"
+            description="Personalización total de cada producto"
           />
           <FeatureItem
             icon={<Users className="w-8 h-8 text-highlight" />}
             title="Atención Personalizada"
-            description="Equipo especializado"
+            description="Equipo altamente capacitado a tu disposición"
           />
           <FeatureItem
             icon={<BarChart2 className="w-8 h-8 text-highlight" />}
             title="Control de Calidad"
-            description="Estándares rigurosos"
+            description="Procesos eficientes y controlados" //ver iso 9001
           />
           <FeatureItem
             icon={<Shield className="w-8 h-8 text-highlight" />}
-            title="Garantía de Calidad"
-            description="Resultados garantizados"
+            title="Entrega Rápida"
+            description="Entregas en tiempo récord" //PREGUNTAR
           />
           <FeatureItem
             icon={<Zap className="w-8 h-8 text-highlight" />}
-            title="Entrega Rápida"
-            description="Tiempos optimizados"
+            title="Compromiso y Mejora Constante"
+            description="Compromiso con la mejora y satisfacción del cliente"
           />
         </div>
       </div>

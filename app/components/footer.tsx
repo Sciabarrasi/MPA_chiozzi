@@ -74,10 +74,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/impresion"
+                  href="/nuestraEmpresa"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
-                  Impresión de Etiquetas
+                  Nuestra Empresa
                 </Link>
               </li>
               <li>
@@ -85,7 +85,7 @@ export function Footer() {
                   href="/etiquetas"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
-                  Etiquetas Autoadhesivas
+                  Productos
                 </Link>
               </li>
               <li>
@@ -93,7 +93,15 @@ export function Footer() {
                   href="/outsourcing"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
-                  Outsourcing
+                  Servicios
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contacto"
+                  className="text-text-secondary hover:text-white transition-colors"
+                >
+                  Blog
                 </Link>
               </li>
               <li>

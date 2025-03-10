@@ -1,4 +1,5 @@
 import type React from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 
 const ServicesSection: React.FC = () => {
@@ -14,14 +15,17 @@ const ServicesSection: React.FC = () => {
           <ServiceCard
             title="Etiquetas Autoadhesivas"
             description="Impresión de alta calidad para todo tipo de productos y superficies."
+            imageUrl="/chiozzi_productos_0014.png"
           />
           <ServiceCard
-            title="Etiquetas Especiales"
+            title="Etiquetas No Autoadhesivas"
             description="Soluciones personalizadas con acabados premium y materiales especiales."
+            imageUrl="/chiozzi_productos_0310.png"
           />
           <ServiceCard
-            title="Impresión Flexográfica"
+            title="Flowpack"
             description="Tecnología de última generación para resultados excepcionales."
+            imageUrl="/chiozzi_productos_0142.png"
           />
         </div>
       </div>
@@ -29,10 +33,23 @@ const ServicesSection: React.FC = () => {
   )
 }
 
-const ServiceCard: React.FC<{ title: string; description: string }> = ({ title, description }) => (
+const ServiceCard: React.FC<{ title: string; description: string; imageUrl: string }> = ({
+  title,
+  description,
+  imageUrl,
+}) => (
   <Card className="bg-background border-none">
-    <CardContent className="p-6">
+    <CardContent className="p-6 flex flex-col items-center text-center bg-[#2A2A2A] rounded-lg">
       <h3 className="text-xl font-bold mb-4 text-highlight">{title}</h3>
+      <div className="relative w-full h-48 mb-6 overflow-hidden flex items-center justify-center">
+        <Image
+          src={imageUrl || "/placeholder.svg"}
+          alt={title}
+          width={300}
+          height={200}
+          className="rounded-lg object-cover mx-auto"
+        />
+      </div>
       <p className="text-text-secondary">{description}</p>
     </CardContent>
   </Card>

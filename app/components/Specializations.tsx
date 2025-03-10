@@ -1,4 +1,5 @@
 import type React from "react"
+import Image from "next/image"
 
 const SpecializationsSection: React.FC = () => {
   return (
@@ -9,9 +10,18 @@ const SpecializationsSection: React.FC = () => {
             <span className="text-highlight mr-2">|</span>
             Especialidades
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <div className="relative">[IMAGEN AQUÍ]</div>
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden flex items-center justify-center">
+              <Image
+                src="/chiozzi_042.png"
+                alt="Especialidades Chiozzi"
+                width={300}
+                height={200}
+                className="object-cover"
+                style={{ objectPosition: "center" }}
+              />
+            </div>
+            <div className="space-y-6 self-center">
               <SpecializationItem
                 number="01"
                 title="Calidad Premium"
