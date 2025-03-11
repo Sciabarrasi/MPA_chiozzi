@@ -8,7 +8,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
-
+              /// PONER LOGO EN FOOTER
 export function Footer() {
   return (
     <footer className="bg-background text-white">
@@ -124,7 +124,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <p className="text-text-secondary">
-                  Colectora Oeste 696 (1619), Garín, Pcia. Buenos Aires
+                  Mitre 901, Gálvez - Santa Fe
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -142,7 +142,7 @@ export function Footer() {
                   href="tel:+541234567890"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
-                  +54 123 456 7890
+                  (03404) 481786
                 </a>
               </div>
             </div>

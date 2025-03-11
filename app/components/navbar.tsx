@@ -1,13 +1,14 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Navbar() {
   const links = [
-    { href: "Nuestra Empresa", label: "Nuestra Empresa" },
+    { href: "/nuestra-empresa", label: "Nuestra Empresa" },
     { href: "/productos", label: "Productos" },
     { href: "/servicios", label: "Servicios" },
     { href: "/blog", label: "Blog" },
@@ -18,8 +19,14 @@ export function Navbar() {
     <nav className="fixed w-full z-50 bg-background/90 backdrop-blur-sm border-b border-background-alt">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-white">
-            Chiozzi
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-header.png"
+              alt="Logo de Chiozzi"
+              width={150}
+              height={150}
+              className="mr-2"
+            />
           </Link>
 
           <div className="hidden md:flex space-x-8">
@@ -56,4 +63,3 @@ export function Navbar() {
     </nav>
   )
 }
-
