@@ -1,18 +1,20 @@
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "../components/navbar"
 import { Footer } from "../components/footer"
+import { ProductCard } from "../components/product-card"
 
 export default function ProductosPage() {
   return (
     <div className="min-h-screen bg-background text-white">
       <Navbar />
 
-      <section className="pt-28 pb-16 px-4">
-        <div className="container mx-auto">
+
+      <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Soluciones de Etiquetado Premium</h1>
             <p className="text-lg text-text-secondary mb-8">
@@ -21,29 +23,29 @@ export default function ProductosPage() {
               garantizan resultados excepcionales para todo tipo de industrias.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-white">Solicitar presupuesto</Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+              <Button className="bg-primary/70 hover:bg-primary/80 text-white">Solicitar presupuesto</Button>
+              <Button variant="outline" className="border-primary/70 text-primary/80 hover:bg-primary/5">
                 Ver catálogo completo
               </Button>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-gradient-to-br from-primary/10 to-transparent p-6 rounded-lg">
+            <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-primary shadow-lg shadow-primary/10 hover:bg-background/70 transition-all duration-300">
               <h2 className="text-xl font-semibold mb-2">Innovación Constante</h2>
               <p className="text-text-secondary">
                 Invertimos continuamente en las últimas tecnologías para ofrecer soluciones de etiquetado que cumplen
                 con los estándares más exigentes del mercado.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-secondary/10 to-transparent p-6 rounded-lg">
+            <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-secondary shadow-lg shadow-secondary/10 hover:bg-background/70 transition-all duration-300">
               <h2 className="text-xl font-semibold mb-2">Calidad Garantizada</h2>
               <p className="text-text-secondary">
                 Cada producto que sale de nuestras instalaciones pasa por rigurosos controles de calidad para asegurar
                 la satisfacción total de nuestros clientes.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-highlight/10 to-transparent p-6 rounded-lg">
+            <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-highlight shadow-lg shadow-highlight/10 hover:bg-background/70 transition-all duration-300">
               <h2 className="text-xl font-semibold mb-2">Soluciones Personalizadas</h2>
               <p className="text-text-secondary">
                 Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos soluciones adaptadas a los
@@ -54,140 +56,14 @@ export default function ProductosPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-zinc-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestras Líneas de Productos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-background border-zinc-800 overflow-hidden">
-              <CardHeader className="pb-0">
-                <CardTitle className="text-xl text-primary">Etiquetas Autoadhesivas</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-akpeb9bOMjo1u3KLDMlGcrr81lcqep.png"
-                    alt="Etiquetas Autoadhesivas"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: "0 25%" }}
-                  />
-                </div>
-                <CardDescription className="text-text-secondary">
-                  Impresión de alta calidad para todo tipo de productos y superficies. Ideales para botellas, envases,
-                  productos premium y aplicaciones que requieren durabilidad y resistencia.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button variant="link" className="text-primary p-0 flex items-center">
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="bg-background border-zinc-800 overflow-hidden">
-              <CardHeader className="pb-0">
-                <CardTitle className="text-xl text-secondary">Etiquetas No Autoadhesivas</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-akpeb9bOMjo1u3KLDMlGcrr81lcqep.png"
-                    alt="Etiquetas No Autoadhesivas"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: "50% 25%" }}
-                  />
-                </div>
-                <CardDescription className="text-text-secondary">
-                  Soluciones personalizadas con acabados premium y materiales especiales. Perfectas para packaging de
-                  lujo, etiquetas colgantes y aplicaciones donde se busca un acabado distintivo.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button variant="link" className="text-secondary p-0 flex items-center">
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="bg-background border-zinc-800 overflow-hidden">
-              <CardHeader className="pb-0">
-                <CardTitle className="text-xl text-highlight">Flowpack</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-akpeb9bOMjo1u3KLDMlGcrr81lcqep.png"
-                    alt="Flowpack"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: "100% 25%" }}
-                  />
-                </div>
-                <CardDescription className="text-text-secondary">
-                  Tecnología de última generación para resultados excepcionales. Soluciones de envasado flexible para
-                  alimentos, productos farmacéuticos y otros artículos que requieren protección y presentación de alta
-                  calidad.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button variant="link" className="text-highlight p-0 flex items-center">
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Productos Destacados</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <Card key={index} className="bg-background border-zinc-800">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={`/placeholder.svg?height=300&width=400`}
-                    alt={`Producto destacado ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">Producto Premium {index + 1}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-text-secondary">
-                    Solución de etiquetado especializada para necesidades específicas de la industria.
-                  </CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10">
-                    Ver detalles
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">¿Necesitas una solución personalizada?</h2>
-          <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-            Nuestro equipo de expertos está listo para ayudarte a encontrar la solución perfecta para tus necesidades de
-            etiquetado y packaging.
-          </p>
-          <Button className="bg-primary hover:bg-primary/90 text-white">Contactar con un especialista</Button>
-        </div>
-      </section>
-
       <section className="py-16 px-4 bg-zinc-900">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Por qué elegir nuestros productos?</h2>
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">¿Por qué elegir nuestros productos?</h2>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex flex-col items-center text-center p-6">
@@ -320,6 +196,93 @@ export default function ProductosPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-zinc-900">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">Nuestras Líneas de Productos</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ProductCard
+              title="Etiquetas Autoadhesivas"
+              description="Impresión de alta calidad para todo tipo de productos y superficies. Ideales para botellas, envases, productos premium y aplicaciones que requieren durabilidad y resistencia."
+              imageSrc="/chiozzi_productos_0014.png"
+              imagePosition="0 25%"
+              color="primary"
+            />
+
+            <ProductCard
+              title="Etiquetas No Autoadhesivas"
+              description="Soluciones personalizadas con acabados premium y materiales especiales. Perfectas para packaging de lujo, etiquetas colgantes y aplicaciones donde se busca un acabado distintivo."
+              imageSrc="/chiozzi_productos_0310.png"
+              imagePosition="50% 25%"
+              color="secondary"
+            />
+
+            <ProductCard
+              title="Flowpack"
+              description="Tecnología de última generación para resultados excepcionales. Soluciones de envasado flexible para alimentos, productos farmacéuticos y otros artículos que requieren protección y presentación de alta calidad."
+              imageSrc="/chiozzi_productos_0142.png"
+              imagePosition="100% 25%"
+              color="highlight"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">Productos Destacados</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <Card key={index} className="bg-background border-zinc-800">
+                <div className="relative h-48 overflow-hidden rounded-t-lg">
+                  <Image
+                    src={`/placeholder.svg?height=300&width=400`}
+                    alt={`Producto destacado ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-lg">Producto Premium {index + 1}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-text-secondary">
+                    Solución de etiquetado especializada para necesidades específicas de la industria.
+                  </CardDescription>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" className="w-full border-primary/70 text-primary/80 hover:bg-primary/5">
+                    Ver detalles
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">¿Necesitas una solución personalizada?</h2>
+          <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+            Nuestro equipo de expertos está listo para ayudarte a encontrar la solución perfecta para tus necesidades de
+            etiquetado y packaging.
+          </p>
+          <Button className="bg-primary/70 hover:bg-primary/80 text-white">Contactar con un especialista</Button>
         </div>
       </section>
 
