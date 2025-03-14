@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Play, Award, FileCheck, Leaf } from "lucide-react"
+import { Play, Award, FileCheck, Leaf, Download, Shield, Target, Users, Lightbulb } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,6 +20,112 @@ export default function NuestraEmpresaPage() {
               Conoce la historia, valores y el equipo detrás de Chiozzi, una empresa con más de 30 años de experiencia
               en la industria gráfica, comprometida con la calidad y la innovación constante.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 bg-zinc-900">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">Misión, Visión y Valores</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-background/60 backdrop-blur-md border-zinc-800 hover:bg-background/70 transition-all duration-300">
+              <CardHeader className="pb-2">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="bg-primary/20 p-2 rounded-full">
+                    <Target className="h-5 w-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl text-white">Misión</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-text-secondary">
+                  En Industria Gráfica Eduardo Chiozzi S.A., con 32 años de experiencia en el rubro flexográfico y 40
+                  años en el rubro offset, nos dedicamos a ofrecer soluciones de impresión de alta calidad que
+                  satisfacen las necesidades y expectativas de nuestros clientes. Nos esforzamos constantemente por
+                  innovar nuestros procesos y tecnologías para superar sus expectativas.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/60 backdrop-blur-md border-zinc-800 hover:bg-background/70 transition-all duration-300">
+              <CardHeader className="pb-2">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="bg-secondary/20 p-2 rounded-full">
+                    <Lightbulb className="h-5 w-5 text-secondary" />
+                  </div>
+                  <CardTitle className="text-xl text-white">Visión</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-text-secondary">
+                  Ser reconocidos como líderes en la industria de impresión, destacándonos por nuestra calidad,
+                  innovación y compromiso con el servicio al cliente. Queremos expandir nuestra presencia en el mercado
+                  latinoamericano, manteniendo siempre nuestro compromiso con la sostenibilidad y la mejora continua.
+                  Buscamos dejar una huella positiva en cada cliente, impulsando su éxito a través de nuestras
+                  soluciones de impresión.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background/60 backdrop-blur-md border-zinc-800 hover:bg-background/70 transition-all duration-300">
+              <CardHeader className="pb-2">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="bg-highlight/20 p-2 rounded-full">
+                    <Users className="h-5 w-5 text-highlight" />
+                  </div>
+                  <CardTitle className="text-xl text-white">Valores</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-text-secondary">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Experiencia:</strong> 32 años de experiencia en flexografía y 40
+                      años en offset.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Calidad:</strong> Compromiso con la excelencia en cada producto.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Innovación:</strong> Búsqueda constante de nuevas formas de
+                      mejorar.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Servicio al Cliente:</strong> Superamos las expectativas.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Integridad:</strong> Honestidad y transparencia en todas nuestras
+                      acciones.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span>
+                      <strong className="text-white">Sostenibilidad:</strong> Compromiso con prácticas responsables.
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -57,7 +163,7 @@ export default function NuestraEmpresaPage() {
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl shadow-primary/10">
               <Image
                 src="/placeholder.svg?height=800&width=600"
-                alt="Imágen de Chiozzi"
+                alt="Historia de Chiozzi"
                 fill
                 className="object-cover"
               />
@@ -82,7 +188,7 @@ export default function NuestraEmpresaPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center">
-              {/* EMBED VIDEO ACÁ */}
+              {/* Aquí se puede embeber el video real */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Button
                   variant="outline"
@@ -168,7 +274,7 @@ export default function NuestraEmpresaPage() {
                 <h3 className="text-xl font-semibold">Certificación ISO</h3>
               </div>
               <p className="text-text-secondary">
-                Contamos con certificación ISO 9001, que avala nuestro compromiso con la mejora continua y la
+                Contamos con certificación ISO 9001:2015, que avala nuestro compromiso con la mejora continua y la
                 implementación de estándares internacionales de calidad.
               </p>
             </div>
@@ -192,7 +298,7 @@ export default function NuestraEmpresaPage() {
           <div className="flex items-center justify-center mb-12">
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Certificación ISO</h2>
+              <h2 className="text-3xl font-bold">Certificación ISO 9001:2015</h2>
             </div>
           </div>
 
@@ -200,40 +306,54 @@ export default function NuestraEmpresaPage() {
             <div className="order-2 md:order-1">
               <h3 className="text-2xl font-semibold mb-4">Calidad certificada</h3>
               <p className="text-text-secondary mb-6">
-                En Chiozzi, nos enorgullece contar con la certificación ISO 9001, que avala nuestro compromiso con la
-                calidad y la mejora continua. Esta certificación garantiza que todos nuestros procesos cumplen con los
-                más altos estándares internacionales.
+                En septiembre de 2024 hemos logrado la certificación de nuestro Sistema de Gestión de Calidad bajo la
+                Norma IRAM ISO 9001:2015, un logro que valida nuestro compromiso con la excelencia y la mejora continua.
               </p>
-              <ul className="space-y-3 text-text-secondary">
+              <p className="text-text-secondary mb-6">
+                Esta certificación internacional respalda la calidad de nuestros procesos en el desarrollo y producción
+                de etiquetas autoadhesivas con impresión flexográfica en bobinas, garantizando eficiencia operativa y
+                una mejora continua en todo lo que hacemos.
+              </p>
+              <h4 className="text-xl font-semibold mb-3">¿Qué significa esta certificación?</h4>
+              <ul className="space-y-3 text-text-secondary mb-6">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Procesos estandarizados y documentados</span>
+                  <span>Procesos más eficientes y controlados</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Mejora continua en todas las áreas</span>
+                  <span>Mayor calidad en cada etiqueta que producimos</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Enfoque en la satisfacción del cliente</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Auditorías periódicas para garantizar el cumplimiento</span>
+                  <span>Un compromiso constante con la mejora continua y la satisfacción del cliente</span>
                 </li>
               </ul>
-              <div className="mt-8">
+              <p className="text-text-secondary mb-6">
+                Este logro es el resultado del esfuerzo conjunto de un equipo apasionado por brindar siempre el mejor
+                servicio y producto.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
                 <Button className="bg-primary/70 hover:bg-primary/80 text-white">Ver certificación</Button>
               </div>
             </div>
-            <div className="relative h-[300px] order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-8">
-              <Image
-                src="/placeholder.svg?height=200&width=200&text=ISO 9001"
-                alt="Certificación ISO 9001"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
+            <div className="relative order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-8">
+              <div className="grid grid-cols-2 gap-6">
+                <Image
+                  src="/placeholder.svg?height=150&width=150&text=ISO+9001"
+                  alt="Certificación ISO 9001"
+                  width={150}
+                  height={150}
+                  className="object-contain"
+                />
+                <Image
+                  src="/placeholder.svg?height=150&width=150&text=IRAM"
+                  alt="Certificación IRAM"
+                  width={150}
+                  height={150}
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -250,69 +370,87 @@ export default function NuestraEmpresaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-background/40 backdrop-blur-sm p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Política de Calidad</h3>
+              <div className="flex items-center mb-6">
+                <Shield className="h-8 w-8 text-primary mr-3" />
+                <h3 className="text-2xl font-semibold text-primary">Política de Calidad</h3>
+              </div>
               <p className="text-text-secondary mb-6">
-                Nuestra política de calidad se basa en el compromiso de satisfacer las necesidades y expectativas de
-                nuestros clientes, ofreciendo productos y servicios de excelencia a través de la mejora continua de
-                nuestros procesos.
+                La dirección de Industria Gráfica Eduardo Chiozzi S.A. plantea como objetivo principal alcanzar la
+                satisfacción del cliente, para lo cual se compromete a:
               </p>
-              <ul className="space-y-3 text-text-secondary">
+              <ul className="space-y-3 text-text-secondary mb-6">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Cumplimiento de requisitos legales y reglamentarios</span>
+                  <span>
+                    Proveer al cliente de los productos solicitados, cumpliendo con sus requisitos y los aplicables.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Capacitación constante de nuestro personal</span>
+                  <span>
+                    Incorporar este concepto en todas las actividades que se desarrollen en la empresa para lograr la
+                    satisfacción del cliente.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Inversión en tecnología de vanguardia</span>
+                  <span>
+                    Garantizar que cada integrante de la organización tenga los conocimientos necesarios para realizar
+                    su trabajo con el grado de calidad requerido.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Evaluación y mejora continua de procesos</span>
+                  <span>
+                    Fijar objetivos de calidad medibles según los requisitos aplicables pertinentes, observando su
+                    evolución y estableciendo mejoras.
+                  </span>
                 </li>
               </ul>
+              <p className="text-text-secondary mb-6">
+                La organización también se compromete a mantener en práctica activa la política de calidad enunciada,
+                revisándola periódicamente para mantenerla actualizada con los requerimientos del mercado y la sociedad.
+              </p>
+              <Button className="flex items-center gap-2 bg-primary/70 hover:bg-primary/80 text-white w-full sm:w-auto">
+                <Download className="h-4 w-4" />
+                Descargar Política de Calidad
+              </Button>
             </div>
 
             <div className="bg-background/40 backdrop-blur-sm p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-highlight">Política de Sustentabilidad</h3>
+              <div className="flex items-center mb-6">
+                <Leaf className="h-8 w-8 text-highlight mr-3" />
+                <h3 className="text-2xl font-semibold text-highlight">Política de Gestión Ambiental</h3>
+              </div>
               <p className="text-text-secondary mb-6">
-                En Chiozzi, estamos comprometidos con el desarrollo sustentable, implementando prácticas que minimizan
-                el impacto ambiental de nuestras operaciones y promueven el uso responsable de los recursos.
+                El concepto de sostenibilidad ha estado presente en nuestros valores desde siempre. Contribuimos a la
+                sostenibilidad mediante la aplicación de un sentido de responsabilidad y ética, incluyendo:
               </p>
-              <ul className="space-y-3 text-text-secondary">
+              <ul className="space-y-3 text-text-secondary mb-6">
                 <li className="flex items-start">
                   <span className="text-highlight mr-2">•</span>
-                  <span>Uso eficiente de recursos y energía</span>
+                  <span>Un firme compromiso con la prevención de la contaminación.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-highlight mr-2">•</span>
-                  <span>Gestión responsable de residuos</span>
+                  <span>La conservación del Medio Ambiente.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-highlight mr-2">•</span>
-                  <span>Desarrollo de productos con menor impacto ambiental</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-highlight mr-2">•</span>
-                  <span>Concientización y capacitación en temas ambientales</span>
+                  <span>La promoción del ahorro y la eficiencia energética.</span>
                 </li>
               </ul>
+              <p className="text-text-secondary mb-6">
+                Este compromiso se materializa a través de la integración del Medio Ambiente en el negocio, el
+                desarrollo de actuaciones de gestión medioambiental y la promoción de la responsabilidad medioambiental
+                en la sociedad.
+              </p>
+              <Button className="flex items-center gap-2 bg-highlight/70 hover:bg-highlight/80 text-white w-full sm:w-auto">
+                <Download className="h-4 w-4" />
+                <span className="whitespace-normal text-center">Descargar Política de Gestión Ambiental</span>
+              </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">¿Quieres formar parte de nuestro equipo?</h2>
-          <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-            En Chiozzi, estamos siempre en búsqueda de talento que comparta nuestra pasión por la excelencia y la
-            innovación. Envíanos tu CV y sé parte de una empresa líder en la industria.
-          </p>
-          <Button className="bg-primary/70 hover:bg-primary/80 text-white">Trabaja con nosotros</Button>
         </div>
       </section>
 

@@ -74,7 +74,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/nuestraEmpresa"
+                  href="/nuestra-empresa"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
                   Nuestra Empresa
@@ -82,7 +82,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/etiquetas"
+                  href="/productos"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
                   Productos
@@ -90,7 +90,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/outsourcing"
+                  href="/servicios"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
                   Servicios
@@ -98,7 +98,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contacto"
+                  href="/blog"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
                   Blog

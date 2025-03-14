@@ -98,10 +98,8 @@ export default function ContactoPage() {
     <div className="min-h-screen bg-background text-white">
       <Toaster richColors position="top-center" />
 
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
@@ -115,7 +113,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Información de Contacto y Formulario */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -126,7 +123,6 @@ export default function ContactoPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Información de Contacto */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-primary">Información de Contacto</h3>
 
@@ -137,7 +133,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Dirección</h4>
-                    <p className="text-text-secondary">Colectora Oeste 696 (1619), Garín, Pcia. Buenos Aires</p>
+                    <p className="text-text-secondary">Mitre 901, Gálvez - Santa Fe</p>
                   </div>
                 </div>
 
@@ -147,7 +143,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Teléfono</h4>
-                    <p className="text-text-secondary">+54 123 456 7890</p>
+                    <p className="text-text-secondary">(03404) 481786</p>
                   </div>
                 </div>
 
@@ -167,14 +163,13 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h4 className="font-medium text-white mb-1">Horario de Atención</h4>
-                    <p className="text-text-secondary">Lunes a Viernes: 8:00 - 18:00</p>
+                    <p className="text-text-secondary">Lunes a Viernes: 8:00 - 17:00</p>
                     <p className="text-text-secondary">Sábados: 9:00 - 13:00</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Formulario de Contacto */}
             <div>
               <Card className="bg-background-alt border-zinc-800">
                 <CardContent className="p-6">
@@ -304,7 +299,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
       <section className="py-16 px-4 bg-zinc-900">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -333,7 +327,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   )
