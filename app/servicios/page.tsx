@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Palette, Printer, Layers, Ruler, Settings } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -9,8 +10,10 @@ import { Footer } from "../components/footer"
 export default function ServiciosPage() {
   return (
     <div className="min-h-screen bg-background text-white">
+      {/* Navbar (importada del componente existente) */}
       <Navbar />
 
+      {/* Hero Section with Introduction */}
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
@@ -25,6 +28,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* Diseño y Preprensa */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -87,6 +91,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* Impresión Flexográfica */}
       <section className="py-16 px-4 bg-zinc-900">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -149,6 +154,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* Un mundo de colores */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -223,6 +229,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* Precisión y Exactitud */}
       <section className="py-16 px-4 bg-zinc-900">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -288,6 +295,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* Versatilidad */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -412,6 +420,7 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">¿Listo para potenciar tu producto?</h2>
@@ -419,15 +428,15 @@ export default function ServiciosPage() {
             Nuestro equipo de expertos está preparado para ayudarte a encontrar la solución perfecta para tus
             necesidades. Contáctanos hoy mismo y descubre cómo podemos llevar tu producto al siguiente nivel.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-primary/70 hover:bg-primary/80 text-white">Solicitar presupuesto</Button>
-            <Button variant="outline" className="border-primary/70 text-primary/80 hover:bg-primary/5">
-              Agendar una consulta
+          <div className="flex justify-center">
+            <Button className="bg-primary/70 hover:bg-primary/80 text-white" asChild>
+              <Link href="/contacto">Contáctanos</Link>
             </Button>
           </div>
         </div>
       </section>
 
+      {/* Footer (importado del componente existente) */}
       <Footer />
     </div>
   )

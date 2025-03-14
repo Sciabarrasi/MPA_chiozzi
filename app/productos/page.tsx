@@ -299,7 +299,7 @@ export default function ProductosPage() {
                     className="absolute inset-0"
                   >
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Premium+Vinos+y+Licores"
+                      src="/chiozzi_productos_0014.png"
                       alt="Etiquetas Autoadhesivas Premium"
                       fill
                       className="object-cover"
@@ -393,7 +393,7 @@ export default function ProductosPage() {
                     className="absolute inset-0"
                   >
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Etiquetas+Colgantes"
+                      src="/chiozzi_productos_0310.png"
                       alt="Etiquetas Colgantes"
                       fill
                       className="object-cover"
@@ -487,7 +487,7 @@ export default function ProductosPage() {
                     className="absolute inset-0"
                   >
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Flowpack+Alimentos"
+                      src="/chiozzi_productos_0142.png"
                       alt="Flowpack para Alimentos"
                       fill
                       className="object-cover"
@@ -601,7 +601,7 @@ export default function ProductosPage() {
             solución perfecta para tus necesidades de etiquetado y packaging.
           </p>
           <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-            Contactar con un especialista
+            Contáctanos
           </Button>
         </div>
       </section>
