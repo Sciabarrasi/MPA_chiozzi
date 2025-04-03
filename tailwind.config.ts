@@ -15,12 +15,12 @@ module.exports = {
   	},
   	extend: {
   		colors: {
-  			primary: '#E30613',
-  			secondary: '#D35400',
-  			highlight: '#ED7D00',
-  			background: '#121212',
-  			'background-alt': '#1E1E1E',
-  			'text-secondary': '#B0B0B0',
+  			primary: '#E30613', //EN USO
+  			secondary: '#EF7D00', //EN USO
+  			highlight: '#EF7D00', //EN USO
+  			background: '#1D1D1B', //EN USO
+  			'background-alt': '#646464',
+  			'text-secondary': "#9C9C9C",
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
@@ -74,28 +74,10 @@ module.exports = {
   					height: 0
   				}
   			},
-  			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
-  			},
-  			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
-  			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

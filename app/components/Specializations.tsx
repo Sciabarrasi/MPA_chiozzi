@@ -8,15 +8,15 @@ const SpecializationsSection: React.FC = () => {
         <div>
           <h2 className="text-3xl font-bold mb-8 flex items-center justify-center text-center">
             <span className="text-highlight mr-2">|</span>
-            Especialidades
+            ESPECIALIDADES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden flex items-center justify-center">
               <Image
-                src="/chiozzi_042.png"
+                src="/Chiozzi_046.png"
                 alt="Especialidades Chiozzi"
-                width={300}
-                height={200}
+                width={600}
+                height={400}
                 className="object-cover"
                 style={{ objectPosition: "center" }}
               />

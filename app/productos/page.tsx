@@ -1,21 +1,33 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Navbar } from "../components/navbar"
+import { Footer } from "../components/footer"
+import { ArrowRight } from 'lucide-react'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
-import { ArrowRight } from "lucide-react";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function ProductosPage() {
+  // Función para sincronizar las imágenes del diálogo con las selecciones
+  const syncDialogImages = (materialType: string, materialId: string) => {
+    // Ocultar todas las imágenes del diálogo para este tipo de material
+    document.querySelectorAll(`[id^="dialog-${materialType}-material-"]`).forEach((img) => img.classList.add("hidden"))
+
+    // Mostrar la imagen correspondiente en el diálogo
+    const dialogImageElement = document.getElementById(`dialog-${materialType}-material-${materialId}`)
+    if (dialogImageElement) {
+      dialogImageElement.classList.remove("hidden")
+    }
+  }
   return (
     <div className="min-h-screen bg-background text-white">
       <Navbar />
@@ -24,23 +36,15 @@ export default function ProductosPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Soluciones de Etiquetado Premium
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Soluciones de Etiquetado Premium</h1>
             <p className="text-lg text-text-secondary mb-8">
-              En Chiozzi, nos especializamos en ofrecer soluciones de etiquetado
-              de alta calidad para empresas que buscan destacar sus productos en
-              el mercado. Nuestras tecnologías avanzadas y materiales premium
+              En Chiozzi, nos especializamos en ofrecer soluciones de etiquetado de alta calidad para empresas que
+              buscan destacar sus productos en el mercado. Nuestras tecnologías avanzadas y materiales premium
               garantizan resultados excepcionales para todo tipo de industrias.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-                Solicitar presupuesto
-              </Button>
-              <Button
-                variant="outline"
-                className="border-primary/70 text-primary/80 hover:bg-primary/5"
-              >
+              <Button className="bg-primary/70 hover:bg-primary/80 text-white">Solicitar presupuesto</Button>
+              <Button variant="outline" className="border-primary/70 text-primary/80 hover:bg-primary/5">
                 Ver catálogo completo
               </Button>
             </div>
@@ -48,33 +52,24 @@ export default function ProductosPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-primary shadow-lg shadow-primary/10 hover:bg-background/70 transition-all duration-300">
-              <h2 className="text-xl font-semibold mb-2">
-                Innovación Constante
-              </h2>
+              <h2 className="text-xl font-semibold mb-2">Innovación Constante</h2>
               <p className="text-text-secondary">
-                Invertimos continuamente en las últimas tecnologías para ofrecer
-                soluciones de etiquetado que cumplen con los estándares más
-                exigentes del mercado.
+                Invertimos continuamente en las últimas tecnologías para ofrecer soluciones de etiquetado que cumplen
+                con los estándares más exigentes del mercado.
               </p>
             </div>
             <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-secondary shadow-lg shadow-secondary/10 hover:bg-background/70 transition-all duration-300">
-              <h2 className="text-xl font-semibold mb-2">
-                Calidad Garantizada
-              </h2>
+              <h2 className="text-xl font-semibold mb-2">Calidad Garantizada</h2>
               <p className="text-text-secondary">
-                Cada producto que sale de nuestras instalaciones pasa por
-                rigurosos controles de calidad para asegurar la satisfacción
-                total de nuestros clientes.
+                Cada producto que sale de nuestras instalaciones pasa por rigurosos controles de calidad para asegurar
+                la satisfacción total de nuestros clientes.
               </p>
             </div>
             <div className="bg-background/60 backdrop-blur-md p-6 rounded-lg border-l-4 border-highlight shadow-lg shadow-highlight/10 hover:bg-background/70 transition-all duration-300">
-              <h2 className="text-xl font-semibold mb-2">
-                Soluciones Personalizadas
-              </h2>
+              <h2 className="text-xl font-semibold mb-2">Soluciones Personalizadas</h2>
               <p className="text-text-secondary">
-                Entendemos que cada cliente tiene necesidades únicas, por eso
-                ofrecemos soluciones adaptadas a los requerimientos específicos
-                de cada proyecto.
+                Entendemos que cada cliente tiene necesidades únicas, por eso ofrecemos soluciones adaptadas a los
+                requerimientos específicos de cada proyecto.
               </p>
             </div>
           </div>
@@ -86,9 +81,7 @@ export default function ProductosPage() {
           <div className="flex items-center justify-center mb-12">
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">
-                ¿Por qué elegir nuestros productos?
-              </h2>
+              <h2 className="text-3xl font-bold">¿POR QUÉ ELEGIR NUESTROS PRODUCTOS?</h2>
             </div>
           </div>
 
@@ -102,18 +95,13 @@ export default function ProductosPage() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Alta Calidad</h3>
               <p className="text-text-secondary">
-                Utilizamos materiales premium y tecnologías de vanguardia para
-                garantizar productos de la más alta calidad.
+                Utilizamos materiales premium y tecnologías de vanguardia para garantizar productos de la más alta
+                calidad.
               </p>
             </div>
 
@@ -136,8 +124,7 @@ export default function ProductosPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Entrega Rápida</h3>
               <p className="text-text-secondary">
-                Nuestros procesos optimizados nos permiten ofrecer tiempos de
-                entrega más rápidos que la competencia.
+                Nuestros procesos optimizados nos permiten ofrecer tiempos de entrega más rápidos que la competencia.
               </p>
             </div>
 
@@ -158,12 +145,9 @@ export default function ProductosPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                Personalización Total
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Personalización Total</h3>
               <p className="text-text-secondary">
-                Adaptamos cada producto a tus necesidades específicas, desde el
-                diseño hasta los materiales y acabados.
+                Adaptamos cada producto a tus necesidades específicas, desde el diseño hasta los materiales y acabados.
               </p>
             </div>
 
@@ -176,20 +160,13 @@ export default function ProductosPage() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                Tecnología Avanzada
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Tecnología Avanzada</h3>
               <p className="text-text-secondary">
-                Utilizamos equipos de última generación para garantizar
-                impresiones de alta definición y colores vibrantes.
+                Utilizamos equipos de última generación para garantizar impresiones de alta definición y colores
+                vibrantes.
               </p>
             </div>
 
@@ -210,12 +187,9 @@ export default function ProductosPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                Asesoramiento Experto
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Asesoramiento Experto</h3>
               <p className="text-text-secondary">
-                Nuestro equipo de profesionales te guiará para encontrar la
-                mejor solución para tu proyecto.
+                Nuestro equipo de profesionales te guiará para encontrar la mejor solución para tu proyecto.
               </p>
             </div>
 
@@ -236,12 +210,9 @@ export default function ProductosPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
-                Precios Competitivos
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Precios Competitivos</h3>
               <p className="text-text-secondary">
-                Ofrecemos la mejor relación calidad-precio del mercado, con
-                opciones para diferentes presupuestos.
+                Ofrecemos la mejor relación calidad-precio del mercado, con opciones para diferentes presupuestos.
               </p>
             </div>
           </div>
@@ -253,156 +224,222 @@ export default function ProductosPage() {
           <div className="flex items-center justify-center mb-12">
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">
-                Nuestras Líneas de Productos
-              </h2>
+              <h2 className="text-3xl font-bold">NUESTRAS LÍNEAS DE PRODUCTOS</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-background border-zinc-800 overflow-hidden rounded-lg">
+            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
               <div className="p-6">
-                <h3 className="text-xl text-primary mb-4">
-                  Etiquetas Autoadhesivas
-                </h3>
+                <h3 className="text-xl text-[#E30613] mb-4">Etiquetas Autoadhesivas</h3>
 
-                <p className="text-sm text-text-secondary mb-2">
-                  Puedes filtrar por:
-                </p>
                 <div className="mb-4">
-                  <select
-                    id="filter-autoadhesivas"
-                    className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      document
-                        .querySelectorAll('[id^="autoadhesivas-image-"]')
-                        .forEach((img) => img.classList.add("hidden"));
-                      const imageElement = document.getElementById(
-                        `autoadhesivas-image-${value}`
-                      );
-                      if (imageElement) {
-                        imageElement.classList.remove("hidden");
-                      }
-                    }}
-                  >
-                    <option value="premium">Premium (Vinos y Licores)</option>
-                    <option value="resistentes">Resistentes al Agua</option>
-                    <option value="transparentes">Transparentes</option>
-                    <option value="metalicas">Metálicas</option>
-                  </select>
+                  <p className="text-sm text-[#9CA3AF] mb-3">Materiales disponibles:</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {[
+                      { id: "opp-blanco", name: "OPP Blanco" },
+                      { id: "transparente", name: "Transparente" },
+                      { id: "ilustracion", name: "Ilustración" },
+                      { id: "metalizado", name: "Metalizado" },
+                    ].map((material) => (
+                      <button
+                        key={material.id}
+                        className="px-3 py-1.5 text-sm rounded-full border border-[#3F3F46] bg-[#27272A] text-white hover:bg-[#E30613]/10 hover:border-[#E30613]/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#E30613]/50 focus:ring-offset-2 focus:ring-offset-[#121212] data-[state=active]:bg-[#E30613]/20 data-[state=active]:border-[#E30613]/70"
+                        data-state={material.id === "opp-blanco" ? "active" : "inactive"}
+                        onClick={(e) => {
+                          // Desactivar todos los botones
+                          document
+                            .querySelectorAll("[data-state]")
+                            .forEach((btn) => btn.setAttribute("data-state", "inactive"))
+                          // Activar este botón
+                          e.currentTarget.setAttribute("data-state", "active")
+                          // Ocultar todas las imágenes
+                          document
+                            .querySelectorAll('[id^="autoadhesivas-material-"]')
+                            .forEach((img) => img.classList.add("hidden"))
+                          // Mostrar la imagen correspondiente
+                          const imageElement = document.getElementById(`autoadhesivas-material-${material.id}`)
+                          if (imageElement) {
+                            imageElement.classList.remove("hidden")
+                          }
+                          // Sincronizar con las imágenes del diálogo
+                          syncDialogImages("autoadhesivas", material.id)
+                        }}
+                      >
+                        {material.name}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="autoadhesivas-image-premium"
-                    className="absolute inset-0"
-                  >
+                  <div id="autoadhesivas-material-opp-blanco" className="absolute inset-0">
                     <Image
                       src="/chiozzi_productos_0014.png"
-                      alt="Etiquetas Autoadhesivas Premium"
+                      alt="Etiquetas Autoadhesivas OPP Blanco"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="autoadhesivas-image-resistentes"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="autoadhesivas-material-transparente" className="absolute inset-0 hidden">
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Resistentes+al+Agua"
-                      alt="Etiquetas Autoadhesivas Resistentes al Agua"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="autoadhesivas-image-transparentes"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Transparentes"
+                      src="/placeholder.svg?height=300&width=400&text=Material+Transparente"
                       alt="Etiquetas Autoadhesivas Transparentes"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="autoadhesivas-image-metalicas"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="autoadhesivas-material-ilustracion" className="absolute inset-0 hidden">
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Metálicas"
-                      alt="Etiquetas Autoadhesivas Metálicas"
+                      src="/placeholder.svg?height=300&width=400&text=Material+Ilustración"
+                      alt="Etiquetas Autoadhesivas Ilustración"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div id="autoadhesivas-material-metalizado" className="absolute inset-0 hidden">
+                    <Image
+                      src="/placeholder.svg?height=300&width=400&text=Material+Metalizado"
+                      alt="Etiquetas Autoadhesivas Metalizadas"
                       fill
                       className="object-cover"
                     />
                   </div>
                 </div>
 
-                <p className="text-text-secondary mb-4">
-                  Impresión de alta calidad para todo tipo de productos y
-                  superficies. Ideales para botellas, envases, productos premium
-                  y aplicaciones que requieren durabilidad y resistencia.
+                <p className="text-[#9CA3AF] mb-4">
+                  Impresión de alta calidad para todo tipo de productos y superficies. Disponible en diferentes
+                  materiales para adaptarse a tus necesidades específicas, desde etiquetas para productos premium hasta
+                  aplicaciones que requieren durabilidad y resistencia.
                 </p>
-                <Button
-                  variant="link"
-                  className="text-primary p-0 flex items-center"
-                >
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="link" className="text-[#E30613] p-0 flex items-center">
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#E30613]">Etiquetas Autoadhesivas</DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras etiquetas autoadhesivas
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div id="dialog-autoadhesivas-material-opp-blanco" className="absolute inset-0">
+                          <Image
+                            src="/chiozzi_productos_0014.png"
+                            alt="Etiquetas Autoadhesivas OPP Blanco"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-autoadhesivas-material-transparente" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Material+Transparente"
+                            alt="Etiquetas Autoadhesivas Transparentes"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-autoadhesivas-material-ilustracion" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Material+Ilustración"
+                            alt="Etiquetas Autoadhesivas Ilustración"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-autoadhesivas-material-metalizado" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Material+Metalizado"
+                            alt="Etiquetas Autoadhesivas Metalizadas"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">Características principales:</h3>
+                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
+                        <li>Alta resistencia a la humedad y temperaturas extremas</li>
+                        <li>Excelente adherencia en diferentes superficies</li>
+                        <li>Impresión de alta definición con hasta 10 colores</li>
+                        <li>Acabados especiales: barniz, stamping, relieve</li>
+                        <li>Disponible en diferentes materiales y formatos</li>
+                      </ul>
+
+                      <h3 className="text-lg font-semibold mb-2">Aplicaciones:</h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Ideales para productos alimenticios, bebidas, cosméticos, farmacéuticos, químicos, industriales
+                        y cualquier producto que requiera etiquetado de alta calidad y durabilidad.
+                      </p>
+
+                      <div className="border-t border-[#27272A] pt-4 mt-4">
+                        <p className="text-sm text-[#9CA3AF]">
+                          ¿Necesitas más información o una cotización personalizada? Nuestro equipo está listo para
+                          ayudarte.
+                        </p>
+                        <Button className="mt-3 bg-[#E30613]/70 hover:bg-[#E30613]/80 text-white">
+                          Solicitar cotización
+                        </Button>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
-            <div className="bg-background border-zinc-800 overflow-hidden rounded-lg">
+            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
               <div className="p-6">
-                <h3 className="text-xl text-secondary mb-4">
-                  Etiquetas No Autoadhesivas
-                </h3>
+                <h3 className="text-xl text-[#D35400] mb-4">Etiquetas No Autoadhesivas</h3>
 
-                <p className="text-sm text-text-secondary mb-2">
-                  Puedes filtrar por:
-                </p>
                 <div className="mb-4">
-                  <select
-                    id="filter-no-autoadhesivas"
-                    className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      document
-                        .querySelectorAll('[id^="no-autoadhesivas-image-"]')
-                        .forEach((img) => img.classList.add("hidden"));
-                      const imageElement = document.getElementById(
-                        `no-autoadhesivas-image-${value}`
-                      );
-                      if (imageElement) {
-                        imageElement.classList.remove("hidden");
-                      }
-                    }}
-                  >
-                    <option value="colgantes">Etiquetas Colgantes</option>
-                    <option value="carton">Cartón Premium</option>
-                    <option value="textil">Textiles</option>
-                    <option value="papel">Papel Especial</option>
-                  </select>
+                  <p className="text-sm text-[#9CA3AF] mb-3">Materiales disponibles:</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {[
+                      { id: "colgantes", name: "Colgantes" },
+                      { id: "carton", name: "Cartón Premium" },
+                      { id: "textil", name: "Textiles" },
+                      { id: "papel", name: "Papel Especial" },
+                    ].map((material) => (
+                      <button
+                        key={material.id}
+                        className="px-3 py-1.5 text-sm rounded-full border border-[#3F3F46] bg-[#27272A] text-white hover:bg-[#D35400]/10 hover:border-[#D35400]/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#D35400]/50 focus:ring-offset-2 focus:ring-offset-[#121212] data-[state=active]:bg-[#D35400]/20 data-[state=active]:border-[#D35400]/70"
+                        data-state={material.id === "colgantes" ? "active" : "inactive"}
+                        onClick={(e) => {
+                          // Desactivar todos los botones en este grupo
+                          e.currentTarget
+                            .closest(".flex")
+                            .querySelectorAll("[data-state]")
+                            .forEach((btn) => btn.setAttribute("data-state", "inactive"))
+                          // Activar este botón
+                          e.currentTarget.setAttribute("data-state", "active")
+                          // Ocultar todas las imágenes de este grupo
+                          document
+                            .querySelectorAll('[id^="no-autoadhesivas-material-"]')
+                            .forEach((img) => img.classList.add("hidden"))
+                          // Mostrar la imagen correspondiente
+                          const imageElement = document.getElementById(`no-autoadhesivas-material-${material.id}`)
+                          if (imageElement) {
+                            imageElement.classList.remove("hidden")
+                          }
+                          // Sincronizar con las imágenes del diálogo
+                          syncDialogImages("no-autoadhesivas", material.id)
+                        }}
+                      >
+                        {material.name}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="no-autoadhesivas-image-colgantes"
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src="/chiozzi_productos_0310.png"
-                      alt="Etiquetas Colgantes"
-                      fill
-                      className="object-cover"
-                    />
+                  <div id="no-autoadhesivas-material-colgantes" className="absolute inset-0">
+                    <Image src="/chiozzi_productos_0310.png" alt="Etiquetas Colgantes" fill className="object-cover" />
                   </div>
-                  <div
-                    id="no-autoadhesivas-image-carton"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="no-autoadhesivas-material-carton" className="absolute inset-0 hidden">
                     <Image
                       src="/placeholder.svg?height=300&width=400&text=Cartón+Premium"
                       alt="Etiquetas de Cartón Premium"
@@ -410,21 +447,15 @@ export default function ProductosPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="no-autoadhesivas-image-textil"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="no-autoadhesivas-material-textil" className="absolute inset-0 hidden">
                     <Image
-                      src="/placeholder.svg?height=300&width=400&text=Etiquetas+Textiles"
+                      src="/placeholder.svg?height=300&width=400&text=Material+Textil"
                       alt="Etiquetas Textiles"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="no-autoadhesivas-image-papel"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="no-autoadhesivas-material-papel" className="absolute inset-0 hidden">
                     <Image
                       src="/placeholder.svg?height=300&width=400&text=Papel+Especial"
                       alt="Etiquetas de Papel Especial"
@@ -434,58 +465,135 @@ export default function ProductosPage() {
                   </div>
                 </div>
 
-                <p className="text-text-secondary mb-4">
-                  Soluciones personalizadas con acabados premium y materiales
-                  especiales. Perfectas para packaging de lujo, etiquetas
-                  colgantes y aplicaciones donde se busca un acabado distintivo.
+                <p className="text-[#9CA3AF] mb-4">
+                  Soluciones personalizadas con acabados premium y materiales especiales. Perfectas para packaging de
+                  lujo, etiquetas colgantes y aplicaciones donde se busca un acabado distintivo.
                 </p>
-                <Button
-                  variant="link"
-                  className="text-secondary p-0 flex items-center"
-                >
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="link" className="text-[#D35400] p-0 flex items-center">
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#D35400]">Etiquetas No Autoadhesivas</DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras etiquetas no autoadhesivas
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div id="dialog-no-autoadhesivas-material-colgantes" className="absolute inset-0">
+                          <Image
+                            src="/chiozzi_productos_0310.png"
+                            alt="Etiquetas Colgantes"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-no-autoadhesivas-material-carton" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Cartón+Premium"
+                            alt="Etiquetas de Cartón Premium"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-no-autoadhesivas-material-textil" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Material+Textil"
+                            alt="Etiquetas Textiles"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-no-autoadhesivas-material-papel" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Papel+Especial"
+                            alt="Etiquetas de Papel Especial"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">Características principales:</h3>
+                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
+                        <li>Materiales premium de alta calidad</li>
+                        <li>Diseños personalizados con acabados de lujo</li>
+                        <li>Opciones de troquelado especial</li>
+                        <li>Impresión offset y digital de alta definición</li>
+                        <li>Variedad de formatos y tamaños</li>
+                      </ul>
+
+                      <h3 className="text-lg font-semibold mb-2">Aplicaciones:</h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Perfectas para productos premium, ropa y accesorios, packaging de lujo, productos artesanales, y
+                        cualquier aplicación que requiera una presentación distintiva.
+                      </p>
+
+                      <div className="border-t border-[#27272A] pt-4 mt-4">
+                        <p className="text-sm text-[#9CA3AF]">
+                          ¿Necesitas más información o una cotización personalizada? Nuestro equipo está listo para
+                          ayudarte.
+                        </p>
+                        <Button className="mt-3 bg-[#D35400]/70 hover:bg-[#D35400]/80 text-white">
+                          Solicitar cotización
+                        </Button>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
-            <div className="bg-background border-zinc-800 overflow-hidden rounded-lg">
+            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
               <div className="p-6">
-                <h3 className="text-xl text-highlight mb-4">Flowpack</h3>
+                <h3 className="text-xl text-[#ED7D00] mb-4">Flowpack</h3>
 
-                <p className="text-sm text-text-secondary mb-2">
-                  Puedes filtrar por:
-                </p>
                 <div className="mb-4">
-                  <select
-                    id="filter-flowpack"
-                    className="w-full bg-zinc-800 border border-zinc-700 text-white rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-highlight"
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      document
-                        .querySelectorAll('[id^="flowpack-image-"]')
-                        .forEach((img) => img.classList.add("hidden"));
-                      const imageElement = document.getElementById(
-                        `flowpack-image-${value}`
-                      );
-                      if (imageElement) {
-                        imageElement.classList.remove("hidden");
-                      }
-                    }}
-                  >
-                    <option value="alimentos">Alimentos</option>
-                    <option value="farmaceuticos">
-                      Productos Farmacéuticos
-                    </option>
-                    <option value="cosmeticos">Cosméticos</option>
-                    <option value="industrial">Industrial</option>
-                  </select>
+                  <p className="text-sm text-[#9CA3AF] mb-3">Aplicaciones disponibles:</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {[
+                      { id: "alimentos", name: "Alimentos" },
+                      { id: "farmaceuticos", name: "Farmacéuticos" },
+                      { id: "cosmeticos", name: "Cosméticos" },
+                      { id: "industrial", name: "Industrial" },
+                    ].map((material) => (
+                      <button
+                        key={material.id}
+                        className="px-3 py-1.5 text-sm rounded-full border border-[#3F3F46] bg-[#27272A] text-white hover:bg-[#ED7D00]/10 hover:border-[#ED7D00]/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#ED7D00]/50 focus:ring-offset-2 focus:ring-offset-[#121212] data-[state=active]:bg-[#ED7D00]/20 data-[state=active]:border-[#ED7D00]/70"
+                        data-state={material.id === "alimentos" ? "active" : "inactive"}
+                        onClick={(e) => {
+                          // Desactivar todos los botones en este grupo
+                          e.currentTarget
+                            .closest(".flex")
+                            .querySelectorAll("[data-state]")
+                            .forEach((btn) => btn.setAttribute("data-state", "inactive"))
+                          // Activar este botón
+                          e.currentTarget.setAttribute("data-state", "active")
+                          // Ocultar todas las imágenes de este grupo
+                          document
+                            .querySelectorAll('[id^="flowpack-material-"]')
+                            .forEach((img) => img.classList.add("hidden"))
+                          // Mostrar la imagen correspondiente
+                          const imageElement = document.getElementById(`flowpack-material-${material.id}`)
+                          if (imageElement) {
+                            imageElement.classList.remove("hidden")
+                          }
+                          // Sincronizar con las imágenes del diálogo
+                          syncDialogImages("flowpack", material.id)
+                        }}
+                      >
+                        {material.name}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="flowpack-image-alimentos"
-                    className="absolute inset-0"
-                  >
+                  <div id="flowpack-material-alimentos" className="absolute inset-0">
                     <Image
                       src="/chiozzi_productos_0142.png"
                       alt="Flowpack para Alimentos"
@@ -493,10 +601,7 @@ export default function ProductosPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="flowpack-image-farmaceuticos"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="flowpack-material-farmaceuticos" className="absolute inset-0 hidden">
                     <Image
                       src="/placeholder.svg?height=300&width=400&text=Flowpack+Farmacéuticos"
                       alt="Flowpack para Productos Farmacéuticos"
@@ -504,10 +609,7 @@ export default function ProductosPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="flowpack-image-cosmeticos"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="flowpack-material-cosmeticos" className="absolute inset-0 hidden">
                     <Image
                       src="/placeholder.svg?height=300&width=400&text=Flowpack+Cosméticos"
                       alt="Flowpack para Cosméticos"
@@ -515,10 +617,7 @@ export default function ProductosPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div
-                    id="flowpack-image-industrial"
-                    className="absolute inset-0 hidden"
-                  >
+                  <div id="flowpack-material-industrial" className="absolute inset-0 hidden">
                     <Image
                       src="/placeholder.svg?height=300&width=400&text=Flowpack+Industrial"
                       alt="Flowpack Industrial"
@@ -528,18 +627,87 @@ export default function ProductosPage() {
                   </div>
                 </div>
 
-                <p className="text-text-secondary mb-4">
-                  Tecnología de última generación para resultados excepcionales.
-                  Soluciones de envasado flexible para alimentos, productos
-                  farmacéuticos y otros artículos que requieren protección y
-                  presentación de alta calidad.
+                <p className="text-[#9CA3AF] mb-4">
+                  Tecnología de última generación para resultados excepcionales. Soluciones de envasado flexible para
+                  alimentos, productos farmacéuticos y otros artículos que requieren protección y presentación de alta
+                  calidad.
                 </p>
-                <Button
-                  variant="link"
-                  className="text-highlight p-0 flex items-center"
-                >
-                  Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="link" className="text-[#ED7D00] p-0 flex items-center">
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#ED7D00]">Flowpack</DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras soluciones Flowpack
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div id="dialog-flowpack-material-alimentos" className="absolute inset-0">
+                          <Image
+                            src="/chiozzi_productos_0142.png"
+                            alt="Flowpack para Alimentos"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-flowpack-material-farmaceuticos" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Farmacéuticos"
+                            alt="Flowpack para Productos Farmacéuticos"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-flowpack-material-cosmeticos" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Cosméticos"
+                            alt="Flowpack para Cosméticos"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div id="dialog-flowpack-material-industrial" className="absolute inset-0 hidden">
+                          <Image
+                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Industrial"
+                            alt="Flowpack Industrial"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">Características principales:</h3>
+                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
+                        <li>Alta barrera contra humedad, oxígeno y luz</li>
+                        <li>Materiales aptos para contacto con alimentos</li>
+                        <li>Impresión de alta calidad hasta 10 colores</li>
+                        <li>Diferentes opciones de sellado y acabado</li>
+                        <li>Soluciones personalizadas según necesidades específicas</li>
+                      </ul>
+
+                      <h3 className="text-lg font-semibold mb-2">Aplicaciones:</h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Ideal para envasado de alimentos, productos farmacéuticos, cosméticos, productos industriales y
+                        cualquier aplicación que requiera protección y presentación de alta calidad.
+                      </p>
+
+                      <div className="border-t border-[#27272A] pt-4 mt-4">
+                        <p className="text-sm text-[#9CA3AF]">
+                          ¿Necesitas más información o una cotización personalizada? Nuestro equipo está listo para
+                          ayudarte.
+                        </p>
+                        <Button className="mt-3 bg-[#ED7D00]/70 hover:bg-[#ED7D00]/80 text-white">
+                          Solicitar cotización
+                        </Button>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>
@@ -551,37 +719,37 @@ export default function ProductosPage() {
           <div className="flex items-center justify-center mb-12">
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Productos Destacados</h2>
+              <h2 className="text-3xl font-bold">DETALLES ESPECIALES</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, index) => (
+            {[
+              { name: "Microcortes de Seguridad" },
+              { name: "Impresión Sobre Adhesivo" },
+              { name: "Stamping" },
+              { name: "Troquelados Especiales" },
+              { name: "Impresión Secrorizada" }
+            ].map((item, index) => (
               <Card key={index} className="bg-background border-zinc-800">
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                   <Image
-                    src={`/placeholder.svg?height=300&width=400`}
-                    alt={`Producto destacado ${index + 1}`}
+                    src={`/placeholder.svg?height=300&width=400&text=${item.name.replace(/\s+/g, '+')}`}
+                    alt={item.name}
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-lg">
-                    Producto Premium {index + 1}
-                  </CardTitle>
+                  <CardTitle className="text-lg">{item.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-text-secondary">
-                    Solución de etiquetado especializada para necesidades
-                    específicas de la industria.
+                    Solución de etiquetado especializada para necesidades específicas de la industria.
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button
-                    variant="outline"
-                    className="w-full border-primary/70 text-primary/80 hover:bg-primary/5"
-                  >
+                  <Button variant="outline" className="w-full border-primary/70 text-primary/80 hover:bg-primary/5">
                     Ver detalles
                   </Button>
                 </CardFooter>
@@ -593,20 +761,16 @@ export default function ProductosPage() {
 
       <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            ¿Necesitas una solución personalizada?
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">¿Necesitas una solución personalizada?</h2>
           <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-            Nuestro equipo de expertos está listo para ayudarte a encontrar la
-            solución perfecta para tus necesidades de etiquetado y packaging.
+            Nuestro equipo de expertos está listo para ayudarte a encontrar la solución perfecta para tus necesidades de
+            etiquetado y packaging.
           </p>
-          <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-            Contáctanos
-          </Button>
+          <Button className="bg-primary/70 hover:bg-primary/80 text-white">Contáctanos</Button>
         </div>
       </section>
 
       <Footer />
     </div>
-  );
+  )
 }

@@ -1,49 +1,58 @@
 import type React from "react"
-import { BarChart2, Printer, Settings, Shield, Users, Zap } from "lucide-react"
+import { CheckCircle, Clock, FileText, Zap, Users, DollarSign } from "lucide-react"
 
 const WorkForYouSection: React.FC = () => {
   return (
-    <section className="pb-12 pt-20 bg-background-alt">
+    <section className="pb-12 pt-20" style={{ backgroundColor: "#18181B" }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 flex items-center justify-center text-center">
-          <span className="text-primary mr-2">|</span>
-          Trabajamos para Usted
+          <span className="mr-2" style={{ color: "#E30613" }}>
+            |
+          </span>
+          TRABAJAMOS PARA USTED
         </h2>
-        <p className="text-text-secondary max-w-3xl mb-16 mx-auto text-center">
-          Nos especializamos en producir etiquetas de alta calidad.
-          Siendo pioneros en la región hace más de 30 años realizamos impresiones flexográficas de alta calidad para todo tipo de industrias alimenticias, frigoríficas, de bebidas, laboratorios farmacéuticos y cosméticos, pinturas y lubricantes.
+        <p className="mb-16 mx-auto text-center max-w-3xl" style={{ color: "#B0B0B0" }}>
+          Nos especializamos en la producción de{" "}
+          <span className="font-semibold" style={{ color: "#ED7D00" }}>
+            etiquetas de alta calidad
+          </span>{" "}
+          para diversos sectores industriales. Nuestro compromiso con la{" "}
+          <span className="font-semibold" style={{ color: "#ED7D00" }}>
+            excelencia y la innovación
+          </span>{" "}
+          nos permite ofrecer soluciones personalizadas que satisfacen las necesidades específicas de cada cliente.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
           <FeatureItem
-            icon={<Printer className="w-8 h-8 text-highlight" />}
-            title="Impresiones de Alta Calidad"
-            description="Tecnología de última generación"
+            icon={<CheckCircle className="w-8 h-8" style={{ color: "#ED7D00" }} />}
+            title="Alta Calidad"
+            description="Utilizamos materiales premium y tecnologías de vanguardia."
           />
           <FeatureItem
-            icon={<Settings className="w-8 h-8 text-highlight" />}
-            title="Soluciones a Medida"
-            description="Personalización total de cada producto"
-          />
-          <FeatureItem
-            icon={<Users className="w-8 h-8 text-highlight" />}
-            title="Atención Personalizada"
-            description="Equipo altamente capacitado a tu disposición"
-          />
-          <FeatureItem
-            icon={<BarChart2 className="w-8 h-8 text-highlight" />}
-            title="Control de Calidad"
-            description="Procesos eficientes y controlados" //ver iso 9001
-          />
-          <FeatureItem
-            icon={<Shield className="w-8 h-8 text-highlight" />}
+            icon={<Clock className="w-8 h-8" style={{ color: "#ED7D00" }} />}
             title="Entrega Rápida"
-            description="Entregas en tiempo récord" //PREGUNTAR
+            description="Tiempos optimizados para satisfacer sus necesidades."
           />
           <FeatureItem
-            icon={<Zap className="w-8 h-8 text-highlight" />}
-            title="Compromiso y Mejora Constante"
-            description="Compromiso con la mejora y satisfacción del cliente"
+            icon={<FileText className="w-8 h-8" style={{ color: "#ED7D00" }} />}
+            title="Personalización Total"
+            description="Soluciones a medida para cada cliente."
+          />
+          <FeatureItem
+            icon={<Zap className="w-8 h-8" style={{ color: "#ED7D00" }} />}
+            title="Tecnología Avanzada"
+            description="Equipos de última generación para resultados excepcionales."
+          />
+          <FeatureItem
+            icon={<Users className="w-8 h-8" style={{ color: "#ED7D00" }} />}
+            title="Asesoramiento Experto"
+            description="Equipo especializado para guiar su proyecto."
+          />
+          <FeatureItem
+            icon={<DollarSign className="w-8 h-8" style={{ color: "#ED7D00" }} />}
+            title="Precios Competitivos"
+            description="La mejor relación calidad-precio del mercado."
           />
         </div>
       </div>
@@ -57,9 +66,14 @@ const FeatureItem: React.FC<{ icon: React.ReactNode; title: string; description:
   description,
 }) => (
   <div className="flex flex-col items-center text-center">
-    <div className="bg-background-alt p-4 rounded-lg mb-4">{icon}</div>
-    <h3 className="text-xl font-bold mb-2">{title}</h3>
-    <p className="text-text-secondary">{description}</p>
+    <div
+      className="p-4 rounded-full mb-4 w-16 h-16 flex items-center justify-center"
+      style={{ backgroundColor: "#18181B" }}
+    >
+      {icon}
+    </div>
+    <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
+    <p style={{ color: "#B0B0B0" }}>{description}</p>
   </div>
 )
 

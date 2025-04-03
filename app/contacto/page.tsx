@@ -23,7 +23,6 @@ export default function ContactoPage() {
     asunto: "",
     mensaje: "",
   })
-  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -33,17 +32,19 @@ export default function ContactoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError(null)
 
     try {
-      // simulamos un envío exitoso después de 1 segundo
+      // Aquí iría la lógica para enviar el formulario por email
+      // Por ejemplo, usando un servidor de acción o una API
+
+      // Simulamos un envío exitoso después de 1 segundo
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
       toast.success("Formulario enviado", {
         description: "Nos pondremos en contacto contigo a la brevedad.",
       })
 
-      // Resetea el formulario
+      // Resetear el formulario
       setFormData({
         nombre: "",
         email: "",
@@ -53,16 +54,15 @@ export default function ContactoPage() {
       })
     } catch (error) {
       if (error instanceof Error) {
-        setError("Error desconocido. Por favor, intenta nuevamente.")
-      }
-    } finally {
-      setIsSubmitting(false)
-
-      if (error) {
         toast.error("Error al enviar", {
-          description: error,
+          description: error.message,
         })
       }
+      toast.error("Error al enviar", {
+        description: "Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.",
+      })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -95,17 +95,16 @@ export default function ContactoPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background text-white">
+    <div className="min-h-screen bg-[#121212] text-white">
       <Toaster richColors position="top-center" />
-
       <Navbar />
 
-      <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
+      <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-[#E30613]/10 via-[#D35400]/15 to-[#CA8A04]/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contacto</h1>
-            <p className="text-lg text-text-secondary mb-8">
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">CONTACTO</h1>
+            <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
               Estamos aquí para responder tus consultas y ayudarte a encontrar la solución perfecta para tus
               necesidades. Ponte en contacto con nosotros y un especialista te atenderá a la brevedad.
             </p>
@@ -113,73 +112,75 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-12 md:py-16 px-4">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Ponte en contacto</h2>
+          <div className="flex items-center justify-center mb-8 md:mb-12">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
+              <h2 className="text-2xl sm:text-3xl font-bold">PONTE EN CONTACTO</h2>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Información de Contacto</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-[#E30613]">Información de Contacto</h3>
 
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-primary" />
+              <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="bg-[#E30613]/20 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <MapPin className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1">Dirección</h4>
-                    <p className="text-text-secondary">Mitre 901, Gálvez - Santa Fe</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Dirección</h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">
+                      Colectora Oeste 696 (1619), Garín, Pcia. Buenos Aires
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="bg-[#E30613]/20 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <Phone className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1">Teléfono</h4>
-                    <p className="text-text-secondary">(03404) 481786</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Teléfono</h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">+54 123 456 7890</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-full">
-                    <Mail className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="bg-[#E30613]/20 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <Mail className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1">Email</h4>
-                    <p className="text-text-secondary">info@chiozzi.com.ar</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Email</h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">info@chiozzi.com.ar</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/20 p-3 rounded-full">
-                    <Clock className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="bg-[#E30613]/20 p-2 sm:p-3 rounded-full flex-shrink-0">
+                    <Clock className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1">Horario de Atención</h4>
-                    <p className="text-text-secondary">Lunes a Viernes: 8:00 - 17:00</p>
-                    <p className="text-text-secondary">Sábados: 9:00 - 13:00</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Horario de Atención</h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">Lunes a Viernes: 8:00 - 18:00</p>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">Sábados: 9:00 - 13:00</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <Card className="bg-background-alt border-zinc-800">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold mb-6 text-white">Formulario de Contacto</h3>
+              <Card className="bg-[#1A1A1A] border-[#27272A]">
+                <CardContent className="p-4 sm:p-6">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-white">Formulario de Contacto</h3>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="nombre" className="text-sm font-medium text-white">
-                          Nombre completo <span className="text-primary">*</span>
+                        <label htmlFor="nombre" className="text-xs sm:text-sm font-medium text-white">
+                          Nombre completo <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
                           id="nombre"
@@ -188,13 +189,13 @@ export default function ContactoPage() {
                           onChange={handleChange}
                           placeholder="Ingresa tu nombre"
                           required
-                          className="bg-zinc-800 border-zinc-700 text-white"
+                          className="bg-[#27272A] border-[#3F3F46] text-white text-sm sm:text-base h-9 sm:h-10"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-white">
-                          Email <span className="text-primary">*</span>
+                        <label htmlFor="email" className="text-xs sm:text-sm font-medium text-white">
+                          Email <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
                           id="email"
@@ -204,14 +205,14 @@ export default function ContactoPage() {
                           onChange={handleChange}
                           placeholder="tu@email.com"
                           required
-                          className="bg-zinc-800 border-zinc-700 text-white"
+                          className="bg-[#27272A] border-[#3F3F46] text-white text-sm sm:text-base h-9 sm:h-10"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="telefono" className="text-sm font-medium text-white">
+                        <label htmlFor="telefono" className="text-xs sm:text-sm font-medium text-white">
                           Teléfono
                         </label>
                         <Input
@@ -220,13 +221,13 @@ export default function ContactoPage() {
                           value={formData.telefono}
                           onChange={handleChange}
                           placeholder="Ingresa tu teléfono"
-                          className="bg-zinc-800 border-zinc-700 text-white"
+                          className="bg-[#27272A] border-[#3F3F46] text-white text-sm sm:text-base h-9 sm:h-10"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="asunto" className="text-sm font-medium text-white">
-                          Asunto <span className="text-primary">*</span>
+                        <label htmlFor="asunto" className="text-xs sm:text-sm font-medium text-white">
+                          Asunto <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
                           id="asunto"
@@ -235,14 +236,14 @@ export default function ContactoPage() {
                           onChange={handleChange}
                           placeholder="Asunto de tu consulta"
                           required
-                          className="bg-zinc-800 border-zinc-700 text-white"
+                          className="bg-[#27272A] border-[#3F3F46] text-white text-sm sm:text-base h-9 sm:h-10"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="mensaje" className="text-sm font-medium text-white">
-                        Mensaje <span className="text-primary">*</span>
+                      <label htmlFor="mensaje" className="text-xs sm:text-sm font-medium text-white">
+                        Mensaje <span className="text-[#E30613]">*</span>
                       </label>
                       <Textarea
                         id="mensaje"
@@ -251,13 +252,13 @@ export default function ContactoPage() {
                         onChange={handleChange}
                         placeholder="Escribe tu mensaje aquí..."
                         required
-                        className="min-h-[150px] bg-zinc-800 border-zinc-700 text-white"
+                        className="min-h-[120px] sm:min-h-[150px] bg-[#27272A] border-[#3F3F46] text-white text-sm sm:text-base"
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full bg-primary/70 hover:bg-primary/80 text-white"
+                      className="w-full bg-[#E30613]/70 hover:bg-[#E30613]/80 text-white text-sm sm:text-base h-9 sm:h-10"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -286,7 +287,7 @@ export default function ContactoPage() {
                         </span>
                       ) : (
                         <span className="flex items-center gap-2">
-                          <Send className="h-4 w-4" />
+                          <Send className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                           Enviar mensaje
                         </span>
                       )}
@@ -299,25 +300,27 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-12 md:py-16 px-4 bg-[#18181B]">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Preguntas Frecuentes</h2>
+          <div className="flex items-center justify-center mb-8 md:mb-12">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
+              <h2 className="text-2xl sm:text-3xl font-bold">PREGUNTAS FRECUENTES</h2>
             </div>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <Card className="bg-background/40 backdrop-blur-sm border-zinc-800">
-              <CardContent className="p-6">
+            <Card className="bg-[#121212] border-[#27272A]">
+              <CardContent className="p-4 sm:p-6">
                 <Accordion type="single" collapsible className="space-y-2">
                   {faqItems.map((item, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="border-zinc-700 last:border-0">
-                      <AccordionTrigger className="text-xl font-semibold text-white hover:no-underline">
+                    <AccordionItem key={index} value={`item-${index}`} className="border-[#3F3F46] last:border-0">
+                      <AccordionTrigger className="text-base sm:text-lg md:text-xl font-semibold text-white hover:no-underline py-3 sm:py-4">
                         {item.pregunta}
                       </AccordionTrigger>
-                      <AccordionContent className="text-text-secondary">{item.respuesta}</AccordionContent>
+                      <AccordionContent className="text-sm sm:text-base text-white/80 pb-3 sm:pb-4">
+                        {item.respuesta}
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -331,3 +334,4 @@ export default function ContactoPage() {
     </div>
   )
 }
+

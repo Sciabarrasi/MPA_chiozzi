@@ -1,24 +1,38 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+// middleware.ts
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { verifyToken } from './lib/auth';
 
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
 
-  if (pathname === '/dashboard') {
-    const username = request.cookies.get('username')
-    const password = request.cookies.get('password')
+  // Permitir acceso a rutas de API/auth
+  if (pathname.startsWith('/api/users')) {
+    return NextResponse.next();
+  }
 
-    // Verifica si las credenciales existen y son válidas
-    if (username !== process.env.NEXT_PUBLIC_USERNAME || password !== process.env.NEXT_PUBLIC_PASSWORD) {
-      const accessDeniedUrl = new URL('/access-denied', request.url)
-      return NextResponse.redirect(accessDeniedUrl)
+  // Proteger dashboard
+  if (pathname.startsWith('/dashboard')) {
+    const token = request.cookies.get('auth-token')?.value;
+
+    if (!token) {
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
+
+    try {
+      verifyToken(token);
+      return NextResponse.next();
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
+      return NextResponse.redirect(new URL('/login', request.url));
     }
   }
 
-  // Permite el acceso a otras rutas
-  return NextResponse.next()
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/dashboard'],
-}
+  matcher: ['/dashboard/:path*'],
+};

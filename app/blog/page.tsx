@@ -7,9 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Navbar } from "../components/navbar"
 import { Footer } from "../components/footer"
 
-///VER COMO HACER EL WYSIWYG, SI HACERLO O NO
-
-// Datos de ejemplo para simular los posts que vendrán del dashboard
+// datos de ejemplo para simular los posts que vendrán de la base de datos
 const blogPosts = [
   {
     id: 1,
@@ -106,13 +104,15 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background text-white">
+      {/* Navbar */}
       <Navbar />
 
+      {/* Hero Section */}
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">BLOG</h1>
             <p className="text-lg text-text-secondary mb-8">
               Descubre las últimas tendencias, innovaciones y noticias sobre la industria del etiquetado y packaging.
               Compartimos conocimientos, casos de éxito y consejos para ayudarte a destacar tus productos en el mercado.
@@ -121,70 +121,18 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Lista de Artículos */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
             <div className="flex items-center gap-4">
               <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Artículos Destacados</h2>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {blogPosts.slice(0, 2).map((post) => (
-              <Card key={post.id} className="bg-background border-zinc-800 overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={post.coverImage || "/placeholder.svg"}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
-                    <span className="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs">{post.category}</span>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  <CardTitle className="text-2xl text-white hover:text-primary transition-colors">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-text-secondary text-base">{post.excerpt}</CardDescription>
-                </CardContent>
-                <CardFooter className="flex justify-between items-center">
-                  <div className="text-sm text-text-secondary">Por {post.author}</div>
-                  <Button variant="link" className="text-primary p-0 flex items-center" asChild>
-                    <Link href={`/blog/${post.slug}`}>
-                      Leer más <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-zinc-900">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">Todos los Artículos</h2>
+              <h2 className="text-3xl font-bold">TODOS LOS ARTÍCULOS</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(2).map((post) => (
+            {blogPosts.map((post) => (
               <Card key={post.id} className="bg-background border-zinc-800 overflow-hidden flex flex-col h-full">
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -227,62 +175,10 @@ export default function BlogPage() {
               </Card>
             ))}
           </div>
-
-          <div className="flex justify-center mt-12">
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="border-zinc-700 text-text-secondary hover:text-white hover:border-white"
-                disabled
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </Button>
-              <Button variant="default" size="sm" className="bg-primary/70 hover:bg-primary/80 text-white min-w-[40px]">
-                1
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-zinc-700 text-text-secondary hover:text-white hover:border-white min-w-[40px]"
-              >
-                2
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-zinc-700 text-text-secondary hover:text-white hover:border-white min-w-[40px]"
-              >
-                3
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="border-zinc-700 text-text-secondary hover:text-white hover:border-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
+      {/* Footer */}
       <Footer />
     </div>
   )

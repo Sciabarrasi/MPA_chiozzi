@@ -1,32 +1,51 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+import { NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
+import { hashPassword, generateToken, setAuthCookie } from "@/lib/auth";
 
-const prisma = new PrismaClient();
-const secret = process.env.JWT_SECRET || 'your-secret-key';
-
-export async function POST(req: NextRequest) {
-  const { username, password } = await req.json();
-
+export async function POST(request: Request) {
   try {
-    const user = await prisma.user.findUnique({ where: { username } });
+    const { username, password } = await request.json();
 
-    if (!user) {
-      return new NextResponse(JSON.stringify({ error: 'Usuario no encontrado' }), { status: 404 });
+    if (!username || !password ) {
+      return NextResponse.json(
+        { error: "Usuario y contraseña son requeridos."},
+        { status: 400 }
+      );
+    }
+    const existingUser = await prisma.user.findUnique({
+      where: { username },
+    });
+
+    if (existingUser) {
+      return NextResponse.json(
+        { error: "El usuario ya esta registrado" },
+        { status: 400 }
+      );
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    //crear usuario
+    const hashedPassword = await hashPassword(password);
+    const user = await prisma.user.create({
+      data: {
+        username,
+        password: hashedPassword,
+      },
+      select: {
+        id: true,
+        username: true,
+        createdAt: true,
+      },
+    });
 
-    if (!isPasswordValid) {
-      return new NextResponse(JSON.stringify({ error: 'Contraseña incorrecta' }), { status: 401 });
-    }
-
-    const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1h' });
-
-    return new NextResponse(JSON.stringify({ token }), { status: 200 });
+    const token = generateToken(user.id);
+    await setAuthCookie(token);
+  
+    return NextResponse.json(user, { status: 201 });
   } catch (error) {
-    console.error("Error al iniciar sesión:", error);
-    return new NextResponse(JSON.stringify({ error: 'Error al iniciar sesión' }), { status: 500 });
+    console.error("Error al crear el usuario: ", error);
+    return NextResponse.json(
+      { error: "Error al crear el usuario." },
+      { status: 500 }
+    );
   }
 }
