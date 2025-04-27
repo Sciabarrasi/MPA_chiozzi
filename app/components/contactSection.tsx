@@ -14,7 +14,7 @@ const ContactSection: React.FC = () => {
         </p>
         <Button
           className="text-white px-8 py-6 text-lg"
-          style={{ backgroundColor: "#ED7D00", hover: { backgroundColor: "rgba(237, 125, 0, 0.9)" } }}
+          style={{ backgroundColor: "#ED7D00"}}
         >
           Contactar
         </Button>

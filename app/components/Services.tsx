@@ -71,7 +71,7 @@ const ServiceCard: React.FC<{ title: string; description: string; imageUrl: stri
             variant="outline"
             size="sm"
             className="text-white border-transparent transition-colors"
-            style={{ backgroundColor: "rgba(237, 125, 0, 0.9)", hover: { backgroundColor: "#ED7D00" } }}
+            style={{ backgroundColor: "rgba(237, 125, 0, 0.9)" }}
           >
             Ver producto
             <ArrowRight className="ml-2 h-4 w-4" />
