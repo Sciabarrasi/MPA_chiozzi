@@ -14,14 +14,60 @@ import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import ImageUploader from "../components/imageUploader";
+import { Input } from "@/components/ui/input";
 
 export default function DashboardPage() {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
+  const [imageData, setImageData] = useState<{
+    publicId: string;
+    url: string;
+  } | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleImageUpload = (imageUrl: string) => {
-    console.log("Imagen subida:", imageUrl);
-    // Aquí puedes guardar la URL en tu base de datos
+  const handleImageUpload = (result: { publicId: string; url: string }) => {
+    setImageData({
+      publicId: result.publicId,
+      url: result.url
+    });
+  };
+
+  const handleSubmit = async () => {
+    if (!postTitle || !postContent || !imageData) {
+      alert("Por favor completa todos los campos");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: postTitle,
+          content: postContent,
+          imagePublicId: imageData.publicId,
+          imageUrl: imageData.url
+        }),
+      });
+
+      if (!response.ok) throw new Error('Error al crear el post');
+
+      // Limpiar el formulario después del éxito
+      setPostTitle("");
+      setPostContent("");
+      setImageData(null);
+      
+      alert("Post creado exitosamente!");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error al crear el post");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -100,8 +146,18 @@ export default function DashboardPage() {
                   </div>
 
                   <div className="flex justify-end gap-3">
-                    <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-                      <Save className="mr-2 h-4 w-4" /> Publicar Post
+                    <Button 
+                      className="bg-primary/70 hover:bg-primary/80 text-white"
+                      onClick={handleSubmit}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        "Publicando..."
+                      ) : (
+                        <>
+                          <Save className="mr-2 h-4 w-4" /> Publicar Post
+                        </>
+                      )}
                     </Button>
                   </div>
                 </CardContent>
@@ -124,6 +180,42 @@ export default function DashboardPage() {
                     onUpload={handleImageUpload}
                     maxImages={5}
                   />
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="settings" className="mt-0">
+              <Card className="bg-background/80 backdrop-blur-md border-zinc-800">
+                <CardHeader>
+                  <CardTitle className="text-white">Configuración</CardTitle>
+                  <CardDescription className="text-text-secondary">
+                    Administra la configuración del blog
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <Label className="text-white">Título del Blog</Label>
+                      <Input
+                        placeholder="Título del blog"
+                        defaultValue="Blog de Chiozzi"
+                        className="bg-zinc-800 border-zinc-700 text-white"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label className="text-white">Descripción</Label>
+                      <Input
+                        placeholder="Descripción del blog"
+                        defaultValue="Noticias y artículos sobre la industria del etiquetado"
+                        className="bg-zinc-800 border-zinc-700 text-white"
+                      />
+                    </div>
+                    <div className="flex justify-end">
+                      <Button className="bg-primary/70 hover:bg-primary/80 text-white">
+                        Guardar Cambios
+                      </Button>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>

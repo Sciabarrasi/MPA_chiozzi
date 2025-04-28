@@ -6,30 +6,38 @@ import type { CloudinaryUploadWidgetResults } from 'next-cloudinary';
 import { Button } from '@/components/ui/button';
 import { ImageIcon, Trash2 } from 'lucide-react';
 
+interface CloudinaryUploadResultInfo {
+  public_id: string;
+  secure_url: string;
+}
+
 export default function ImageUploader({
   label,
   onUpload,
   maxImages,
 }: {
   label: string;
-  onUpload: (url: string) => void;
+  onUpload: (result: { publicId: string; url: string }) => void;
   maxImages: number;
 }) {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   const handleDelete = () => {
     setImageUrl(null);
-    onUpload('');
+    onUpload({ publicId: '', url: '' });
   };
 
   const handleUploadSuccess = (results: CloudinaryUploadWidgetResults) => {
-    const url = typeof results.info === 'string' 
-      ? results.info 
-      : results.info?.secure_url;
-    
-    if (url) {
-      setImageUrl(url);
-      onUpload(url);
+    const info = typeof results.info === 'string' 
+      ? { public_id: '', secure_url: results.info } 
+      : results.info as CloudinaryUploadResultInfo;
+
+    if (info?.secure_url) {
+      setImageUrl(info.secure_url);
+      onUpload({
+        publicId: info.public_id,
+        url: info.secure_url
+      });
     }
   };
 
