@@ -14,21 +14,26 @@ import { Footer } from "../components/footer"
 
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false)
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  })
   const { register, isLoading, error } = useRegister()
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target
+    setFormData(prev => ({ ...prev, [id]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await register({ email, password })
+    await register(formData)
   }
 
   return (
     <div className="min-h-screen bg-background text-white">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Register Section */}
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10 min-h-[calc(100vh-64px)]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
 
@@ -38,7 +43,7 @@ export default function RegisterPage() {
               <CardHeader className="space-y-1 text-center">
                 <CardTitle className="text-2xl font-bold text-white">Crear Cuenta</CardTitle>
                 <CardDescription className="text-text-secondary">
-                  Ingresa tus datos para registrarte en la plataforma
+                  Ingresa tu email y contraseña para registrarte
                 </CardDescription>
               </CardHeader>
 
@@ -59,9 +64,9 @@ export default function RegisterPage() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="nombre@empresa.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="nombre@ejemplo.com"
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                         className="bg-zinc-800 border-zinc-700 pl-10 text-white"
                       />
@@ -78,9 +83,10 @@ export default function RegisterPage() {
                         id="password"
                         type={showPassword ? "text" : "password"}
                         placeholder="••••••••"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        value={formData.password}
+                        onChange={handleChange}
                         required
+                        minLength={6}
                         className="bg-zinc-800 border-zinc-700 pl-10 pr-10 text-white"
                       />
                       <button
@@ -91,7 +97,7 @@ export default function RegisterPage() {
                         {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                       </button>
                     </div>
-                    <p className="text-xs text-text-secondary mt-1">La contraseña debe tener al menos 6 caracteres</p>
+                    <p className="text-xs text-text-secondary mt-1">Mínimo 6 caracteres</p>
                   </div>
 
                   <Button
@@ -141,7 +147,6 @@ export default function RegisterPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   )

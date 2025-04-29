@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const useLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -20,20 +20,20 @@ const useLogin = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ email, password }),
       });
 
       if (response.ok) {
         const data = await response.json();
         sessionStorage.setItem('token', data.token);
-
-        // Redirección después del login exitoso
         router.push('/dashboard');
       } else {
-        console.error("Error de inicio de sesión:", await response.text());
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Error al iniciar sesión");
       }
     } catch (error) {
       console.error("Error de inicio de sesión:", error);
+      alert(error instanceof Error ? error.message : "Error al iniciar sesión");
     } finally {
       setIsLoading(false);
     }
@@ -42,8 +42,8 @@ const useLogin = () => {
   return {
     showPassword,
     setShowPassword,
-    username,
-    setUsername,
+    email,
+    setEmail,
     password,
     setPassword,
     isLoading,

@@ -1,7 +1,6 @@
 "use client";
 
-import { Eye, EyeOff, Lock, User } from "lucide-react";
-
+import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -14,8 +13,8 @@ export default function LoginPage() {
   const {
     showPassword,
     setShowPassword,
-    username,
-    setUsername,
+    email,
+    setEmail,
     password,
     setPassword,
     isLoading,
@@ -35,24 +34,24 @@ export default function LoginPage() {
               <CardHeader className="space-y-1 text-center">
                 <CardTitle className="text-2xl font-bold text-white">Iniciar Sesión</CardTitle>
                 <CardDescription className="text-text-secondary">
-                  Ingresa tus credenciales para acceder al panel de administración
+                  Ingresa tu email y contraseña para acceder
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="space-y-6 p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="username" className="text-white">
-                      Nombre de Usuario
+                    <Label htmlFor="email" className="text-white">
+                      Email
                     </Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-text-secondary" />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-text-secondary" />
                       <Input
-                        id="username"
-                        type="text"
-                        placeholder="nombre_de_usuario"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        id="email"
+                        type="email"
+                        placeholder="tu@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                         className="bg-zinc-800 border-zinc-700 pl-10 text-white"
                       />
