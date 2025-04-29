@@ -1,18 +1,15 @@
-import { NextResponse } from "next/server";
-import { removeAuthCookie } from "@/lib/auth";
+import { NextResponse } from 'next/server';
 
 export async function POST() {
-    try { 
-        await removeAuthCookie();
-        return NextResponse.json(
-            { message: "Sesion cerrada correctamente." },
-            { status: 200 }
-        );
-    } catch (error) {
-        console.error("Error al cerrar sesión:", error);
-        return NextResponse.json(
-            {error: "Internal server error" },
-            { status: 500 }
-        );
-    }
+  const response = NextResponse.json({ message: 'Logout exitoso' });
+
+  response.cookies.set('token', '', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 0,
+    path: '/',
+    sameSite: 'strict',
+  });
+
+  return response;
 }

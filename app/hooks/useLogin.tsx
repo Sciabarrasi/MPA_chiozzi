@@ -1,18 +1,16 @@
-"use client";
+import { useState } from 'react';
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
-const useLogin = () => {
+export default function useLogin() {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
 
     try {
       const response = await fetch('/api/users/login', {
@@ -23,17 +21,15 @@ const useLogin = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        sessionStorage.setItem('token', data.token);
-        router.push('/dashboard');
-      } else {
+      if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Error al iniciar sesión");
+        throw new Error(errorData.error || 'Error al iniciar sesión');
       }
-    } catch (error) {
-      console.error("Error de inicio de sesión:", error);
-      alert(error instanceof Error ? error.message : "Error al iniciar sesión");
+
+      // Redirigir con recarga para asegurar que el middleware tenga la cookie
+      window.location.href = '/dashboard';
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error al iniciar sesión');
     } finally {
       setIsLoading(false);
     }
@@ -47,8 +43,7 @@ const useLogin = () => {
     password,
     setPassword,
     isLoading,
+    error,
     handleSubmit,
   };
-};
-
-export default useLogin;
+}
