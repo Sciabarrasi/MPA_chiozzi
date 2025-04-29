@@ -42,8 +42,8 @@ export async function POST(request: Request) {
             include: {
                 user: {
                     select: {
-                        name: true,
-                        image: true
+                        name: true
+                        // Se eliminó 'image: true' ya que no existe en el modelo User
                     }
                 }
             }
@@ -78,8 +78,8 @@ export async function GET() {
             include: {
                 user: {
                     select: {
-                        name: true,
-                        image: true
+                        name: true
+                        // Se eliminó 'image: true' ya que no existe en el modelo User
                     }
                 }
             }
