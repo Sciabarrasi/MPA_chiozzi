@@ -16,19 +16,25 @@ export async function POST(request: Request) {
       );
     }
 
+    console.log(`Buscando usuario con el email: ${email.toLowerCase()}`);
+
     const user = await prisma.user.findUnique({
       where: { email: email.toLowerCase() }
     });
 
     if (!user) {
+      console.log(`Usuario no encontrado para el email: ${email}`);
       return NextResponse.json(
         { error: 'Credenciales inválidas.' },
         { status: 401 }
       );
     }
 
+    console.log(`Usuario encontrado: ${user.email}`);
+
     const passwordMatch = await comparePassword(password, user.password);
     if (!passwordMatch) {
+      console.log(`Contraseña incorrecta para el usuario: ${email}`);
       return NextResponse.json(
         { error: 'Credenciales inválidas' },
         { status: 401 }

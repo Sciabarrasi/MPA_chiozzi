@@ -1,61 +1,56 @@
 // hooks/useRegister.ts
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 type RegisterData = {
-  email: string;
-  password: string;
-};
+  name: string
+  email: string
+  password: string
+}
 
 export const useRegister = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
 
   const register = async (data: RegisterData) => {
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true)
+    setError(null)
 
     try {
-      // Validación básica
-      if (!data.email || !data.password) {
-        throw new Error("Email y contraseña son requeridos");
+      if (!data.name || !data.email || !data.password) {
+        throw new Error("Todos los campos son obligatorios")
       }
 
       if (data.password.length < 6) {
-        throw new Error("La contraseña debe tener al menos 6 caracteres");
+        throw new Error("La contraseña debe tener al menos 6 caracteres")
       }
 
-      // Validación simple de email
       if (!data.email.includes("@")) {
-        throw new Error("Por favor ingresa un email válido");
+        throw new Error("Por favor ingresa un email válido")
       }
 
-      // Llamada a la API
       const response = await fetch("/api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email: data.email,
-          password: data.password
-        }),
-      });
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Error en el registro");
+        throw new Error(result.message || "Error en el registro")
       }
 
-      // Redirección con mensaje de éxito
-      router.push(`/login?registered=true&email=${encodeURIComponent(data.email)}`);
+      router.push(`/login?registered=true&email=${encodeURIComponent(data.email)}`)
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Ocurrió un error durante el registro");
+      setError(err instanceof Error ? err.message : "Ocurrió un error durante el registro")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  }
 
-  return { register, isLoading, error };
-};
+  return { register, isLoading, error }
+}
