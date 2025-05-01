@@ -2,7 +2,6 @@ import { cookies } from 'next/headers';
 import bcrypt from 'bcryptjs';
 import prisma from '@/lib/prisma';
 
-// Definición de tipos para la API de cookies
 interface AppCookies {
   set: (options: {
     name: string;
@@ -17,7 +16,6 @@ interface AppCookies {
   get: (name: string) => { value: string } | undefined;
 }
 
-// Función para obtener el store de cookies con tipos seguros
 const getCookieStore = (): AppCookies => {
   return cookies() as unknown as AppCookies;
 };
@@ -40,7 +38,7 @@ export const setAuthCookie = (userId: number): void => {
     value: userId.toString(),
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    maxAge: 60 * 60 * 24, // 1 día
+    maxAge: 60 * 60 * 24,
     path: '/',
     sameSite: 'strict',
   });

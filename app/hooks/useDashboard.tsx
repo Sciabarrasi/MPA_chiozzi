@@ -36,7 +36,7 @@ export function useDashboard() {
           content: postContent,
           imagePublicId: imageData.publicId,
           imageUrl: imageData.url,
-          userId: 2,  // <-- Aquí agregamos el userId temporalmente
+          userId: 2,
         }),
       });
 

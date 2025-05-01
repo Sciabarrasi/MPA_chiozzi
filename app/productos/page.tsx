@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/dialog"
 
 export default function ProductosPage() {
-  // Función para sincronizar las imágenes del diálogo con las selecciones
   return (
     <div className="min-h-screen bg-background text-white">
       <Navbar />

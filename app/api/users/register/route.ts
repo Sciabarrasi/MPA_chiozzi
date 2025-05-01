@@ -1,4 +1,3 @@
-// app/api/users/register/route.ts
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import prisma from "@/lib/prisma";
@@ -8,7 +7,6 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { email, password, name } = body;
 
-    // Validaciones
     if (!email || !password || !name) {
       return NextResponse.json({ message: "Todos los campos son obligatorios" }, { status: 400 });
     }

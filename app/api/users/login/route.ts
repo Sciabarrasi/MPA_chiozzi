@@ -41,7 +41,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Generar el token
     const token = jwt.sign({ userId: user.id }, JWT_SECRET, {
       expiresIn: '1d',
     });
@@ -54,11 +53,10 @@ export async function POST(request: Request) {
       },
     });
 
-    // Setear cookie con el token
     response.cookies.set('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24, // 1 día
+      maxAge: 60 * 60 * 24,
       path: '/',
       sameSite: 'strict',
     });

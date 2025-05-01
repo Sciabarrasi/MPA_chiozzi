@@ -1,4 +1,3 @@
-// hooks/useRegister.ts
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 

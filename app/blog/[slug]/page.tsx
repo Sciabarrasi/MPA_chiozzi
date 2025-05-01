@@ -102,10 +102,8 @@ const blogPosts = [
 ]
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  // Encontrar el post que coincide con el slug
   const post = blogPosts.find((post) => post.slug === params.slug)
 
-  // Si no se encuentra el post, mostrar un mensaje
   if (!post) {
     return (
       <div className="min-h-screen bg-background text-white flex items-center justify-center">
@@ -120,10 +118,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     )
   }
 
-  // Función para convertir el texto con saltos de línea y markdown básico a JSX
   const formatContent = (content: string) => {
     return content.split("\n\n").map((paragraph, index) => {
-      // Detectar si es un encabezado
       if (paragraph.startsWith("### ")) {
         return (
           <h3 key={index} className="text-2xl font-bold mt-8 mb-4">
@@ -132,7 +128,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         )
       }
 
-      // Detectar si es una lista con asteriscos
       if (paragraph.startsWith("- ")) {
         const items = paragraph.split("\n- ").map((item) => item.replace("- ", ""))
         return (
@@ -144,7 +139,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         )
       }
 
-      // Detectar si es una lista numerada
       if (paragraph.match(/^\d+\. /)) {
         const items = paragraph.split("\n").filter((item) => item.match(/^\d+\. /))
         return (
@@ -157,7 +151,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         )
       }
 
-      // Párrafo normal
       return (
         <p key={index} className="mb-4 text-text-secondary leading-relaxed">
           {formatInlineMarkdown(paragraph)}
@@ -166,9 +159,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     })
   }
 
-  // Función para formatear markdown inline (negritas, cursivas)
   const formatInlineMarkdown = (text: string) => {
-    // Reemplazar **texto** con <strong>texto</strong>
     const withBold = text.split(/\*\*(.*?)\*\*/g).map((part, i) =>
       i % 2 === 0 ? (
         part
@@ -179,17 +170,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       ),
     )
 
-    // Aquí se podrían agregar más formatos como cursivas, enlaces, etc.
 
     return withBold
   }
 
   return (
     <div className="min-h-screen bg-background text-white">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section con imagen de portada */}
       <section className="pt-28 relative">
         <div className="relative h-[40vh] md:h-[50vh] w-full">
           <Image src={post.coverImage || "/placeholder.svg"} alt={post.title} fill className="object-cover" priority />
@@ -197,7 +185,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Contenido del Post */}
       <section className="py-12 px-4 -mt-20 relative z-10">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
@@ -211,7 +198,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </Button>
             </div>
 
-            {/* Título y metadatos */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{post.title}</h1>
 
             <div className="flex items-center gap-2 text-sm text-text-secondary mb-8">
@@ -223,7 +209,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <div>{post.author}</div>
             </div>
 
-            {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {post.tags.map((tag) => (
                 <span key={tag} className="px-3 py-1 bg-zinc-800 text-text-secondary rounded-full text-xs">
@@ -232,13 +217,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               ))}
             </div>
 
-            {/* Contenido */}
             <div className="prose prose-invert prose-zinc max-w-none">{formatContent(post.content)}</div>
 
-            {/* Separador */}
             <div className="my-12 border-t border-zinc-800"></div>
 
-            {/* Autor */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-2">Sobre el autor</h3>
               <p className="text-text-secondary">
@@ -248,7 +230,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </p>
             </div>
 
-            {/* Artículos relacionados */}
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6">Artículos relacionados</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -284,7 +265,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   )

@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
-// POST: Crear un nuevo post
 export async function POST(request: Request) {
   const body = await request.json();
   const { title, content, imagePublicId, imageUrl, userId } = body;
@@ -17,7 +16,7 @@ export async function POST(request: Request) {
         content,
         imagePublicId,
         imageUrl,
-        userId,  // ahora sí, pasamos un número válido
+        userId,
       },
     });
 

@@ -104,10 +104,8 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background text-white">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
@@ -121,7 +119,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Lista de Artículos */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-12">
@@ -178,7 +175,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   )
