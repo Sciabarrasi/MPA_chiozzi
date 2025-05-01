@@ -1,35 +1,23 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
+// POST: Crear un nuevo post
 export async function POST(request: Request) {
   const body = await request.json();
-  const { title, content, imagePublicId, imageUrl } = body;
+  const { title, content, imagePublicId, imageUrl, userId } = body;
+
+  if (!userId) {
+    return NextResponse.json({ error: 'userId es obligatorio' }, { status: 400 });
+  }
 
   try {
-    // Buscar si el usuario "eduardo_chiozzi@gmail.com" existe
-    let user = await prisma.user.findUnique({
-      where: { email: 'eduardo_chiozzi@gmail.com' }, // Buscar por el correo del usuario privilegiado
-    });
-
-    // Si el usuario no existe, crearlo
-    if (!user) {
-      user = await prisma.user.create({
-        data: {
-          email: 'eduardo_chiozzi@gmail.com',
-          password: '', // Si no necesitas usar una contraseña, déjalo vacío
-          name: 'Eduardo Chiozzi S.A', // O el nombre que prefieras
-        },
-      });
-    }
-
-    // Crear el post relacionado con el usuario
     const newPost = await prisma.post.create({
       data: {
         title,
         content,
         imagePublicId,
         imageUrl,
-        userId: user.id, // Relacionamos el post con el usuario "Eduardo Chiozzi"
+        userId,  // ahora sí, pasamos un número válido
       },
     });
 
