@@ -1,16 +1,16 @@
-import type React from "react"
-import { CheckCircle, Clock, FileText, Zap, Users, DollarSign } from "lucide-react"
+import { Check, Clock, Users, Zap, DollarSign } from "lucide-react"
 
-const WorkForYouSection: React.FC = () => {
+export default function WorkSection() {
   return (
-    <section className="pb-12 pt-20" style={{ backgroundColor: "#18181B" }}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 flex items-center justify-center text-center">
-          <span className="mr-2" style={{ color: "#E30613" }}>
-            |
-          </span>
-          TRABAJAMOS PARA USTED
-        </h2>
+    <section className="py-16 px-4 bg-zinc-900">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-center mb-12">
+          <div className="flex items-center gap-4">
+            <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+            <h2 className="text-3xl font-bold">TRABAJAMOS PARA USTED</h2>
+          </div>
+        </div>
+
         <p className="mb-16 mx-auto text-center max-w-3xl" style={{ color: "#B0B0B0" }}>
           Nos especializamos en la producción de{" "}
           <span className="font-semibold" style={{ color: "#ED7D00" }}>
@@ -23,59 +23,70 @@ const WorkForYouSection: React.FC = () => {
           nos permite ofrecer soluciones personalizadas que satisfacen las necesidades específicas de cada cliente.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
-          <FeatureItem
-            icon={<CheckCircle className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Alta Calidad"
-            description="Utilizamos materiales premium y tecnologías de vanguardia."
-          />
-          <FeatureItem
-            icon={<Clock className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Entrega Rápida"
-            description="Tiempos optimizados para satisfacer sus necesidades."
-          />
-          <FeatureItem
-            icon={<FileText className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Personalización Total"
-            description="Soluciones a medida para cada cliente."
-          />
-          <FeatureItem
-            icon={<Zap className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Tecnología Avanzada"
-            description="Equipos de última generación para resultados excepcionales."
-          />
-          <FeatureItem
-            icon={<Users className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Asesoramiento Experto"
-            description="Equipo especializado para guiar su proyecto."
-          />
-          <FeatureItem
-            icon={<DollarSign className="w-8 h-8" style={{ color: "#ED7D00" }} />}
-            title="Precios Competitivos"
-            description="La mejor relación calidad-precio del mercado."
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <Check className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Alta Calidad</h3>
+            <p className="text-text-secondary">
+              Utilizamos materiales premium y tecnologías de vanguardia para garantizar productos de la más alta
+              calidad.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <Clock className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Entrega Rápida</h3>
+            <p className="text-text-secondary">
+              Nuestros procesos optimizados nos permiten ofrecer tiempos de entrega más rápidos que la competencia.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <Users className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Personalización Total</h3>
+            <p className="text-text-secondary">
+              Adaptamos cada producto a tus necesidades específicas, desde el diseño hasta los materiales y acabados.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <Zap className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Tecnología Avanzada</h3>
+            <p className="text-text-secondary">
+              Utilizamos equipos de última generación para garantizar impresiones de alta definición y colores
+              vibrantes.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <Users className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Asesoramiento Experto</h3>
+            <p className="text-text-secondary">
+              Nuestro equipo de profesionales te guiará para encontrar la mejor solución para tu proyecto.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6">
+            <div className="w-16 h-16 rounded-full bg-highlight/20 flex items-center justify-center mb-4">
+              <DollarSign className="h-8 w-8 text-highlight" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Precios Competitivos</h3>
+            <p className="text-text-secondary">
+              Ofrecemos la mejor relación calidad-precio del mercado, con opciones para diferentes presupuestos.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   )
 }
-
-const FeatureItem: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({
-  icon,
-  title,
-  description,
-}) => (
-  <div className="flex flex-col items-center text-center">
-    <div
-      className="p-4 rounded-full mb-4 w-16 h-16 flex items-center justify-center"
-      style={{ backgroundColor: "#18181B" }}
-    >
-      {icon}
-    </div>
-    <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
-    <p style={{ color: "#B0B0B0" }}>{description}</p>
-  </div>
-)
-
-export default WorkForYouSection
-

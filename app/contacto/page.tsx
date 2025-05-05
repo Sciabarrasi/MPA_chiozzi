@@ -1,48 +1,55 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
-import { toast, Toaster } from "sonner"
+import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { toast, Toaster } from "sonner";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Navbar } from "../components/navbar"
-import { Footer } from "../components/footer"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 
 export default function ContactoPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     telefono: "",
     asunto: "",
     mensaje: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       // Aquí iría la lógica para enviar el formulario por email
       // Por ejemplo, usando un servidor de acción o una API
 
       // Simulamos un envío exitoso después de 1 segundo
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast.success("Formulario enviado", {
         description: "Nos pondremos en contacto contigo a la brevedad.",
-      })
+      });
 
       // Resetear el formulario
       setFormData({
@@ -51,20 +58,21 @@ export default function ContactoPage() {
         telefono: "",
         asunto: "",
         mensaje: "",
-      })
+      });
     } catch (error) {
       if (error instanceof Error) {
         toast.error("Error al enviar", {
           description: error.message,
-        })
+        });
       }
       toast.error("Error al enviar", {
-        description: "Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.",
-      })
+        description:
+          "Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.",
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const faqItems = [
     {
@@ -92,7 +100,7 @@ export default function ContactoPage() {
       respuesta:
         "Aceptamos archivos en formato AI, PDF, EPS y PSD. Recomendamos que los archivos estén en alta resolución (300 dpi) y con las fuentes convertidas a curvas/trazos.",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-[#121212] text-white">
@@ -103,10 +111,13 @@ export default function ContactoPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">CONTACTO</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+              CONTACTO
+            </h1>
             <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
-              Estamos aquí para responder tus consultas y ayudarte a encontrar la solución perfecta para tus
-              necesidades. Ponte en contacto con nosotros y un especialista te atenderá a la brevedad.
+              Estamos aquí para responder tus consultas y ayudarte a encontrar
+              la solución perfecta para tus necesidades. Ponte en contacto con
+              nosotros y un especialista te atenderá a la brevedad.
             </p>
           </div>
         </div>
@@ -117,13 +128,17 @@ export default function ContactoPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">PONTE EN CONTACTO</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                PONTE EN CONTACTO
+              </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-[#E30613]">Información de Contacto</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-[#E30613]">
+                Información de Contacto
+              </h3>
 
               <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
                 <div className="flex items-start gap-3 md:gap-4">
@@ -131,9 +146,11 @@ export default function ContactoPage() {
                     <MapPin className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Dirección</h4>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                      Dirección
+                    </h4>
                     <p className="text-[#9CA3AF] text-sm sm:text-base">
-                      Colectora Oeste 696 (1619), Garín, Pcia. Buenos Aires
+                      Mitre 901, Gálvez - Santa Fe
                     </p>
                   </div>
                 </div>
@@ -143,8 +160,12 @@ export default function ContactoPage() {
                     <Phone className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Teléfono</h4>
-                    <p className="text-[#9CA3AF] text-sm sm:text-base">+54 123 456 7890</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                      Teléfono
+                    </h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">
+                      (03404) 481786
+                    </p>
                   </div>
                 </div>
 
@@ -153,8 +174,12 @@ export default function ContactoPage() {
                     <Mail className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Email</h4>
-                    <p className="text-[#9CA3AF] text-sm sm:text-base">info@chiozzi.com.ar</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                      Email
+                    </h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">
+                      info@chiozzi.com.ar
+                    </p>
                   </div>
                 </div>
 
@@ -163,9 +188,12 @@ export default function ContactoPage() {
                     <Clock className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Horario de Atención</h4>
-                    <p className="text-[#9CA3AF] text-sm sm:text-base">Lunes a Viernes: 8:00 - 18:00</p>
-                    <p className="text-[#9CA3AF] text-sm sm:text-base">Sábados: 9:00 - 13:00</p>
+                    <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                      Horario de Atención
+                    </h4>
+                    <p className="text-[#9CA3AF] text-sm sm:text-base">
+                      Lunes a Viernes: 8:00 - 17:00
+                    </p>
                   </div>
                 </div>
               </div>
@@ -174,13 +202,19 @@ export default function ContactoPage() {
             <div>
               <Card className="bg-[#1A1A1A] border-[#27272A]">
                 <CardContent className="p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-white">Formulario de Contacto</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6 text-white">
+                    Formulario de Contacto
+                  </h3>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="nombre" className="text-xs sm:text-sm font-medium text-white">
-                          Nombre completo <span className="text-[#E30613]">*</span>
+                        <label
+                          htmlFor="nombre"
+                          className="text-xs sm:text-sm font-medium text-white"
+                        >
+                          Nombre completo{" "}
+                          <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
                           id="nombre"
@@ -194,7 +228,10 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-xs sm:text-sm font-medium text-white">
+                        <label
+                          htmlFor="email"
+                          className="text-xs sm:text-sm font-medium text-white"
+                        >
                           Email <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
@@ -212,7 +249,10 @@ export default function ContactoPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="telefono" className="text-xs sm:text-sm font-medium text-white">
+                        <label
+                          htmlFor="telefono"
+                          className="text-xs sm:text-sm font-medium text-white"
+                        >
                           Teléfono
                         </label>
                         <Input
@@ -226,7 +266,10 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="asunto" className="text-xs sm:text-sm font-medium text-white">
+                        <label
+                          htmlFor="asunto"
+                          className="text-xs sm:text-sm font-medium text-white"
+                        >
                           Asunto <span className="text-[#E30613]">*</span>
                         </label>
                         <Input
@@ -242,7 +285,10 @@ export default function ContactoPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="mensaje" className="text-xs sm:text-sm font-medium text-white">
+                      <label
+                        htmlFor="mensaje"
+                        className="text-xs sm:text-sm font-medium text-white"
+                      >
                         Mensaje <span className="text-[#E30613]">*</span>
                       </label>
                       <Textarea
@@ -305,7 +351,9 @@ export default function ContactoPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">PREGUNTAS FRECUENTES</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                PREGUNTAS FRECUENTES
+              </h2>
             </div>
           </div>
 
@@ -314,7 +362,11 @@ export default function ContactoPage() {
               <CardContent className="p-4 sm:p-6">
                 <Accordion type="single" collapsible className="space-y-2">
                   {faqItems.map((item, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="border-[#3F3F46] last:border-0">
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="border-[#3F3F46] last:border-0"
+                    >
                       <AccordionTrigger className="text-base sm:text-lg md:text-xl font-semibold text-white hover:no-underline py-3 sm:py-4">
                         {item.pregunta}
                       </AccordionTrigger>
@@ -332,6 +384,5 @@ export default function ContactoPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-

@@ -1,7 +1,7 @@
 import { Navbar } from "./components/navbar"
 import { Footer } from "./components/footer"
 import HeroSection from "./components/HeroSection"
-import WorkForYouSection from "./components/workSection"
+import WorkSection from "./components/workSection"
 import ServicesSection from "./components/Services"
 import SpecializationsSection from "./components/Specializations"
 import ContactSection from "./components/contactSection"
@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-white">
       <Navbar />
       <HeroSection />
-      <WorkForYouSection />
+      <WorkSection />
       <ServicesSection />
       <SpecializationsSection />
       <ContactSection />

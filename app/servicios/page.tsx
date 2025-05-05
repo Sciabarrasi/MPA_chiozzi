@@ -1,11 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Palette, Printer, Layers, Ruler, Settings } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Palette, Printer, Layers, Ruler, Settings } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Navbar } from "../components/navbar"
-import { Footer } from "../components/footer"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 
 export default function ServiciosPage() {
   return (
@@ -16,11 +22,14 @@ export default function ServiciosPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">NUESTROS SERVICIOS</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+              Nuestros Servicios
+            </h1>
             <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
-              En Chiozzi ofrecemos servicios integrales de alta calidad para todas tus necesidades de etiquetado y
-              packaging. Desde el diseño hasta la impresión final, contamos con la tecnología y experiencia para
-              garantizar resultados excepcionales.
+              En Chiozzi ofrecemos servicios integrales de alta calidad para
+              todas tus necesidades de etiquetado y packaging. Desde el diseño
+              hasta la impresión final, contamos con la tecnología y experiencia
+              para garantizar resultados excepcionales.
             </p>
           </div>
         </div>
@@ -31,44 +40,62 @@ export default function ServiciosPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">DISEÑO Y PREPRENSA</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Diseño y Preprensa
+              </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-[#E30613]">Sistemas de vanguardia</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-[#E30613]">
+                Sistemas de vanguardia
+              </h3>
               <p className="text-[#9CA3AF] mb-4 md:mb-6 text-sm sm:text-base">
-                Nuestro departamento de diseño y preprensa cuenta con los sistemas más avanzados del mercado,
-                permitiéndonos ofrecer soluciones de alta calidad que cumplen con los estándares más exigentes.
+                Nuestro departamento de diseño y preprensa cuenta con los
+                sistemas más avanzados del mercado, permitiéndonos ofrecer
+                soluciones de alta calidad que cumplen con los estándares más
+                exigentes.
               </p>
               <ul className="space-y-3 md:space-y-4 text-sm sm:text-base text-[#9CA3AF]">
                 <li className="flex items-start">
                   <span className="text-[#E30613] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Software especializado:</span> Utilizamos las últimas
-                    versiones de Adobe Creative Suite y software especializado para la industria gráfica.
+                    <span className="font-medium text-white">
+                      Software especializado:
+                    </span>{" "}
+                    Utilizamos las últimas versiones de Adobe Creative Suite y
+                    software especializado para la industria gráfica.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#E30613] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Pruebas digitales certificadas:</span> Realizamos pruebas
-                    de color certificadas que garantizan la fidelidad cromática en el producto final.
+                    <span className="font-medium text-white">
+                      Pruebas digitales certificadas:
+                    </span>{" "}
+                    Realizamos pruebas de color certificadas que garantizan la
+                    fidelidad cromática en el producto final.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#E30613] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Asesoramiento técnico:</span> Nuestro equipo de diseñadores
-                    y técnicos brinda asesoramiento especializado para optimizar cada proyecto.
+                    <span className="font-medium text-white">
+                      Asesoramiento técnico:
+                    </span>{" "}
+                    Nuestro equipo de diseñadores y técnicos brinda
+                    asesoramiento especializado para optimizar cada proyecto.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#E30613] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Flujo de trabajo automatizado:</span> Contamos con un
-                    sistema de flujo de trabajo que optimiza tiempos y garantiza la calidad en cada etapa del proceso.
+                    <span className="font-medium text-white">
+                      Flujo de trabajo automatizado:
+                    </span>{" "}
+                    Contamos con un sistema de flujo de trabajo que optimiza
+                    tiempos y garantiza la calidad en cada etapa del proceso.
                   </div>
                 </li>
               </ul>
@@ -93,7 +120,9 @@ export default function ServiciosPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">IMPRESIÓN FLEXOGRÁFICA DE ALTA CALIDAD</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Impresión Flexográfica de Alta Calidad
+              </h2>
             </div>
           </div>
 
@@ -114,36 +143,50 @@ export default function ServiciosPage() {
                 Maquinaria de última generación
               </h3>
               <p className="text-[#9CA3AF] mb-4 md:mb-6 text-sm sm:text-base">
-                Contamos con equipos de impresión flexográfica de última generación que nos permiten ofrecer resultados
-                excepcionales en términos de definición, registro y reproducción cromática.
+                Contamos con equipos de impresión flexográfica de última
+                generación que nos permiten ofrecer resultados excepcionales en
+                términos de definición, registro y reproducción cromática.
               </p>
               <ul className="space-y-3 md:space-y-4 text-sm sm:text-base text-[#9CA3AF]">
                 <li className="flex items-start">
                   <span className="text-[#D35400] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Impresoras flexográficas multicuerpo:</span> Permiten la
-                    impresión de hasta 10 colores en una sola pasada, garantizando un registro perfecto.
+                    <span className="font-medium text-white">
+                      Impresoras flexográficas multicuerpo:
+                    </span>{" "}
+                    Permiten la impresión de hasta 10 colores en una sola
+                    pasada, garantizando un registro perfecto.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#D35400] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Sistemas de control automático:</span> Monitoreo constante
-                    de la calidad durante todo el proceso de impresión.
+                    <span className="font-medium text-white">
+                      Sistemas de control automático:
+                    </span>{" "}
+                    Monitoreo constante de la calidad durante todo el proceso de
+                    impresión.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#D35400] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Tecnología de secado UV:</span> Permite trabajar con
-                    materiales especiales y garantiza un secado inmediato para un acabado perfecto.
+                    <span className="font-medium text-white">
+                      Tecnología de secado UV:
+                    </span>{" "}
+                    Permite trabajar con materiales especiales y garantiza un
+                    secado inmediato para un acabado perfecto.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#D35400] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Capacidad de producción:</span> Nuestras instalaciones nos
-                    permiten atender proyectos de cualquier volumen, desde pequeñas tiradas hasta grandes producciones.
+                    <span className="font-medium text-white">
+                      Capacidad de producción:
+                    </span>{" "}
+                    Nuestras instalaciones nos permiten atender proyectos de
+                    cualquier volumen, desde pequeñas tiradas hasta grandes
+                    producciones.
                   </div>
                 </li>
               </ul>
@@ -157,14 +200,17 @@ export default function ServiciosPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">UN MUNDO DE COLORES PARA POTENCIAR TU MARCA</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Un Mundo de Colores para Potenciar tu Marca
+              </h2>
             </div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
             <p className="text-base sm:text-lg text-[#9CA3AF]">
-              Aplicamos la mejor tecnología en control de color para garantizar una variedad infinita de tonalidades que
-              reflejen la identidad de cada marca.
+              Aplicamos la mejor tecnología en control de color para garantizar
+              una variedad infinita de tonalidades que reflejen la identidad de
+              cada marca.
             </p>
           </div>
 
@@ -177,12 +223,15 @@ export default function ServiciosPage() {
                 </div>
               </div>
               <CardHeader className="p-4 sm:p-6">
-                <CardTitle className="text-lg sm:text-xl text-white">Gestión de Color Avanzada</CardTitle>
+                <CardTitle className="text-lg sm:text-xl text-white">
+                  Gestión de Color Avanzada
+                </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Utilizamos sistemas de gestión de color calibrados que garantizan la consistencia cromática en todas
-                  las etapas del proceso, desde el diseño hasta la impresión final.
+                  Utilizamos sistemas de gestión de color calibrados que
+                  garantizan la consistencia cromática en todas las etapas del
+                  proceso, desde el diseño hasta la impresión final.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -195,12 +244,15 @@ export default function ServiciosPage() {
                 </div>
               </div>
               <CardHeader className="p-4 sm:p-6">
-                <CardTitle className="text-lg sm:text-xl text-white">Tintas Especiales</CardTitle>
+                <CardTitle className="text-lg sm:text-xl text-white">
+                  Tintas Especiales
+                </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Trabajamos con tintas especiales como metalizadas, fluorescentes y de seguridad, que permiten crear
-                  efectos únicos y diferenciadores para tu producto.
+                  Trabajamos con tintas especiales como metalizadas,
+                  fluorescentes y de seguridad, que permiten crear efectos
+                  únicos y diferenciadores para tu producto.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -213,12 +265,15 @@ export default function ServiciosPage() {
                 </div>
               </div>
               <CardHeader className="p-4 sm:p-6">
-                <CardTitle className="text-lg sm:text-xl text-white">Control de Calidad Cromática</CardTitle>
+                <CardTitle className="text-lg sm:text-xl text-white">
+                  Control de Calidad Cromática
+                </CardTitle>
               </CardHeader>
               <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Realizamos controles de calidad cromática durante todo el proceso de producción, asegurando que los
-                  colores de tu marca se reproduzcan con total fidelidad.
+                  Realizamos controles de calidad cromática durante todo el
+                  proceso de producción, asegurando que los colores de tu marca
+                  se reproduzcan con total fidelidad.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -231,7 +286,9 @@ export default function ServiciosPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">PRECISIÓN Y EXACTITUD EN EL SERVICIO</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Precisión y Exactitud en el Servicio
+              </h2>
             </div>
           </div>
 
@@ -241,37 +298,52 @@ export default function ServiciosPage() {
                 Tecnología avanzada para resultados perfectos
               </h3>
               <p className="text-[#9CA3AF] mb-4 md:mb-6 text-sm sm:text-base">
-                Utilizamos tecnología avanzada para asegurar etiquetas con tolerancias mínimas y ajuste perfecto a cada
-                envase. Nuestros sistemas de control de calidad garantizan que cada etiqueta cumpla con las
-                especificaciones exactas requeridas por cada cliente.
+                Utilizamos tecnología avanzada para asegurar etiquetas con
+                tolerancias mínimas y ajuste perfecto a cada envase. Nuestros
+                sistemas de control de calidad garantizan que cada etiqueta
+                cumpla con las especificaciones exactas requeridas por cada
+                cliente.
               </p>
               <ul className="space-y-3 md:space-y-4 text-sm sm:text-base text-[#9CA3AF]">
                 <li className="flex items-start">
                   <span className="text-[#ED7D00] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Sistemas de registro de alta precisión:</span> Garantizan
-                    una alineación perfecta de todos los colores y elementos de la etiqueta.
+                    <span className="font-medium text-white">
+                      Sistemas de registro de alta precisión:
+                    </span>{" "}
+                    Garantizan una alineación perfecta de todos los colores y
+                    elementos de la etiqueta.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#ED7D00] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Control dimensional automatizado:</span> Asegura que cada
-                    etiqueta cumpla con las dimensiones exactas requeridas.
+                    <span className="font-medium text-white">
+                      Control dimensional automatizado:
+                    </span>{" "}
+                    Asegura que cada etiqueta cumpla con las dimensiones exactas
+                    requeridas.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#ED7D00] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Inspección visual automatizada:</span> Detecta cualquier
-                    imperfección o desviación durante el proceso de producción.
+                    <span className="font-medium text-white">
+                      Inspección visual automatizada:
+                    </span>{" "}
+                    Detecta cualquier imperfección o desviación durante el
+                    proceso de producción.
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#ED7D00] mr-3 font-bold">•</span>
                   <div>
-                    <span className="font-medium text-white">Ajuste perfecto a cada envase:</span> Nuestras etiquetas se
-                    adaptan perfectamente a la forma y tamaño de cada envase, garantizando una aplicación impecable.
+                    <span className="font-medium text-white">
+                      Ajuste perfecto a cada envase:
+                    </span>{" "}
+                    Nuestras etiquetas se adaptan perfectamente a la forma y
+                    tamaño de cada envase, garantizando una aplicación
+                    impecable.
                   </div>
                 </li>
               </ul>
@@ -296,14 +368,18 @@ export default function ServiciosPage() {
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">VERSATILIDAD: SOLUCIONES PERSONALIZADAS</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">
+                Versatilidad: Soluciones Personalizadas
+              </h2>
             </div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
             <p className="text-base sm:text-lg text-[#9CA3AF]">
-              Ofrecemos soluciones personalizadas para cada producto, con etiquetas adaptadas a distintos mercados y
-              necesidades. Nuestras opciones de diferenciación maximizan el impacto visual y comunicacional de tu marca.
+              Ofrecemos soluciones personalizadas para cada producto, con
+              etiquetas adaptadas a distintos mercados y necesidades. Nuestras
+              opciones de diferenciación maximizan el impacto visual y
+              comunicacional de tu marca.
             </p>
           </div>
 
@@ -318,20 +394,17 @@ export default function ServiciosPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Industria Alimenticia</h3>
+                  <h3 className="text-white font-semibold text-base sm:text-lg">
+                    Industria Alimenticia
+                  </h3>
                 </div>
               </div>
               <CardContent className="p-4 sm:p-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas resistentes a la humedad, bajas temperaturas y grasas, cumpliendo con todas las normativas
-                  del sector.
+                  Etiquetas resistentes a la humedad, bajas temperaturas y
+                  grasas, cumpliendo con todas las normativas del sector.
                 </CardDescription>
               </CardContent>
-              <CardFooter className="px-4 pb-4 sm:px-6 sm:pb-6">
-                <Button variant="outline" className="w-full border-[#E30613]/70 text-[#E30613]/80 hover:bg-[#E30613]/5">
-                  Ver ejemplos
-                </Button>
-              </CardFooter>
             </Card>
 
             <Card className="bg-[#121212] border-[#27272A]">
@@ -344,20 +417,17 @@ export default function ServiciosPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Sector Farmacéutico</h3>
+                  <h3 className="text-white font-semibold text-base sm:text-lg">
+                    Sector Farmacéutico
+                  </h3>
                 </div>
               </div>
               <CardContent className="p-4 sm:p-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas de alta precisión con elementos de seguridad y trazabilidad, cumpliendo con estrictas
-                  normativas.
+                  Etiquetas de alta precisión con elementos de seguridad y
+                  trazabilidad, cumpliendo con estrictas normativas.
                 </CardDescription>
               </CardContent>
-              <CardFooter className="px-4 pb-4 sm:px-6 sm:pb-6">
-                <Button variant="outline" className="w-full border-[#E30613]/70 text-[#E30613]/80 hover:bg-[#E30613]/5">
-                  Ver ejemplos
-                </Button>
-              </CardFooter>
             </Card>
 
             <Card className="bg-[#121212] border-[#27272A]">
@@ -370,20 +440,17 @@ export default function ServiciosPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Bebidas y Vinos</h3>
+                  <h3 className="text-white font-semibold text-base sm:text-lg">
+                    Bebidas y Vinos
+                  </h3>
                 </div>
               </div>
               <CardContent className="p-4 sm:p-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas premium con acabados especiales como stamping, relieves y barnizados que destacan la calidad
-                  del producto.
+                  Etiquetas premium con acabados especiales como stamping,
+                  relieves y barnizados que destacan la calidad del producto.
                 </CardDescription>
               </CardContent>
-              <CardFooter className="px-4 pb-4 sm:px-6 sm:pb-6">
-                <Button variant="outline" className="w-full border-[#E30613]/70 text-[#E30613]/80 hover:bg-[#E30613]/5">
-                  Ver ejemplos
-                </Button>
-              </CardFooter>
             </Card>
 
             <Card className="bg-[#121212] border-[#27272A]">
@@ -396,20 +463,17 @@ export default function ServiciosPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Cosmética</h3>
+                  <h3 className="text-white font-semibold text-base sm:text-lg">
+                    Cosmética
+                  </h3>
                 </div>
               </div>
               <CardContent className="p-4 sm:p-6">
                 <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas de alto impacto visual con acabados metalizados, holográficos y texturas que transmiten
-                  exclusividad.
+                  Etiquetas de alto impacto visual con acabados metalizados,
+                  holográficos y texturas que transmiten exclusividad.
                 </CardDescription>
               </CardContent>
-              <CardFooter className="px-4 pb-4 sm:px-6 sm:pb-6">
-                <Button variant="outline" className="w-full border-[#E30613]/70 text-[#E30613]/80 hover:bg-[#E30613]/5">
-                  Ver ejemplos
-                </Button>
-              </CardFooter>
             </Card>
           </div>
         </div>
@@ -417,13 +481,19 @@ export default function ServiciosPage() {
 
       <section className="py-12 md:py-16 bg-gradient-to-r from-[#E30613]/20 via-[#D35400]/20 to-[#121212]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 md:mb-6">¿Listo para potenciar tu producto?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 md:mb-6">
+            ¿Listo para potenciar tu producto?
+          </h2>
           <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 max-w-2xl mx-auto">
-            Nuestro equipo de expertos está preparado para ayudarte a encontrar la solución perfecta para tus
-            necesidades. Contáctanos hoy mismo y descubre cómo podemos llevar tu producto al siguiente nivel.
+            Nuestro equipo de expertos está preparado para ayudarte a encontrar
+            la solución perfecta para tus necesidades. Contáctanos hoy mismo y
+            descubre cómo podemos llevar tu producto al siguiente nivel.
           </p>
           <div className="flex justify-center">
-            <Button className="bg-[#E30613]/70 hover:bg-[#E30613]/80 text-white" asChild>
+            <Button
+              className="bg-[#E30613]/70 hover:bg-[#E30613]/80 text-white"
+              asChild
+            >
               <Link href="/contacto">Contáctanos</Link>
             </Button>
           </div>
@@ -432,6 +502,5 @@ export default function ServiciosPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-
