@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -43,14 +42,14 @@ export default function ProductosPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
-                className="bg-primary/70 hover:bg-primary/80 text-white"
+                className="bg-primary/70 text-white hover:bg-primary/90 hover:text-white hover:border-primary transition-colors"
                 asChild
               >
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
               <Button
                 variant="outline"
-                className="border-primary/70 text-primary/80 hover:bg-primary/5"
+                className="border-primary/70 text-primary/80 hover:bg-primary/20 hover:text-white hover:border-primary transition-colors"
               >
                 Ver catálogo completo
               </Button>
@@ -758,38 +757,139 @@ export default function ProductosPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <Card key={index} className="bg-background border-zinc-800">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={`/placeholder.svg?height=300&width=400`}
-                    alt={`Producto destacado ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    Producto Premium {index + 1}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-text-secondary">
-                    Solución de etiquetado especializada para necesidades
-                    específicas de la industria.
-                  </CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <Button
-                    variant="outline"
-                    className="w-full border-primary/70 text-primary/80 hover:bg-primary/5"
-                  >
-                    Ver detalles
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Stamping`}
+                  alt="Stamping"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">Stamping</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Técnica de acabado premium que aplica láminas metálicas para
+                  crear efectos brillantes y elegantes en sus etiquetas.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Troquelados`}
+                  alt="Troquelados"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">
+                  Troquelados
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Cortes precisos y personalizados que dan forma única a sus
+                  etiquetas, permitiendo diseños innovadores y distintivos.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Microcortes+de+Seguridad`}
+                  alt="Microcortes de Seguridad"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">
+                  Microcortes de Seguridad
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Sistema de seguridad que evita la manipulación y
+                  falsificación, ideal para productos que requieren protección
+                  adicional.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Impresiones+Sectorizadas`}
+                  alt="Impresiones Sectorizadas"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">
+                  Impresiones Sectorizadas
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Técnica que permite aplicar diferentes acabados o colores en
+                  áreas específicas de la etiqueta, creando efectos visuales
+                  únicos.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Librito+(BOOKLET)`}
+                  alt="Librito (BOOKLET)"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">
+                  Librito (BOOKLET)
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Etiquetas desplegables que permiten incluir gran cantidad de
+                  información en un espacio reducido, ideal para productos
+                  farmacéuticos.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-background border-zinc-800">
+              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Image
+                  src={`/placeholder.svg?height=300&width=400&text=Impresión+Sobre+Adhesivo`}
+                  alt="Impresión Sobre Adhesivo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-white text-lg">
+                  Impresión Sobre Adhesivo
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-text-secondary">
+                  Técnica especializada que permite imprimir directamente sobre
+                  la superficie adhesiva, creando efectos visuales innovadores.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -804,7 +904,7 @@ export default function ProductosPage() {
             solución perfecta para tus necesidades de etiquetado y packaging.
           </p>
           <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-            Contáctanos
+            <Link href="/contacto">Contáctanos</Link>
           </Button>
         </div>
       </section>

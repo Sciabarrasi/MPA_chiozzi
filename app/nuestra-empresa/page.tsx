@@ -202,7 +202,7 @@ export default function NuestraEmpresaPage() {
             <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-primary/10 mt-6 md:mt-0">
               <Image
                 src="/placeholder.svg?height=800&width=600"
-                alt="Historia de Chiozzi"
+                alt="Youtube Video"
                 fill
                 className="object-cover"
               />
@@ -416,27 +416,15 @@ export default function NuestraEmpresaPage() {
                 Este logro es el resultado del esfuerzo conjunto de un equipo
                 apasionado por brindar siempre el mejor servicio y producto.
               </p>
-              <div className="mt-6 md:mt-8">
-                <Button className="bg-primary/70 hover:bg-primary/80 text-white text-sm md:text-base">
-                  Ver certificación
-                </Button>
-              </div>
             </div>
             <div className="relative order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-6 md:p-8 mb-6 md:mb-0">
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <div className="relative order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-6 md:p-8 mb-6 md:mb-0">
                 <Image
-                  src="/placeholder.svg?height=150&width=150&text=ISO+9001"
+                  src="/Logo_Iso_Iram_Blanco.png"
                   alt="Certificación ISO 9001"
-                  width={120}
-                  height={120}
-                  className="object-contain w-full max-w-[100px] md:max-w-[150px] mx-auto"
-                />
-                <Image
-                  src="/placeholder.svg?height=150&width=150&text=IRAM"
-                  alt="Certificación IRAM"
-                  width={120}
-                  height={120}
-                  className="object-contain w-full max-w-[100px] md:max-w-[150px] mx-auto"
+                  width={300}
+                  height={300}
+                  className="object-contain mx-auto"
                 />
               </div>
             </div>
