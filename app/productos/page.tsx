@@ -764,7 +764,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Stamping`}
                   alt="Stamping"
                   fill
-                  className="object-cover"
+                  className="text-white object-cover"
                 />
               </div>
               <CardHeader>
@@ -784,7 +784,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Troquelados`}
                   alt="Troquelados"
                   fill
-                  className="object-cover"
+                  className="text-white object-cover"
                 />
               </div>
               <CardHeader>
@@ -806,7 +806,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Microcortes+de+Seguridad`}
                   alt="Microcortes de Seguridad"
                   fill
-                  className="object-cover"
+                  className="text-white object-cover"
                 />
               </div>
               <CardHeader>
@@ -829,7 +829,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Impresiones+Sectorizadas`}
                   alt="Impresiones Sectorizadas"
                   fill
-                  className="object-cover"
+                  className="text-white object-cover"
                 />
               </div>
               <CardHeader>
@@ -852,7 +852,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Librito+(BOOKLET)`}
                   alt="Librito (BOOKLET)"
                   fill
-                  className="object-cover"
+                  className="text-white object-cover"
                 />
               </div>
               <CardHeader>
@@ -875,7 +875,7 @@ export default function ProductosPage() {
                   src={`/placeholder.svg?height=300&width=400&text=Impresión+Sobre+Adhesivo`}
                   alt="Impresión Sobre Adhesivo"
                   fill
-                  className="object-cover"
+                  className=" text-white object-cover"
                 />
               </div>
               <CardHeader>

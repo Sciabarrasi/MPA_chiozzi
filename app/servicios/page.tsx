@@ -41,7 +41,7 @@ export default function ServiciosPage() {
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
               <h2 className="text-2xl sm:text-3xl font-bold">
-                Diseño y Preprensa
+                DISEÑO Y PREPRENSA
               </h2>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function ServiciosPage() {
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
               <h2 className="text-2xl sm:text-3xl font-bold">
-                Impresión Flexográfica de Alta Calidad
+                IMPRESIÓN FLEXOGRÁFICA DE ALTA CALIDAD
               </h2>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function ServiciosPage() {
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
               <h2 className="text-2xl sm:text-3xl font-bold">
-                Un Mundo de Colores para Potenciar tu Marca
+                UN MUNDO DE COLORES PARA POTENCIAR TU MARCA
               </h2>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function ServiciosPage() {
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
               <h2 className="text-2xl sm:text-3xl font-bold">
-                Precisión y Exactitud en el Servicio
+                PRECISIÓN Y EXACTITUD EN EL SERVICIO
               </h2>
             </div>
           </div>
@@ -369,7 +369,7 @@ export default function ServiciosPage() {
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
               <h2 className="text-2xl sm:text-3xl font-bold">
-                Versatilidad: Soluciones Personalizadas
+                VERSATILIDAD: SOLUCIONES PERSONALIZADAS
               </h2>
             </div>
           </div>
