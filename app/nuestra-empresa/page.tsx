@@ -422,8 +422,8 @@ export default function NuestraEmpresaPage() {
                 <Image
                   src="/Logo_Iso_Iram_Blanco.png"
                   alt="Certificación ISO 9001"
-                  width={300}
-                  height={300}
+                  width={350}
+                  height={350}
                   className="object-contain mx-auto"
                 />
               </div>
