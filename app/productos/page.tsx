@@ -40,18 +40,12 @@ export default function ProductosPage() {
               el mercado. Nuestras tecnologías avanzadas y materiales premium
               garantizan resultados excepcionales para todo tipo de industrias.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex justify-center">
               <Button
                 className="bg-primary/70 text-white hover:bg-primary/90 hover:text-white hover:border-primary transition-colors"
                 asChild
               >
                 <Link href="/contacto">Solicitar presupuesto</Link>
-              </Button>
-              <Button
-                variant="outline"
-                className="border-primary/70 text-primary/80 hover:bg-primary/20 hover:text-white hover:border-primary transition-colors"
-              >
-                Ver catálogo completo
               </Button>
             </div>
           </div>
@@ -742,6 +736,68 @@ export default function ProductosPage() {
                     </div>
                   </DialogContent>
                 </Dialog>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">TERMINACIONES</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-zinc-900 rounded-lg overflow-hidden">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  Terminaciones Premium
+                </h3>
+                <div className="relative h-64 mb-6 rounded-md overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600&text=Terminaciones+Premium"
+                    alt="Terminaciones Premium"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-text-secondary mb-6">
+                  Elevamos la calidad visual y táctil de tus etiquetas con
+                  acabados exclusivos como stamping metalizado, relieves,
+                  barnizados selectivos UV y laminados especiales. Estas
+                  terminaciones premium añaden elegancia y distinción, ideales
+                  para productos de alta gama en sectores como vinos, licores,
+                  cosmética y alimentos gourmet.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-zinc-900 rounded-lg overflow-hidden">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4 text-highlight">
+                  Terminaciones Funcionales
+                </h3>
+                <div className="relative h-64 mb-6 rounded-md overflow-hidden">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600&text=Terminaciones+Funcionales"
+                    alt="Terminaciones Funcionales"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-text-secondary mb-6">
+                  Soluciones técnicas que mejoran el rendimiento y durabilidad
+                  de tus etiquetas en condiciones exigentes. Incluyen laminados
+                  resistentes a la humedad, barnices anti-rayado, acabados
+                  resistentes a temperaturas extremas y protección UV. Perfectas
+                  para productos expuestos a condiciones adversas como
+                  cosméticos, productos químicos y alimentos refrigerados o
+                  congelados.
+                </p>
               </div>
             </div>
           </div>
