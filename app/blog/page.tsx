@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -7,32 +10,102 @@ import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 
 interface BlogPost {
-  id: string;
+  id: number;
   title: string;
   content: string;
   imageUrl: string;
+  imagePublicId: string;
   createdAt: string;
 }
 
-export default async function BlogPage() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
-    cache: 'no-store'
-  });
-  
-  if (!response.ok) {
-    throw new Error('Error al cargar los posts');
-  }
-  
-  const blogPosts: BlogPost[] = await response.json();
+export default function BlogPage() {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const response = await fetch('/api/posts', {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(`Error ${response.status}: ${errorText || 'Error desconocido'}`);
+        }
+        
+        const data = await response.json();
+        setBlogPosts(data);
+      } catch (err) {
+        console.error('Error fetching posts:', err);
+        setError(err instanceof Error ? err.message : 'Error al cargar los posts');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  const handleRetry = () => {
+    setError(null);
+    setLoading(true);
+  };
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    try {
+      const date = new Date(dateString);
+      return date.toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    } catch {
+      return dateString;
+    }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background text-white">
+        <Navbar />
+        <section className="pt-28 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <p>Cargando artículos...</p>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background text-white">
+        <Navbar />
+        <section className="pt-28 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-3xl font-bold mb-4">Error al cargar el blog</h1>
+            <p className="text-text-secondary mb-6">{error}</p>
+            <Button 
+              variant="outline" 
+              onClick={handleRetry}
+              className="border-primary text-primary hover:bg-primary/10"
+            >
+              Intentar nuevamente
+            </Button>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-white">
@@ -59,45 +132,51 @@ export default async function BlogPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="bg-background border-zinc-800 overflow-hidden flex flex-col h-full">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={post.imageUrl || "/placeholder.svg"}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
-                    <div className="flex items-center">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {formatDate(post.createdAt)}
-                    </div>
-                    <span>•</span>
-                    <div>Publicado por Eduardo Chiozzi S.A</div>
+          {blogPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <Card key={post.id} className="bg-background border-zinc-800 overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.imageUrl || "/placeholder.svg"}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                   </div>
-                  <CardTitle className="text-xl text-white hover:text-primary transition-colors">
-                    <Link href={`/blog/${post.id}`}>{post.title}</Link>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pb-2 flex-grow">
-                  <CardDescription className="text-text-secondary">
-                    {post.content.substring(0, 120)}...
-                  </CardDescription>
-                </CardContent>
-                <CardFooter className="pt-2">
-                  <Button variant="link" className="text-primary p-0 flex items-center" asChild>
-                    <Link href={`/blog/${post.id}`}>
-                      Leer más <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
+                      <div className="flex items-center">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {formatDate(post.createdAt)}
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl text-white hover:text-primary transition-colors">
+                      <Link href={`/blog/${post.id}`}>{post.title}</Link>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pb-2 flex-grow">
+                    <CardDescription className="text-text-secondary line-clamp-3">
+                      {post.content}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter className="pt-2">
+                    <Button variant="link" className="text-primary p-0 flex items-center group" asChild>
+                      <Link href={`/blog/${post.id}`}>
+                        Leer más <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-text-secondary">No hay artículos disponibles</p>
+            </div>
+          )}
         </div>
       </section>
 

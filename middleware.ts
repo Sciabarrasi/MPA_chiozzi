@@ -13,7 +13,7 @@ type JWTToken = {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  const protectedRoutes = ['/api/posts', '/api/users']
+  const protectedRoutes = ['/api/users']
   const isProtected = protectedRoutes.some(route => pathname.startsWith(route))
 
   if (isProtected) {
@@ -44,7 +44,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/api/posts/:path*',
     '/api/users/:path*',
   ],
 }
