@@ -1,4 +1,3 @@
-// hooks/useLogin.ts
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -28,7 +27,6 @@ export default function useLogin() {
         throw new Error(result.error);
       }
 
-      // Redirigir manualmente para mejor control
       if (result?.url) {
         router.push(result.url);
       } else {

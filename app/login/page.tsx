@@ -48,7 +48,6 @@ export default function LoginPage() {
                 )}
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Campos del formulario (se mantienen igual) */}
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-white">
                       Email

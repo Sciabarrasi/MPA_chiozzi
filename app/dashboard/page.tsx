@@ -1,5 +1,5 @@
 "use client";
-import { Save, ImageIcon } from "lucide-react";
+import { Save, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,8 +15,12 @@ import { Footer } from "../components/footer";
 import ImageUploader from "../components/imageUploader";
 import { Input } from "@/components/ui/input";
 import { useDashboard } from "../hooks/useDashboard";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useSession, signOut } from "next-auth/react";
 
 export default function DashboardPage() {
+  const { data: session, status } = useSession();
   const {
     postTitle,
     setPostTitle,
@@ -26,6 +30,22 @@ export default function DashboardPage() {
     handleSubmit,
     isSubmitting,
   } = useDashboard();
+  
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push('/access-denied');
+    }
+  }, [status, router]);
+
+  if (status === "loading" || !session) {
+    return (
+      <div className="min-h-screen bg-background text-white flex items-center justify-center">
+        <p>Cargando...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-white">
@@ -40,15 +60,16 @@ export default function DashboardPage() {
                 Panel de Administración
               </h1>
               <p className="text-text-secondary mt-2">
-                Gestiona el contenido del blog
+                Bienvenido, {session.user?.name || session.user?.email}
               </p>
             </div>
             <div className="flex items-center gap-3">
               <Button
                 variant="outline"
                 className="border-zinc-700 text-text-secondary hover:text-white hover:border-white"
+                onClick={() => signOut({ callbackUrl: '/login' })}
               >
-                <ImageIcon className="mr-2 h-4 w-4" /> Cerrar Sesión
+                <LogOut className="mr-2 h-4 w-4" /> Cerrar Sesión
               </Button>
             </div>
           </div>

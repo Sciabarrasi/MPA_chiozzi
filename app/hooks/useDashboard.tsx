@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 export function useDashboard() {
+  const { data: session } = useSession();
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
   const [imageData, setImageData] = useState<{
@@ -17,9 +19,20 @@ export function useDashboard() {
     });
   };
 
+  const handleLogout = async () => {
+    await signOut({ callbackUrl: '/login' });
+  };
+
   const handleSubmit = async () => {
     if (!postTitle || !postContent || !imageData) {
       alert("Por favor completa todos los campos");
+      return;
+    }
+
+    const userId = session?.user && (session.user as { id: string }).id;
+    
+    if (!userId) {
+      alert("No estás autenticado");
       return;
     }
 
@@ -36,7 +49,7 @@ export function useDashboard() {
           content: postContent,
           imagePublicId: imageData.publicId,
           imageUrl: imageData.url,
-          userId: 2,
+          userId: userId,
         }),
       });
 
@@ -63,6 +76,8 @@ export function useDashboard() {
     imageData,
     handleImageUpload,
     handleSubmit,
+    handleLogout,
     isSubmitting,
+    session,
   };
 }
