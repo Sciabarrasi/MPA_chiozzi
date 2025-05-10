@@ -252,6 +252,12 @@ export default function ProductosPage() {
         </div>
       </section>
 
+      <div className="w-full bg-zinc-900 py-4">
+        <div className="container mx-auto">
+          <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
+        </div>
+      </div>
+
       <section className="py-16 bg-zinc-900">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-12">
@@ -803,6 +809,12 @@ export default function ProductosPage() {
           </div>
         </div>
       </section>
+
+      <div className="w-full bg-background py-4">
+        <div className="container mx-auto">
+          <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
+        </div>
+      </div>    
 
       <section className="py-16 px-4">
         <div className="container mx-auto">

@@ -1,4 +1,7 @@
+// hooks/useLogin.ts
 import { useState } from 'react';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function useLogin() {
   const [showPassword, setShowPassword] = useState(false);
@@ -6,6 +9,7 @@ export default function useLogin() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,21 +17,23 @@ export default function useLogin() {
     setError(null);
 
     try {
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
+      const result = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+        callbackUrl: '/dashboard',
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Error al iniciar sesión');
+      if (result?.error) {
+        throw new Error(result.error);
       }
 
-      // Redirigir con recarga para asegurar que el middleware tenga la cookie
-      window.location.href = '/dashboard';
+      // Redirigir manualmente para mejor control
+      if (result?.url) {
+        router.push(result.url);
+      } else {
+        router.push('/dashboard');
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al iniciar sesión');
     } finally {
