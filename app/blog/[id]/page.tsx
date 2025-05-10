@@ -16,12 +16,24 @@ interface BlogPost {
   imagePublicId?: string;
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const postId = Number(params.id);
+export async function generateStaticParams() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const posts = await fetch(`${baseUrl}/api/posts`).then((res) => res.json());
+
+  return posts.map((post: BlogPost) => ({
+    id: post.id.toString(),
+  }));
+}
+
+export default async function BlogPostPage(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+  const postIdStr = params?.id;
+
+  if (!postIdStr) {
+    return notFound();
+  }
+
+  const postId = Number(postIdStr);
   if (isNaN(postId)) {
     return notFound();
   }
@@ -30,20 +42,20 @@ export default async function BlogPostPage({
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
     const postResponse = await fetch(`${baseUrl}/api/posts/${postId}`, {
-      next: { revalidate: 60 }
+      next: { revalidate: 60 },
     });
 
     if (!postResponse.ok) {
       if (postResponse.status === 404) {
         return notFound();
       }
-      
+
       const errorData = await postResponse.json().catch(() => null);
-      console.error('Error en API:', {
+      console.error("Error en API:", {
         status: postResponse.status,
-        error: errorData?.error || 'Error desconocido'
+        error: errorData?.error || "Error desconocido",
       });
-      throw new Error(errorData?.error || 'Error al cargar el post');
+      throw new Error(errorData?.error || "Error al cargar el post");
     }
 
     const post: BlogPost = await postResponse.json();
@@ -51,17 +63,15 @@ export default async function BlogPostPage({
     let relatedPosts: BlogPost[] = [];
     try {
       const allPostsResponse = await fetch(`${baseUrl}/api/posts`, {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       });
 
       if (allPostsResponse.ok) {
         const allPosts: BlogPost[] = await allPostsResponse.json();
-        relatedPosts = allPosts
-          .filter((otherPost) => otherPost.id !== post.id)
-          .slice(0, 2);
+        relatedPosts = allPosts.filter((p) => p.id !== post.id).slice(0, 2);
       }
     } catch (error) {
-      console.error('Error obteniendo posts relacionados:', error);
+      console.error("Error obteniendo posts relacionados:", error);
     }
 
     const formatContent = (content: string) => {
@@ -91,15 +101,9 @@ export default async function BlogPostPage({
     return (
       <div className="min-h-screen bg-background text-white">
         <Navbar />
-
         <div className="container mx-auto px-4 pt-28 pb-16">
           <div className="mb-8">
-            <Button
-              variant="outline"
-              size="sm"
-              className="border-zinc-700"
-              asChild
-            >
+            <Button variant="outline" size="sm" className="border-zinc-700" asChild>
               <Link href="/blog" className="flex items-center">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Volver al Blog
@@ -171,9 +175,7 @@ export default async function BlogPostPage({
                           <span>{formatDate(otherPost.createdAt)}</span>
                         </div>
                         <h3 className="text-xl font-semibold mb-3 hover:text-primary transition-colors">
-                          <Link href={`/blog/${otherPost.id}`}>
-                            {otherPost.title}
-                          </Link>
+                          <Link href={`/blog/${otherPost.id}`}>{otherPost.title}</Link>
                         </h3>
                         <p className="text-text-secondary text-sm line-clamp-3">
                           {otherPost.content.substring(0, 120)}...
@@ -186,9 +188,7 @@ export default async function BlogPostPage({
                           className="w-full border-zinc-700 hover:bg-primary/10 hover:text-primary hover:border-primary"
                           asChild
                         >
-                          <Link href={`/blog/${otherPost.id}`}>
-                            Leer artículo
-                          </Link>
+                          <Link href={`/blog/${otherPost.id}`}>Leer artículo</Link>
                         </Button>
                       </div>
                     </div>
@@ -198,7 +198,6 @@ export default async function BlogPostPage({
             </>
           )}
         </div>
-
         <Footer />
       </div>
     );
