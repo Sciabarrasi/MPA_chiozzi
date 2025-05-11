@@ -55,24 +55,28 @@ export function useSinglePost(postId: number) {
   }, [postId]);
 
   const formatContent = useCallback((content: string) => {
-    return content
-      .split("\n")
-      .filter(Boolean)
-      .map((paragraph, index) => (
-        <p key={index} className="mb-4">
-          {paragraph}
-        </p>
-      ));
+    return (
+      <div>
+        {content
+          .split("\n")
+          .filter(Boolean)
+          .map((paragraph, index) => (
+            <p key={index} className="text-white mb-4">
+              {paragraph}
+            </p>
+          ))}
+      </div>
+    );
   }, []);
 
   const formatDate = useCallback((dateString: string) => {
     try {
       const date = new Date(dateString);
-      return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "long",
+      return new Intl.DateTimeFormat("es-ES", {
         day: "numeric",
-      });
+        month: "long",
+        year: "numeric",
+      }).format(date);
     } catch {
       return dateString;
     }
