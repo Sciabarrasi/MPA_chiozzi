@@ -1,19 +1,16 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
-import type { NextRequest } from "next/server";
 
 export async function GET(
-  request: NextRequest,
+  request: Request,
   { params }: { params: { id: string } }
 ) {
   try {
-    const postIdStr = params.id;
-
-    if (!postIdStr || isNaN(Number(postIdStr))) {
+    const postId = Number(params.id);
+    
+    if (isNaN(postId)) {
       return NextResponse.json({ error: "ID de post inválido" }, { status: 400 });
     }
-
-    const postId = Number(postIdStr);
 
     const post = await prisma.post.findUnique({
       where: { id: postId },
