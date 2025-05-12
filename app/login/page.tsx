@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import useLogin from "../hooks/useLogin";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function LoginPage() {
   const {
@@ -18,6 +19,7 @@ export default function LoginPage() {
     password,
     setPassword,
     isLoading,
+    error,
     handleSubmit,
   } = useLogin();
 
@@ -39,6 +41,12 @@ export default function LoginPage() {
               </CardHeader>
 
               <CardContent className="space-y-6 p-6">
+                {error && (
+                  <Alert variant="destructive">
+                    <AlertDescription>{error}</AlertDescription>
+                  </Alert>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-white">

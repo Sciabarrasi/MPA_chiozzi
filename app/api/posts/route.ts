@@ -11,6 +11,13 @@ export async function GET() {
         imageUrl: true,
         imagePublicId: true,
         createdAt: true,
+        user: {
+          select: {
+            id: true,
+            name: true,
+            email: true
+          }
+        }
       },
       orderBy: {
         createdAt: "desc",
@@ -38,21 +45,42 @@ export async function POST(request: Request) {
   }
 
   try {
+    const userIdNumber = parseInt(userId, 10);
+    
+    if (isNaN(userIdNumber)) {
+      return NextResponse.json(
+        { error: "userId debe ser un número válido" },
+        { status: 400 }
+      );
+    }
+
     const newPost = await prisma.post.create({
       data: {
         title,
         content,
         imagePublicId,
         imageUrl,
-        userId,
+        userId: userIdNumber,
       },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            email: true
+          }
+        }
+      }
     });
 
     return NextResponse.json(newPost, { status: 201 });
   } catch (error) {
     console.error("Error creando el post:", error);
     return NextResponse.json(
-      { error: "Error creando el post" },
+      { 
+        error: "Error creando el post",
+        details: error instanceof Error ? error.message : String(error)
+      },
       { status: 500 }
     );
   }
