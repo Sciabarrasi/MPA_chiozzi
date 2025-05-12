@@ -178,7 +178,7 @@ export default function ContactoPage() {
                       Email
                     </h4>
                     <p className="text-[#9CA3AF] text-sm sm:text-base">
-                      info@chiozzi.com.ar
+                      info@echiozzi.com
                     </p>
                   </div>
                 </div>

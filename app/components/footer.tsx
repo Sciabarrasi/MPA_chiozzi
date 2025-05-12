@@ -130,7 +130,7 @@ export function Footer() {
                   href="mailto:info@chiozzi.com.ar"
                   className="text-text-secondary hover:text-white transition-colors"
                 >
-                  info@chiozzi.com.ar
+                  info@echiozzi.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
