@@ -4,7 +4,6 @@ import {
   Award,
   FileCheck,
   Leaf,
-  Download,
   Shield,
   Target,
   Users,
@@ -21,6 +20,7 @@ import {
 } from "@/components/ui/card";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import { DownloadButton } from "../components/download-buttons";
 
 export default function NuestraEmpresaPage() {
   return (
@@ -495,10 +495,11 @@ export default function NuestraEmpresaPage() {
                 periódicamente para mantenerla actualizada con los
                 requerimientos del mercado y la sociedad.
               </p>
-              <Button className="flex items-center gap-2 bg-primary/70 hover:bg-primary/80 text-white w-full sm:w-auto text-sm md:text-base">
-                <Download className="h-4 w-4" />
-                Descargar Política de Calidad
-              </Button>
+              <DownloadButton 
+                text="Descargar Política de Calidad"
+                filePath="/docs/politica-de-calidad.pdf"
+                fileName="Política de Caliad.pdf"
+              />
             </div>
 
             <div className="bg-background p-6 md:p-8 rounded-lg">
@@ -538,12 +539,14 @@ export default function NuestraEmpresaPage() {
                 gestión medioambiental y la promoción de la responsabilidad
                 medioambiental en la sociedad.
               </p>
-              <Button className="flex items-center gap-2 bg-highlight/70 hover:bg-highlight/80 text-white w-full sm:w-auto text-sm md:text-base">
-                <Download className="h-4 w-4" />
-                <span className="whitespace-normal text-center">
-                  Descargar Política de Gestión Ambiental
-                </span>
-              </Button>
+              <DownloadButton 
+                text="Descargar Política de Gestión Ambiental"
+                files={[
+                  { path: "/docs/politica-de-gestion-ambiental-1.pdf", name: "Parte 1 - Gestión Ambiental.pdf" },
+                  { path: "/docs/politica-de-gestion-ambiental-2.pdf", name: "Parte 2 - Gestión Ambiental.pdf" },
+                ]}
+                className="bg-highlight/70 hover:bg-highlight/80"
+              />
             </div>
           </div>
         </div>
