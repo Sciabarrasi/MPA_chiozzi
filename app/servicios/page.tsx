@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Palette, Printer, Layers, Ruler, Settings } from "lucide-react";
-
+import WhatsAppButton from "../components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -499,6 +499,11 @@ export default function ServiciosPage() {
           </div>
         </div>
       </section>
+
+      <WhatsAppButton
+        phoneNumber="(+ 54 9 3404) 653267"
+        message="Hola, quisiera discutir mi próximo proyecto con ustedes !"
+      />
 
       <Footer />
     </div>

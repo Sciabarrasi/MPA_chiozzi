@@ -35,7 +35,7 @@ export function Navbar() {
             <SheetTrigger asChild>
               <Button variant="ghost" className="md:hidden" size="icon">
                 <Menu className="h-6 w-6 text-white" />
-                <span className="sr-only">Abrir menú</span>
+                <span className="text-white sr-only">Abrir menú</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-[#1A1A1A] border-[#27272A]">
