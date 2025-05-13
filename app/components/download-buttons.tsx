@@ -49,9 +49,9 @@ export function DownloadButton({
   return (
     <Button
       onClick={handleDownload}
-      className={`flex items-center gap-2 bg-primary/70 hover:bg-primary/80 text-white w-full sm:w-auto text-sm md:text-base ${className}`}
+      className={`flex items-center gap-1 xs:gap-2 bg-primary/70 hover:bg-primary/80 text-white w-full max-w-[280px] xs:max-w-none sm:w-auto text-xs sm:text-sm md:text-base leading-tight ${className}`}
     >
-      <Download className="h-4 w-4" />
+      <Download className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
       {text}
     </Button>
   );

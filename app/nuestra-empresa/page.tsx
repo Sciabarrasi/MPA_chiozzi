@@ -9,7 +9,7 @@ import {
   Users,
   Lightbulb,
 } from "lucide-react";
-
+import WhatsAppButton from "../components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -495,7 +495,7 @@ export default function NuestraEmpresaPage() {
                 periódicamente para mantenerla actualizada con los
                 requerimientos del mercado y la sociedad.
               </p>
-              <DownloadButton 
+              <DownloadButton
                 text="Descargar Política de Calidad"
                 filePath="/docs/politica-de-calidad.pdf"
                 fileName="Política de Caliad.pdf"
@@ -539,11 +539,17 @@ export default function NuestraEmpresaPage() {
                 gestión medioambiental y la promoción de la responsabilidad
                 medioambiental en la sociedad.
               </p>
-              <DownloadButton 
+              <DownloadButton
                 text="Descargar Política de Gestión Ambiental"
                 files={[
-                  { path: "/docs/politica-de-gestion-ambiental-1.pdf", name: "Parte 1 - Gestión Ambiental.pdf" },
-                  { path: "/docs/politica-de-gestion-ambiental-2.pdf", name: "Parte 2 - Gestión Ambiental.pdf" },
+                  {
+                    path: "/docs/politica-de-gestion-ambiental-1.pdf",
+                    name: "Parte 1 - Gestión Ambiental.pdf",
+                  },
+                  {
+                    path: "/docs/politica-de-gestion-ambiental-2.pdf",
+                    name: "Parte 2 - Gestión Ambiental.pdf",
+                  },
                 ]}
                 className="bg-highlight/70 hover:bg-highlight/80"
               />
@@ -552,6 +558,10 @@ export default function NuestraEmpresaPage() {
         </div>
       </section>
 
+      <WhatsAppButton
+        phoneNumber="(+ 54 9 3404) 653267"
+        message="Hola, quisiera discutir mi próximo proyecto con ustedes !"
+      />
       <Footer />
     </div>
   );

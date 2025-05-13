@@ -5,7 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { toast, Toaster } from "sonner";
-
+import WhatsAppButton from "../components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -382,6 +382,10 @@ export default function ContactoPage() {
         </div>
       </section>
 
+      <WhatsAppButton
+        phoneNumber="(+ 54 9 3404) 653267"
+        message="Hola, quisiera discutir mi próximo proyecto con ustedes !"
+      />
       <Footer />
     </div>
   );

@@ -21,6 +21,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import WhatsAppButton from "../components/whatsapp-button";
 
 export default function ProductosPage() {
   return (
@@ -814,7 +815,7 @@ export default function ProductosPage() {
         <div className="container mx-auto">
           <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
         </div>
-      </div>    
+      </div>
 
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -977,6 +978,10 @@ export default function ProductosPage() {
         </div>
       </section>
 
+      <WhatsAppButton
+        phoneNumber="(+ 54 9 3404) 653267"
+        message="Hola, quisiera discutir mi próximo proyecto con ustedes !"
+      />
       <Footer />
     </div>
   );
