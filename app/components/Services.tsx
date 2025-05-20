@@ -33,7 +33,7 @@ const ServicesSection: React.FC = () => {
           <ServiceCard
             title="Flowpack"
             description="Tecnología de última generación para resultados excepcionales."
-            imageUrl="/chiozzi_productos_0142.png"
+            imageUrl="/chiozzi_productos_0140.png"
           />
         </div>
       </div>
