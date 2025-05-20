@@ -18,8 +18,8 @@ const HeroSection: React.FC = () => {
         <div className="bg-background/70 backdrop-blur-sm p-8 rounded-lg max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Eduardo Chiozzi S.A</h1>
           <p className="text-lg md:text-xl mb-8 text-white">
-            Más de <span className="text-highlight font-semibold">25 años de trayectoria</span> nos han convertido en
-            referentes en impresión flexográfica de alta calidad. En Chiozzi, combinamos{" "}
+            Más de <span className="text-highlight font-semibold">30 años de trayectoria</span> nos han convertido en
+            referentes en impresión flexográfica de alta calidad. En Ind. Gráfica Eduardo Chiozzi, combinamos{" "}
             <span className="text-highlight font-semibold">
               tecnología avanzada, innovación constante y un equipo altamente capacitado
             </span>{" "}

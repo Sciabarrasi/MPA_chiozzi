@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  Play,
   Award,
   FileCheck,
   Leaf,
@@ -10,7 +9,6 @@ import {
   Lightbulb,
 } from "lucide-react";
 import WhatsAppButton from "../components/whatsapp-button";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -34,9 +32,9 @@ export default function NuestraEmpresaPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Nuestra Empresa
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary mb-6 md:mb-8 px-2">
-              Conoce la historia, valores y el equipo detrás de Chiozzi, una
-              empresa con más de 30 años de experiencia en la industria gráfica,
+            <p className="text-lg md:text-lg text-text-secondary mb-6 md:mb-8 px-2">
+              Conocé la historia, valores y el equipo detrás de Ind. Gráfica
+              Eduardo Chiozzi, una empresa con más de 30 años de experiencia,
               comprometida con la calidad y la innovación constante.
             </p>
           </div>
@@ -200,24 +198,16 @@ export default function NuestraEmpresaPage() {
               </div>
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-primary/10 mt-6 md:mt-0">
-              <Image
-                src="/placeholder.svg?height=800&width=600"
-                alt="Youtube Video"
-                fill
-                className="object-cover"
-              />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-background/50">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-12 w-12 md:h-16 md:w-16 rounded-full border-2 border-primary/70 bg-background/30 mb-3 md:mb-4"
-                >
-                  <Play className="h-6 w-6 md:h-8 md:w-8 text-primary" />
-                </Button>
-                <p className="text-white text-center px-4 md:px-6 text-sm md:text-base max-w-xs md:max-w-sm">
-                  Conoce nuestra planta, procesos y el equipo que hace posible
-                  ofrecer productos de la más alta calidad
-                </p>
+                <iframe
+                  width="640"
+                  height="400"
+                  src="https://www.youtube.com/embed/mXAJu_xxoVY?si=9hjzVlZS9mWwT-HY"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -243,36 +233,42 @@ export default function NuestraEmpresaPage() {
             soluciones de la más alta calidad a nuestros clientes.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
             {[
               {
-                title: "Diseño Gráfico",
+                title: "Comercial",
                 role: "Departamento Creativo",
                 description:
                   "Equipo especializado en el diseño de etiquetas y packaging de alta calidad, con enfoque en la innovación visual y la comunicación efectiva de marca.",
-                image:
-                  "/placeholder.svg?height=400&width=300&text=Diseño+Gráfico",
+                image: "/comercial-chiozzi.png",
               },
               {
-                title: "Marketing",
+                title: "Administración",
                 role: "Comunicación y Estrategia",
                 description:
                   "Profesionales dedicados a posicionar la marca y productos de la empresa, desarrollando estrategias efectivas para conectar con nuestros clientes.",
-                image: "/placeholder.svg?height=400&width=300&text=Marketing",
+                image: "/administracion-chiozzi.png",
               },
               {
-                title: "Producción",
+                title: "Preprensa",
                 role: "Departamento Técnico",
                 description:
                   "Expertos en procesos de impresión y acabados especiales, garantizando la más alta calidad en cada etiqueta que producimos.",
-                image: "/placeholder.svg?height=400&width=300&text=Producción",
+                image: "/preprensa_chiozzi.png",
               },
               {
-                title: "Ventas",
+                title: "Producción",
                 role: "Atención al Cliente",
                 description:
                   "Equipo orientado a entender y satisfacer las necesidades específicas de cada cliente, ofreciendo soluciones personalizadas.",
-                image: "/placeholder.svg?height=400&width=300&text=Ventas",
+                image: "/produccion_chiozzi.png",
+              },
+              {
+                title: "Control y Despacho",
+                role: "Logística y Calidad",
+                description:
+                  "Responsables de asegurar que cada producto cumpla con los más altos estándares de calidad antes de ser enviado, garantizando entregas puntuales y en perfectas condiciones.",
+                image: "/control_despacho_chiozzi.png",
               },
             ].map((department, index) => (
               <Card
@@ -540,7 +536,7 @@ export default function NuestraEmpresaPage() {
                 medioambiental en la sociedad.
               </p>
               <DownloadButton
-                text="Descargar Política de Gestión Ambiental"
+                text="Descargar Política Ambiental"
                 files={[
                   {
                     path: "/docs/politica-de-gestion-ambiental-1.pdf",
@@ -551,7 +547,7 @@ export default function NuestraEmpresaPage() {
                     name: "Parte 2 - Gestión Ambiental.pdf",
                   },
                 ]}
-                className="bg-highlight/70 hover:bg-highlight/80"
+                className="bg-highlight/70 hover:bg-highlight/80 "
               />
             </div>
           </div>

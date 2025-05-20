@@ -16,12 +16,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1">
             <div className="mb-6">
-              <Image src="/Isotipo.png" alt="Logo de Chiozzi" width={230} height={230} className="mr-2" />
+              <Image
+                src="/Isotipo.png"
+                alt="Logo de Chiozzi"
+                width={230}
+                height={230}
+                className="mr-2"
+              />
             </div>
-            <h3 className="text-primary font-semibold mb-4">Vanguardia, Tecnología e Innovación</h3>
             <p className="text-text-secondary">
-              Poseemos las mejores soluciones en las áreas de Impresión de Etiquetas Autoadhesivas, Packaging y
-              Outsourcing.
+              Soluciones innovadoras de impresión y etiquetado que elevan el
+              valor de tu marca.
             </p>
           </div>
 
@@ -33,21 +38,21 @@ export function Footer() {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/igech"
-                target="_blank" 
+                target="_blank"
                 className="text-text-secondary hover:text-white transition-colors"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a
                 href="https://www.instagram.com/igechiozzi/"
-                target="_blank" 
+                target="_blank"
                 className="text-text-secondary hover:text-white transition-colors"
               >
                 <Instagram className="h-6 w-6" />
               </a>
               <a
                 href="https://www.linkedin.com/company/industria-gr%C3%A1fica-eduardo-chiozzi/posts/?feedView=all"
-                target="_blank" 
+                target="_blank"
                 className="text-text-secondary hover:text-white transition-colors"
               >
                 <Linkedin className="h-6 w-6" />

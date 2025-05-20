@@ -3,13 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 import { ArrowRight } from "lucide-react";
@@ -35,11 +28,12 @@ export default function ProductosPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Soluciones de Etiquetado Premium
             </h1>
-            <p className="text-lg text-text-secondary mb-8">
-              En Chiozzi, nos especializamos en ofrecer soluciones de etiquetado
-              de alta calidad para empresas que buscan destacar sus productos en
-              el mercado. Nuestras tecnologías avanzadas y materiales premium
-              garantizan resultados excepcionales para todo tipo de industrias.
+            <p className="text-xl text-text-secondary mb-8">
+              En Ind. Gráfica Eduardo Chiozzi, nos especializamos en ofrecer
+              soluciones de etiquetado de alta calidad para empresas que buscan
+              destacar sus productos en el mercado. Nuestras tecnologías
+              avanzadas y materiales premium garantizan resultados excepcionales
+              para todo tipo de industrias.
             </p>
             <div className="flex justify-center">
               <Button
@@ -81,6 +75,528 @@ export default function ProductosPage() {
                 ofrecemos soluciones adaptadas a los requerimientos específicos
                 de cada proyecto.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-zinc-900">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">
+                NUESTRAS LÍNEAS DE PRODUCTOS
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-[#E30613]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#E30613]/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <div
+                  id="autoadhesivas-material-opp-blanco"
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src="/chiozzi_productos_0014.png"
+                    alt="Etiquetas Autoadhesivas OPP Blanco"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-[#E30613] transition-colors flex items-center">
+                  Etiquetas Autoadhesivas
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Impresión de alta calidad para todo tipo de productos y
+                  superficies. Disponible en diferentes materiales para
+                  adaptarse a tus necesidades específicas, desde etiquetas para
+                  productos premium hasta aplicaciones que requieren durabilidad
+                  y resistencia.
+                </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="link"
+                      className="text-[#E30613] p-0 flex items-center"
+                    >
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#E30613]">
+                        Etiquetas Autoadhesivas
+                      </DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras etiquetas
+                        autoadhesivas
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div
+                          id="dialog-autoadhesivas-material-opp-blanco"
+                          className="absolute inset-0"
+                        >
+                          <Image
+                            src="/chiozzi_productos_0014.png"
+                            alt="Etiquetas Autoadhesivas OPP Blanco"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">
+                        Aplicaciones:
+                      </h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Ideales para productos alimenticios, bebidas,
+                        cosméticos, farmacéuticos, químicos, industriales y
+                        cualquier producto que requiera etiquetado de alta
+                        calidad y dura.
+                      </p>
+
+                      <h3 className="text-lg font-semibold mb-2">
+                        Materiales:
+                      </h3>
+                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
+                        <li>
+                          <span className="underline">Papel Ilustración:</span>{" "}
+                          Adaptabilidad y flexibilidad, impresión de alta
+                          definición y versatilidad en aplicaciones.
+                          <br />
+                          <span className="underline">Opciones:</span> MATE -
+                          BRILLANTE - SEMIGLOSS
+                        </li>
+                        <br />
+                        <li>
+                          <span className="underline">
+                            OPP Polipropileno Orientado:
+                          </span>{" "}
+                          Material plástico autoadhesivo que se caracteriza por
+                          su resistencia al agua, a la abrasión y a la
+                          intemperie. Es ideal para hacer etiquetas para
+                          envases, productos alimenticios, farmacéuticos, entre
+                          otros.
+                          <br />
+                          <span className="underline">Opciones:</span> OPP
+                          Blanco - OPP Transparente - OPP Metalizado
+                        </li>
+                      </ul>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-[#D35400]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#D35400]/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <div
+                  id="no-autoadhesivas-material-colgantes"
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src="/chiozzi_productos_0310.png"
+                    alt="Etiquetas Colgantes"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-[#D35400] transition-colors flex items-center">
+                  Etiquetas No Autoadhesivas
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Soluciones personalizadas con acabados premium y materiales
+                  especiales. Perfectas para packaging de lujo, etiquetas
+                  colgantes y aplicaciones donde se busca un acabado distintivo.
+                </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="link"
+                      className="text-[#D35400] p-0 flex items-center"
+                    >
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#D35400]">
+                        Etiquetas No Autoadhesivas
+                      </DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras etiquetas no
+                        autoadhesivas
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div
+                          id="dialog-no-autoadhesivas-material-colgantes"
+                          className="absolute inset-0"
+                        >
+                          <Image
+                            src="/chiozzi_productos_0310.png"
+                            alt="Etiquetas Colgantes"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">
+                        Aplicaciones:
+                      </h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Perfectas para productos premium, ropa y accesorios,
+                        packaging de lujo, productos artesanales, y cualquier
+                        aplicación que requiera una presentación distintiva.
+                      </p>
+
+                      <h3 className="text-lg font-semibold mb-2">
+                        Materiales:
+                      </h3>
+                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
+                        <li>
+                          <span className="underline">
+                            Alto Impacto (HIPP):
+                          </span>{" "}
+                          Alta resistencia al contraste de temperaturas, ideal
+                          para contacto con alimentos.
+                        </li>
+                        <br />
+                        <li>
+                          <span className="underline">Wrap Around:</span>{" "}
+                          Resistente al agua y refrigeración, proporcionando una
+                          mayor transparencia.
+                        </li>
+                      </ul>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-[#ED7D00]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#ED7D00]/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <div
+                  id="flowpack-material-alimentos"
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src="/chiozzi_productos_0140.png"
+                    alt="Flowpack para Alimentos"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-[#ED7D00] transition-colors flex items-center">
+                  Flowpack
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Tecnología de última generación para resultados excepcionales.
+                  Soluciones de envasado flexible para alimentos, productos
+                  farmacéuticos y otros artículos que requieren protección y
+                  presentación de alta calidad.
+                </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="link"
+                      className="text-[#ED7D00] p-0 flex items-center"
+                    >
+                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl text-[#ED7D00]">
+                        Flowpack
+                      </DialogTitle>
+                      <DialogDescription className="text-[#9CA3AF] pt-2">
+                        Información detallada sobre nuestras soluciones Flowpack
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4">
+                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
+                        <div
+                          id="dialog-flowpack-material-alimentos"
+                          className="absolute inset-0"
+                        >
+                          <Image
+                            src="/chiozzi_productos_0140.png"
+                            alt="Flowpack para Alimentos"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-semibold mb-2">
+                        Aplicaciones:
+                      </h3>
+                      <p className="text-[#9CA3AF] mb-4">
+                        Solución de packaging integral fabricado con
+                        polipropileno biorientado (BOPP), un material flexible,
+                        ligero y resistente que prolonga la vida útil de los
+                        productos al actuar como barrera contra factores
+                        externos.
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">TERMINACIONES</h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/terminacion_barniz.png"
+                  alt="Terminaciones Premium"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-primary transition-colors flex items-center">
+                  Barniz
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Un detalle que marca la diferencia. El barniz se aplica sobre
+                  la impresión para proteger y realzar el diseño, añadiendo un
+                  acabado profesional a tus etiquetas.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="text-white font-medium">
+                    Opciones disponibles:
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-primary"></span>
+                    <span className="text-gray-300">Mate</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-primary"></span>
+                    <span className="text-gray-300">Brillante</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-highlight/30 transition-all duration-300 hover:shadow-lg hover:shadow-highlight/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/terminacion-secotrizado.png"
+                  alt="Terminaciones Funcionales"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-highlight transition-colors flex items-center">
+                  Secotrizado
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Combinación de barnices mate y brilloso para resaltar detalles
+                  específicos en el diseño. Esta técnica crea un contraste
+                  visual y táctil que añade sofisticación a tus etiquetas.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="text-white font-medium">
+                    Aplicaciones ideales:
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-highlight"></span>
+                    <span className="text-gray-300">Etiquetas premium</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-highlight"></span>
+                    <span className="text-gray-300">Packaging de lujo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-secondary/30 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 flex flex-col h-full">
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src="/laminado_chiozzi.png"
+                  alt="Terminaciones Laminado"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex-grow">
+                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-secondary transition-colors flex items-center">
+                  Laminado
+                </h3>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  Una capa extra de protección que además aporta un acabado
+                  visual increíble. Ideal para productos expuestos a condiciones
+                  exigentes o manipulación frecuente.
+                </p>
+                <div className="space-y-2">
+                  <h4 className="text-white font-medium">
+                    Opciones disponibles:
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-secondary"></span>
+                    <span className="text-gray-300">Mate</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-secondary"></span>
+                    <span className="text-gray-300">Brillante</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="w-full bg-background py-4">
+        <div className="container mx-auto">
+          <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
+        </div>
+      </div>
+
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
+              <h2 className="text-3xl font-bold">DETALLES ESPECIALES</h2>
+            </div>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:grid-flow-row lg:auto-rows-fr">
+              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={`/stamping_chiozzi.png`}
+                    alt="Stamping"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-primary transition-colors">
+                    Stamping
+                  </h3>
+                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
+                    Aplicación de láminas metálicas en frío sobre la etiqueta
+                    para destacar elementos clave y asociarse con lujo y
+                    exclusividad.
+                  </p>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={`/troquelados_chiozzi.png`}
+                    alt="Troquelados"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-secondary transition-colors">
+                    Troquelados
+                  </h3>
+                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
+                    Troquelados a medida, que se adaptan a tu envase.
+                    Creatividad y funcionalidad en el diseño de etiquetas.
+                  </p>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-highlight/50 hover:shadow-lg hover:shadow-highlight/10">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={`/microcortes_chiozzi.png`}
+                    alt="Microcortes de Seguridad"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-highlight transition-colors">
+                    Microcortes de Seguridad
+                  </h3>
+                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
+                    Evitá manipulaciones, asegurando la integridad y
+                    autenticidad del producto.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={`/sectorizadas_chiozzi.png`}
+                    alt="Impresiones Sectorizadas"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-primary transition-colors">
+                    Impresiones Sectorizadas
+                  </h3>
+                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
+                    Zonas específicas dentro de la etiqueta donde no aplicamos
+                    barniz ni protección, dejando ese espacio listo para que
+                    puedas imprimir, por ejemplo: fechas de vencimiento, lotes,
+                    códigos, o cualquier dato variable que tu producto necesite.
+                  </p>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={`/sobre_adhesivo_chiozzi.png`}
+                    alt="Impresión Sobre Adhesivo"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-secondary transition-colors">
+                    Impresión Sobre Adhesivo
+                  </h3>
+                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
+                    Mayor espacio para información adicional en el producto.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -253,727 +769,17 @@ export default function ProductosPage() {
         </div>
       </section>
 
-      <div className="w-full bg-zinc-900 py-4">
-        <div className="container mx-auto">
-          <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
-        </div>
-      </div>
-
-      <section className="py-16 bg-zinc-900">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">
-                NUESTRAS LÍNEAS DE PRODUCTOS
-              </h2>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
-              <div className="p-6">
-                <h3 className="text-xl text-[#E30613] mb-4">
-                  Etiquetas Autoadhesivas
-                </h3>
-
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="autoadhesivas-material-opp-blanco"
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src="/chiozzi_productos_0014.png"
-                      alt="Etiquetas Autoadhesivas OPP Blanco"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="autoadhesivas-material-transparente"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Material+Transparente"
-                      alt="Etiquetas Autoadhesivas Transparentes"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="autoadhesivas-material-ilustracion"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Material+Ilustración"
-                      alt="Etiquetas Autoadhesivas Ilustración"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="autoadhesivas-material-metalizado"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Material+Metalizado"
-                      alt="Etiquetas Autoadhesivas Metalizadas"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                <p className="text-[#9CA3AF] mb-4">
-                  Impresión de alta calidad para todo tipo de productos y
-                  superficies. Disponible en diferentes materiales para
-                  adaptarse a tus necesidades específicas, desde etiquetas para
-                  productos premium hasta aplicaciones que requieren durabilidad
-                  y resistencia.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button
-                      variant="link"
-                      className="text-[#E30613] p-0 flex items-center"
-                    >
-                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl text-[#E30613]">
-                        Etiquetas Autoadhesivas
-                      </DialogTitle>
-                      <DialogDescription className="text-[#9CA3AF] pt-2">
-                        Información detallada sobre nuestras etiquetas
-                        autoadhesivas
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
-                        <div
-                          id="dialog-autoadhesivas-material-opp-blanco"
-                          className="absolute inset-0"
-                        >
-                          <Image
-                            src="/chiozzi_productos_0014.png"
-                            alt="Etiquetas Autoadhesivas OPP Blanco"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-autoadhesivas-material-transparente"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Material+Transparente"
-                            alt="Etiquetas Autoadhesivas Transparentes"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-autoadhesivas-material-ilustracion"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Material+Ilustración"
-                            alt="Etiquetas Autoadhesivas Ilustración"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-autoadhesivas-material-metalizado"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Material+Metalizado"
-                            alt="Etiquetas Autoadhesivas Metalizadas"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Características principales:
-                      </h3>
-                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
-                        <li>
-                          Alta resistencia a la humedad y temperaturas extremas
-                        </li>
-                        <li>Excelente adherencia en diferentes superficies</li>
-                        <li>
-                          Impresión de alta definición con hasta 10 colores
-                        </li>
-                        <li>Acabados especiales: barniz, stamping, relieve</li>
-                        <li>Disponible en diferentes materiales y formatos</li>
-                      </ul>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Aplicaciones:
-                      </h3>
-                      <p className="text-[#9CA3AF] mb-4">
-                        Ideales para productos alimenticios, bebidas,
-                        cosméticos, farmacéuticos, químicos, industriales y
-                        cualquier producto que requiera etiquetado de alta
-                        calidad y durabilidad.
-                      </p>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </div>
-
-            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
-              <div className="p-6">
-                <h3 className="text-xl text-[#D35400] mb-4">
-                  Etiquetas No Autoadhesivas
-                </h3>
-
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="no-autoadhesivas-material-colgantes"
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src="/chiozzi_productos_0310.png"
-                      alt="Etiquetas Colgantes"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="no-autoadhesivas-material-carton"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Cartón+Premium"
-                      alt="Etiquetas de Cartón Premium"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="no-autoadhesivas-material-textil"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Material+Textil"
-                      alt="Etiquetas Textiles"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="no-autoadhesivas-material-papel"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Papel+Especial"
-                      alt="Etiquetas de Papel Especial"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                <p className="text-[#9CA3AF] mb-4">
-                  Soluciones personalizadas con acabados premium y materiales
-                  especiales. Perfectas para packaging de lujo, etiquetas
-                  colgantes y aplicaciones donde se busca un acabado distintivo.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button
-                      variant="link"
-                      className="text-[#D35400] p-0 flex items-center"
-                    >
-                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl text-[#D35400]">
-                        Etiquetas No Autoadhesivas
-                      </DialogTitle>
-                      <DialogDescription className="text-[#9CA3AF] pt-2">
-                        Información detallada sobre nuestras etiquetas no
-                        autoadhesivas
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
-                        <div
-                          id="dialog-no-autoadhesivas-material-colgantes"
-                          className="absolute inset-0"
-                        >
-                          <Image
-                            src="/chiozzi_productos_0310.png"
-                            alt="Etiquetas Colgantes"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-no-autoadhesivas-material-carton"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Cartón+Premium"
-                            alt="Etiquetas de Cartón Premium"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-no-autoadhesivas-material-textil"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Material+Textil"
-                            alt="Etiquetas Textiles"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-no-autoadhesivas-material-papel"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Papel+Especial"
-                            alt="Etiquetas de Papel Especial"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Características principales:
-                      </h3>
-                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
-                        <li>Materiales premium de alta calidad</li>
-                        <li>Diseños personalizados con acabados de lujo</li>
-                        <li>Opciones de troquelado especial</li>
-                        <li>Impresión offset y digital de alta definición</li>
-                        <li>Variedad de formatos y tamaños</li>
-                      </ul>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Aplicaciones:
-                      </h3>
-                      <p className="text-[#9CA3AF] mb-4">
-                        Perfectas para productos premium, ropa y accesorios,
-                        packaging de lujo, productos artesanales, y cualquier
-                        aplicación que requiera una presentación distintiva.
-                      </p>
-
-                      <div className="border-t border-[#27272A] pt-4 mt-4">
-                        <p className="text-sm text-[#9CA3AF]">
-                          ¿Necesitas más información o una cotización
-                          personalizada? Nuestro equipo está listo para
-                          ayudarte.
-                        </p>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </div>
-
-            <div className="bg-[#121212] border-[#27272A] overflow-hidden rounded-lg">
-              <div className="p-6">
-                <h3 className="text-xl text-[#ED7D00] mb-4">Flowpack</h3>
-
-                <div className="relative h-64 mb-4 overflow-hidden rounded-md">
-                  <div
-                    id="flowpack-material-alimentos"
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src="/chiozzi_productos_0142.png"
-                      alt="Flowpack para Alimentos"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="flowpack-material-farmaceuticos"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Flowpack+Farmacéuticos"
-                      alt="Flowpack para Productos Farmacéuticos"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="flowpack-material-cosmeticos"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Flowpack+Cosméticos"
-                      alt="Flowpack para Cosméticos"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div
-                    id="flowpack-material-industrial"
-                    className="absolute inset-0 hidden"
-                  >
-                    <Image
-                      src="/placeholder.svg?height=300&width=400&text=Flowpack+Industrial"
-                      alt="Flowpack Industrial"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                <p className="text-[#9CA3AF] mb-4">
-                  Tecnología de última generación para resultados excepcionales.
-                  Soluciones de envasado flexible para alimentos, productos
-                  farmacéuticos y otros artículos que requieren protección y
-                  presentación de alta calidad.
-                </p>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button
-                      variant="link"
-                      className="text-[#ED7D00] p-0 flex items-center"
-                    >
-                      Ver más detalles <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[700px] bg-[#121212] border-[#27272A] text-white">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl text-[#ED7D00]">
-                        Flowpack
-                      </DialogTitle>
-                      <DialogDescription className="text-[#9CA3AF] pt-2">
-                        Información detallada sobre nuestras soluciones Flowpack
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="mt-4">
-                      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md mb-4">
-                        <div
-                          id="dialog-flowpack-material-alimentos"
-                          className="absolute inset-0"
-                        >
-                          <Image
-                            src="/chiozzi_productos_0142.png"
-                            alt="Flowpack para Alimentos"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-flowpack-material-farmaceuticos"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Farmacéuticos"
-                            alt="Flowpack para Productos Farmacéuticos"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-flowpack-material-cosmeticos"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Cosméticos"
-                            alt="Flowpack para Cosméticos"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                        <div
-                          id="dialog-flowpack-material-industrial"
-                          className="absolute inset-0 hidden"
-                        >
-                          <Image
-                            src="/placeholder.svg?height=300&width=600&text=Flowpack+Industrial"
-                            alt="Flowpack Industrial"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Características principales:
-                      </h3>
-                      <ul className="list-disc pl-5 text-[#9CA3AF] space-y-1 mb-4">
-                        <li>Alta barrera contra humedad, oxígeno y luz</li>
-                        <li>Materiales aptos para contacto con alimentos</li>
-                        <li>Impresión de alta calidad hasta 10 colores</li>
-                        <li>Diferentes opciones de sellado y acabado</li>
-                        <li>
-                          Soluciones personalizadas según necesidades
-                          específicas
-                        </li>
-                      </ul>
-
-                      <h3 className="text-lg font-semibold mb-2">
-                        Aplicaciones:
-                      </h3>
-                      <p className="text-[#9CA3AF] mb-4">
-                        Ideal para envasado de alimentos, productos
-                        farmacéuticos, cosméticos, productos industriales y
-                        cualquier aplicación que requiera protección y
-                        presentación de alta calidad.
-                      </p>
-
-                      <div className="border-t border-[#27272A] pt-4 mt-4">
-                        <p className="text-sm text-[#9CA3AF]">
-                          ¿Necesitas más información o una cotización
-                          personalizada? Nuestro equipo está listo para
-                          ayudarte.
-                        </p>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">TERMINACIONES</h2>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-zinc-900 rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">
-                  Terminaciones Premium
-                </h3>
-                <div className="relative h-64 mb-6 rounded-md overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600&text=Terminaciones+Premium"
-                    alt="Terminaciones Premium"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-text-secondary mb-6">
-                  Elevamos la calidad visual y táctil de tus etiquetas con
-                  acabados exclusivos como stamping metalizado, relieves,
-                  barnizados selectivos UV y laminados especiales. Estas
-                  terminaciones premium añaden elegancia y distinción, ideales
-                  para productos de alta gama en sectores como vinos, licores,
-                  cosmética y alimentos gourmet.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-zinc-900 rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-highlight">
-                  Terminaciones Funcionales
-                </h3>
-                <div className="relative h-64 mb-6 rounded-md overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600&text=Terminaciones+Funcionales"
-                    alt="Terminaciones Funcionales"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-text-secondary mb-6">
-                  Soluciones técnicas que mejoran el rendimiento y durabilidad
-                  de tus etiquetas en condiciones exigentes. Incluyen laminados
-                  resistentes a la humedad, barnices anti-rayado, acabados
-                  resistentes a temperaturas extremas y protección UV. Perfectas
-                  para productos expuestos a condiciones adversas como
-                  cosméticos, productos químicos y alimentos refrigerados o
-                  congelados.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="w-full bg-background py-4">
-        <div className="container mx-auto">
-          <div className="h-1 bg-primary rounded-full w-4/5 mx-auto"></div>
-        </div>
-      </div>
-
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">DETALLES ESPECIALES</h2>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Stamping`}
-                  alt="Stamping"
-                  fill
-                  className="text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">Stamping</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Técnica de acabado premium que aplica láminas metálicas para
-                  crear efectos brillantes y elegantes en sus etiquetas.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Troquelados`}
-                  alt="Troquelados"
-                  fill
-                  className="text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Troquelados
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Cortes precisos y personalizados que dan forma única a sus
-                  etiquetas, permitiendo diseños innovadores y distintivos.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Microcortes+de+Seguridad`}
-                  alt="Microcortes de Seguridad"
-                  fill
-                  className="text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Microcortes de Seguridad
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Sistema de seguridad que evita la manipulación y
-                  falsificación, ideal para productos que requieren protección
-                  adicional.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Impresiones+Sectorizadas`}
-                  alt="Impresiones Sectorizadas"
-                  fill
-                  className="text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Impresiones Sectorizadas
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Técnica que permite aplicar diferentes acabados o colores en
-                  áreas específicas de la etiqueta, creando efectos visuales
-                  únicos.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Librito+(BOOKLET)`}
-                  alt="Librito (BOOKLET)"
-                  fill
-                  className="text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Librito (BOOKLET)
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Etiquetas desplegables que permiten incluir gran cantidad de
-                  información en un espacio reducido, ideal para productos
-                  farmacéuticos.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-zinc-800">
-              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src={`/placeholder.svg?height=300&width=400&text=Impresión+Sobre+Adhesivo`}
-                  alt="Impresión Sobre Adhesivo"
-                  fill
-                  className=" text-white object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Impresión Sobre Adhesivo
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-text-secondary">
-                  Técnica especializada que permite imprimir directamente sobre
-                  la superficie adhesiva, creando efectos visuales innovadores.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">
-            ¿Necesitas una solución personalizada?
+            ¿Necesitás una solución personalizada?
           </h2>
           <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está listo para ayudarte a encontrar la
             solución perfecta para tus necesidades de etiquetado y packaging.
           </p>
           <Button className="bg-primary/70 hover:bg-primary/80 text-white">
-            <Link href="/contacto">Contáctanos</Link>
+            <Link href="/contacto">Contactanos</Link>
           </Button>
         </div>
       </section>

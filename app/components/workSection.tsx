@@ -7,7 +7,7 @@ export default function WorkSection() {
         <div className="flex items-center justify-center mb-12">
           <div className="flex items-center gap-4">
             <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-            <h2 className="text-3xl font-bold">TRABAJAMOS PARA USTED</h2>
+            <h2 className="text-3xl font-bold">TRABAJAMOS PARA TU EMPRESA</h2>
           </div>
         </div>
 

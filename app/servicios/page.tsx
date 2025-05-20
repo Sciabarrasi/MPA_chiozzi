@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Palette, Printer, Layers, Ruler, Settings } from "lucide-react";
+import { Palette, Layers, Settings } from "lucide-react";
 import WhatsAppButton from "../components/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,10 +26,7 @@ export default function ServiciosPage() {
               Nuestros Servicios
             </h1>
             <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
-              En Chiozzi ofrecemos servicios integrales de alta calidad para
-              todas tus necesidades de etiquetado y packaging. Desde el diseño
-              hasta la impresión final, contamos con la tecnología y experiencia
-              para garantizar resultados excepcionales.
+              En Ind. Gráfica Eduardo Chiozzi ofrecemos servicios integrales de alta calidad para todas tus necesidades de etiquetado y packaging. Desde el diseño hasta la impresión final, contamos con la tecnología y experiencia para garantizar resultados excepcionales.
             </p>
           </div>
         </div>
@@ -102,14 +99,11 @@ export default function ServiciosPage() {
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#E30613]/10 mt-6 md:mt-0">
               <Image
-                src="/placeholder.svg?height=800&width=600&text=Diseño+y+Preprensa"
+                src="/preprensa_chiozzi.png"
                 alt="Diseño y Preprensa"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-[#121212]/50 backdrop-blur-sm">
-                <Palette className="h-16 w-16 sm:h-20 sm:w-20 text-[#E30613] opacity-80" />
-              </div>
             </div>
           </div>
         </div>
@@ -129,14 +123,11 @@ export default function ServiciosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#D35400]/10 mt-6 md:mt-0">
               <Image
-                src="/placeholder.svg?height=800&width=600&text=Impresión+Flexográfica"
+                src="/flexografica_chiozzi.png"
                 alt="Impresión Flexográfica"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-[#121212]/50 backdrop-blur-sm">
-                <Printer className="h-16 w-16 sm:h-20 sm:w-20 text-[#D35400] opacity-80" />
-              </div>
             </div>
             <div className="order-1 md:order-2">
               <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-[#D35400]">
@@ -350,14 +341,11 @@ export default function ServiciosPage() {
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#ED7D00]/10 mt-6 md:mt-0">
               <Image
-                src="/placeholder.svg?height=800&width=600&text=Precisión+y+Exactitud"
+                src="/precision_chiozzi.png"
                 alt="Precisión y Exactitud"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-[#121212]/50 backdrop-blur-sm">
-                <Ruler className="h-16 w-16 sm:h-20 sm:w-20 text-[#ED7D00] opacity-80" />
-              </div>
             </div>
           </div>
         </div>
@@ -387,15 +375,15 @@ export default function ServiciosPage() {
             <Card className="bg-[#121212] border-[#27272A]">
               <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=400&text=Industria+Alimenticia"
-                  alt="Industria Alimenticia"
+                  src="/versatilidad_alimenticia.png"
+                  alt="Alimenticia"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-semibold text-base sm:text-lg">
-                    Industria Alimenticia
+                    Alimenticia
                   </h3>
                 </div>
               </div>
@@ -410,15 +398,15 @@ export default function ServiciosPage() {
             <Card className="bg-[#121212] border-[#27272A]">
               <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=400&text=Sector+Farmacéutico"
-                  alt="Sector Farmacéutico"
+                  src="/versatilidad_lactea.png"
+                  alt="Láctea"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-semibold text-base sm:text-lg">
-                    Sector Farmacéutico
+                    Láctea
                   </h3>
                 </div>
               </div>
@@ -433,15 +421,15 @@ export default function ServiciosPage() {
             <Card className="bg-[#121212] border-[#27272A]">
               <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=400&text=Bebidas+y+Vinos"
-                  alt="Bebidas y Vinos"
+                  src="/versatilidad_cosmetica.png"
+                  alt="Cosmética y Farmacéutica"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-semibold text-base sm:text-lg">
-                    Bebidas y Vinos
+                    Cosmética y Farmacéutica
                   </h3>
                 </div>
               </div>
@@ -456,15 +444,15 @@ export default function ServiciosPage() {
             <Card className="bg-[#121212] border-[#27272A]">
               <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=400&text=Cosmética"
-                  alt="Cosmética"
+                  src="/versatilidad_quimica.png"
+                  alt="Química"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-semibold text-base sm:text-lg">
-                    Cosmética
+                    Química
                   </h3>
                 </div>
               </div>
@@ -486,15 +474,15 @@ export default function ServiciosPage() {
           </h2>
           <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está preparado para ayudarte a encontrar
-            la solución perfecta para tus necesidades. Contáctanos hoy mismo y
-            descubre cómo podemos llevar tu producto al siguiente nivel.
+            la solución perfecta para tus necesidades. Contactanos hoy mismo y
+            descubrí cómo podemos llevar tu producto al siguiente nivel.
           </p>
           <div className="flex justify-center">
             <Button
               className="bg-[#E30613]/70 hover:bg-[#E30613]/80 text-white"
               asChild
             >
-              <Link href="/contacto">Contáctanos</Link>
+              <Link href="/contacto">Contactanos</Link>
             </Button>
           </div>
         </div>
@@ -504,7 +492,6 @@ export default function ServiciosPage() {
         phoneNumber="(+ 54 9 3404) 653267"
         message="Hola, quisiera discutir mi próximo proyecto con ustedes !"
       />
-
       <Footer />
     </div>
   );

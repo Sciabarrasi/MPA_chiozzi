@@ -17,7 +17,7 @@ const ServicesSection: React.FC = () => {
           <span className="mr-2" style={{ color: "#ED7D00" }}>
             |
           </span>
-          NUESTROS SERVICIOS
+          SOLUCIONES
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ServiceCard
