@@ -4,6 +4,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
 } from "lucide-react";
 import Image from "next/image";
@@ -146,6 +147,15 @@ export function Footer() {
                 >
                   (03404) 481786
                 </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MessageCircle className="h-5 w-5 text-[#E30613] flex-shrink-0" />
+                <Link
+                  href="https://wa.me/5493404653267"
+                  className="text-text-secondary hover:text-white transition-colors"
+                >
+                  (+54 9 3404) 653267
+                </Link>
               </div>
             </div>
           </div>

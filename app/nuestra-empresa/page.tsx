@@ -26,16 +26,22 @@ export default function NuestraEmpresaPage() {
       <Navbar />
 
       <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/nuestra-empresa-chiozzi.png"
+            alt="Fondo Nuestra Empresa"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-              Nuestra Empresa
-            </h1>
-            <p className="text-lg md:text-lg text-text-secondary mb-6 md:mb-8 px-2">
-              Conocé la historia, valores y el equipo detrás de Ind. Gráfica
-              Eduardo Chiozzi, una empresa con más de 30 años de experiencia,
-              comprometida con la calidad y la innovación constante.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Nuestra Empresa</h1>
+            <p className="text-lg md:text-xl text-white mb-6 md:mb-8 px-2">
+              Conocé la historia, valores y el equipo detrás de Ind. Gráfica Eduardo Chiozzi, una empresa con más de 30
+              años de experiencia, comprometida con la calidad y la innovación constante.
             </p>
           </div>
         </div>

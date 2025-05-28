@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="relative container mx-auto px-4 pt-40 z-20">
         <div className="bg-background/70 backdrop-blur-sm p-8 rounded-lg max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Eduardo Chiozzi S.A</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Industria Gráfica Eduardo Chiozzi S.A</h1>
           <p className="text-lg md:text-xl mb-8 text-white">
             Más de <span className="text-highlight font-semibold">30 años de trayectoria</span> nos han convertido en
             referentes en impresión flexográfica de alta calidad. En Ind. Gráfica Eduardo Chiozzi, combinamos{" "}
