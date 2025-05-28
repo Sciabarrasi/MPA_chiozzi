@@ -525,7 +525,7 @@ export default function ProductosPage() {
               <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
                 <div className="relative h-64 w-full overflow-hidden">
                   <Image
-                    src={`/troquelados_chiozzi.png`}
+                    src={`/chiozzi_productos_0178.png`}
                     alt="Troquelados"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
