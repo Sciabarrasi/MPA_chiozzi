@@ -22,13 +22,22 @@ export default function ProductosPage() {
       <Navbar />
 
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/chiozzi_productos_0014.png"
+            alt="Fondo Nuestra Empresa"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Soluciones de Etiquetado Premium
             </h1>
-            <p className="text-xl text-text-secondary mb-8">
+            <p className="text-xl text-white mb-8">
               En Ind. Gráfica Eduardo Chiozzi, nos especializamos en ofrecer
               soluciones de etiquetado de alta calidad para empresas que buscan
               destacar sus productos en el mercado. Nuestras tecnologías

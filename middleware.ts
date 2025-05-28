@@ -13,6 +13,12 @@ type JWTToken = {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Permitir el acceso libre a /api/users/register
+  if (pathname === "/api/users/register") {
+    return NextResponse.next();
+  }
+
+  // Definir las rutas protegidas
   const protectedRoutes = ['/api/users']
   const isProtected = protectedRoutes.some(route => pathname.startsWith(route))
 

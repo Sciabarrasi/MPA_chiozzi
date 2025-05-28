@@ -19,13 +19,20 @@ export default function ServiciosPage() {
       <Navbar />
 
       <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-[#E30613]/10 via-[#D35400]/15 to-[#CA8A04]/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/Chiozzi_046.png"
+            alt="Fondo Servicios"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-              Nuestros Servicios
-            </h1>
-            <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">Nuestros Servicios</h1>
+            <p className="text-base sm:text-lg text-white mb-6 md:mb-8 px-2">
               En Ind. Gráfica Eduardo Chiozzi ofrecemos servicios integrales de alta calidad para todas tus necesidades de etiquetado y packaging. Desde el diseño hasta la impresión final, contamos con la tecnología y experiencia para garantizar resultados excepcionales.
             </p>
           </div>

@@ -107,13 +107,22 @@ export default function ContactoPage() {
       <Navbar />
 
       <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-[#E30613]/10 via-[#D35400]/15 to-[#CA8A04]/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/trama-base.png"
+            alt="Fondo Nuestra Empresa"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(227,6,19,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(237,125,0,0.2)_0%,transparent_50%),radial-gradient(circle_at_40%_80%,rgba(211,84,0,0.15)_0%,transparent_40%)]"></div>
+        </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
               CONTACTO
             </h1>
-            <p className="text-base sm:text-lg text-[#9CA3AF] mb-6 md:mb-8 px-2">
+            <p className="text-base sm:text-lg text-white mb-6 md:mb-8 px-2">
               Estamos aquí para responder tus consultas y ayudarte a encontrar
               la solución perfecta para tus necesidades. Contactate con
               nosotros.
@@ -137,7 +146,9 @@ export default function ContactoPage() {
             <div className="flex items-center justify-center mb-8 md:mb-12">
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-                <h2 className="text-2xl sm:text-3xl font-bold">PONTE EN CONTACTO</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold">
+                  PONTE EN CONTACTO
+                </h2>
               </div>
             </div>
 
@@ -153,8 +164,12 @@ export default function ContactoPage() {
                       <MapPin className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Dirección</h4>
-                      <p className="text-[#9CA3AF] text-sm sm:text-base">Mitre 901, Gálvez - Santa Fe</p>
+                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                        Dirección
+                      </h4>
+                      <p className="text-[#9CA3AF] text-sm sm:text-base">
+                        Mitre 901, Gálvez - Santa Fe
+                      </p>
                     </div>
                   </div>
 
@@ -163,8 +178,12 @@ export default function ContactoPage() {
                       <Phone className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Teléfono</h4>
-                      <p className="text-[#9CA3AF] text-sm sm:text-base">(03404) 481786</p>
+                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                        Teléfono
+                      </h4>
+                      <p className="text-[#9CA3AF] text-sm sm:text-base">
+                        (03404) 481786
+                      </p>
                     </div>
                   </div>
 
@@ -173,8 +192,12 @@ export default function ContactoPage() {
                       <Mail className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Email</h4>
-                      <p className="text-[#9CA3AF] text-sm sm:text-base">info@echiozzi.com</p>
+                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                        Email
+                      </h4>
+                      <p className="text-[#9CA3AF] text-sm sm:text-base">
+                        info@echiozzi.com
+                      </p>
                     </div>
                   </div>
 
@@ -183,8 +206,12 @@ export default function ContactoPage() {
                       <Clock className="h-4 w-4 sm:h-6 sm:w-6 text-[#E30613]" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">Horario de Atención</h4>
-                      <p className="text-[#9CA3AF] text-sm sm:text-base">Lunes a Viernes: 8:00 - 17:00</p>
+                      <h4 className="font-medium text-white mb-1 text-sm sm:text-base">
+                        Horario de Atención
+                      </h4>
+                      <p className="text-[#9CA3AF] text-sm sm:text-base">
+                        Lunes a Viernes: 8:00 - 17:00
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -200,8 +227,12 @@ export default function ContactoPage() {
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <label htmlFor="nombre" className="text-xs sm:text-sm font-medium text-white">
-                            Nombre completo <span className="text-[#E30613]">*</span>
+                          <label
+                            htmlFor="nombre"
+                            className="text-xs sm:text-sm font-medium text-white"
+                          >
+                            Nombre completo{" "}
+                            <span className="text-[#E30613]">*</span>
                           </label>
                           <Input
                             id="nombre"
@@ -215,7 +246,10 @@ export default function ContactoPage() {
                         </div>
 
                         <div className="space-y-2">
-                          <label htmlFor="email" className="text-xs sm:text-sm font-medium text-white">
+                          <label
+                            htmlFor="email"
+                            className="text-xs sm:text-sm font-medium text-white"
+                          >
                             Email <span className="text-[#E30613]">*</span>
                           </label>
                           <Input
@@ -233,7 +267,10 @@ export default function ContactoPage() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <label htmlFor="telefono" className="text-xs sm:text-sm font-medium text-white">
+                          <label
+                            htmlFor="telefono"
+                            className="text-xs sm:text-sm font-medium text-white"
+                          >
                             Teléfono
                           </label>
                           <Input
@@ -247,7 +284,10 @@ export default function ContactoPage() {
                         </div>
 
                         <div className="space-y-2">
-                          <label htmlFor="asunto" className="text-xs sm:text-sm font-medium text-white">
+                          <label
+                            htmlFor="asunto"
+                            className="text-xs sm:text-sm font-medium text-white"
+                          >
                             Asunto <span className="text-[#E30613]">*</span>
                           </label>
                           <Input
@@ -263,7 +303,10 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="mensaje" className="text-xs sm:text-sm font-medium text-white">
+                        <label
+                          htmlFor="mensaje"
+                          className="text-xs sm:text-sm font-medium text-white"
+                        >
                           Mensaje <span className="text-[#E30613]">*</span>
                         </label>
                         <Textarea
