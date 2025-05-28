@@ -69,7 +69,7 @@ export default function ImageUploader({
               Arrastra una imagen o haz clic para seleccionar
             </p>
             <CldUploadWidget
-              uploadPreset="prueba"
+              uploadPreset="blog_uploads"
               options={{
                 cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
                 maxFiles: maxImages,
@@ -93,7 +93,7 @@ export default function ImageUploader({
       {imageUrl && (
         <div className="mt-3 flex justify-center">
           <CldUploadWidget
-            uploadPreset="prueba"
+            uploadPreset="blog_uploads"
             options={{
               cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
               maxFiles: maxImages,
