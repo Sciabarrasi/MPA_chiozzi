@@ -12,7 +12,6 @@ import WhatsAppButton from "../components/whatsapp-button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -73,8 +72,7 @@ export default function NuestraEmpresaPage() {
               <CardContent>
                 <p className="text-base md:text-lg text-text-secondary">
                   En Industria Gráfica Eduardo Chiozzi S.A., con 32 años de
-                  experiencia en el rubro flexográfico y 40 años en el rubro
-                  offset, nos dedicamos a ofrecer soluciones de impresión de
+                  experiencia en el rubro flexográfico, nos dedicamos a ofrecer soluciones de impresión de
                   alta calidad que satisfacen las necesidades y expectativas de
                   nuestros clientes. Nos esforzamos constantemente por innovar
                   nuestros procesos y tecnologías para superar sus expectativas.
@@ -123,7 +121,7 @@ export default function NuestraEmpresaPage() {
                     <span className="text-primary mr-2">•</span>
                     <span>
                       <strong className="text-white">Experiencia:</strong> 32
-                      años de experiencia en flexografía y 40 años en offset.
+                      años de experiencia en flexografía.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -243,37 +241,32 @@ export default function NuestraEmpresaPage() {
             {[
               {
                 title: "Comercial",
-                role: "Departamento Creativo",
                 description:
-                  "Equipo especializado en el diseño de etiquetas y packaging de alta calidad, con enfoque en la innovación visual y la comunicación efectiva de marca.",
+                  "Equipo capacitado para brindarte asesoramiento personalizado y encontrar la mejor solución según tus necesidades y volúmenes de producción.",
                 image: "/comercial-chiozzi.png",
               },
               {
                 title: "Administración",
-                role: "Comunicación y Estrategia",
                 description:
-                  "Profesionales dedicados a posicionar la marca y productos de la empresa, desarrollando estrategias efectivas para conectar con nuestros clientes.",
+                  "Profesionales dedicados a que todo funcione de forma ordenada y a tiempo. Nos ocupamos de la gestión de pedidos, facturación y logística interna.",
                 image: "/administracion-chiozzi.png",
               },
               {
                 title: "Preprensa",
-                role: "Departamento Técnico",
                 description:
-                  "Expertos en procesos de impresión y acabados especiales, garantizando la más alta calidad en cada etiqueta que producimos.",
+                  "Expertos en transformar ideas en diseños listos para imprimir. Ajustamos colores, medidas y detalles para que en máquina todo salga perfecto.",
                 image: "/preprensa_chiozzi.png",
               },
               {
                 title: "Producción",
-                role: "Atención al Cliente",
                 description:
-                  "Equipo orientado a entender y satisfacer las necesidades específicas de cada cliente, ofreciendo soluciones personalizadas.",
+                  "Responsables de hacer que tus etiquetas cobren forma. Copiado, montaje e impresión con tecnología, precisión y experiencia.",
                 image: "/produccion_chiozzi.png",
               },
               {
                 title: "Control y Despacho",
-                role: "Logística y Calidad",
                 description:
-                  "Responsables de asegurar que cada producto cumpla con los más altos estándares de calidad antes de ser enviado, garantizando entregas puntuales y en perfectas condiciones.",
+                  "Equipo experto en controlar hasta el último detalle. Controlamos, empaquetamos, rotulamos y enviamos con el mismo cuidado con el que producimos.",
                 image: "/control_despacho_chiozzi.png",
               },
             ].map((department, index) => (
@@ -293,9 +286,6 @@ export default function NuestraEmpresaPage() {
                   <CardTitle className="text-xl md:text-2xl text-white">
                     {department.title}
                   </CardTitle>
-                  <CardDescription className="text-primary text-sm md:text-base">
-                    {department.role}
-                  </CardDescription>
                 </CardHeader>
                 <CardContent className="px-4 pb-4 md:px-6 md:pb-6">
                   <p className="text-text-secondary text-sm md:text-base">

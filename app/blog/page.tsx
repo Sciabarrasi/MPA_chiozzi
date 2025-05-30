@@ -75,7 +75,7 @@ export default function BlogPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
             <p className="text-lg text-text-secondary mb-8">
-              Descubre las últimas tendencias, innovaciones y noticias sobre la
+              Descubrí las últimas tendencias, innovaciones y noticias sobre la
               industria del etiquetado y packaging.
             </p>
           </div>

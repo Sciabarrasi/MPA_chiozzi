@@ -31,9 +31,14 @@ export default function ServiciosPage() {
         </div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">Nuestros Servicios</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+              Nuestros Servicios
+            </h1>
             <p className="text-base sm:text-lg text-white mb-6 md:mb-8 px-2">
-              En Ind. Gráfica Eduardo Chiozzi ofrecemos servicios integrales de alta calidad para todas tus necesidades de etiquetado y packaging. Desde el diseño hasta la impresión final, contamos con la tecnología y experiencia para garantizar resultados excepcionales.
+              En Ind. Gráfica Eduardo Chiozzi ofrecemos servicios integrales de
+              alta calidad para todas tus necesidades de etiquetado y packaging.
+              Desde el diseño hasta la impresión final, contamos con la
+              tecnología y experiencia para garantizar resultados excepcionales.
             </p>
           </div>
         </div>
@@ -106,7 +111,7 @@ export default function ServiciosPage() {
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#E30613]/10 mt-6 md:mt-0">
               <Image
-                src="/preprensa_chiozzi.png"
+                src="/chiozzi_preprensa.png"
                 alt="Diseño y Preprensa"
                 fill
                 className="object-cover"
@@ -358,19 +363,18 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-4">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-8 md:mb-12">
-            <div className="flex items-center gap-3 md:gap-4">
-              <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">
-                VERSATILIDAD: SOLUCIONES PERSONALIZADAS
-              </h2>
+      <section className="py-16" style={{ backgroundColor: "#121212" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <div className="flex flex-col items-center mb-4">
+              <div className="flex items-center mb-2">
+                <div className="w-1 h-8 bg-red-600 mr-4"></div>
+                <h2 className="text-3xl font-bold text-white">
+                  VERSATILIDAD: SOLUCIONES PERSONALIZADAS
+                </h2>
+              </div>
             </div>
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <p className="text-base sm:text-lg text-[#9CA3AF]">
+            <p className="text-gray-300 max-w-4xl mx-auto text-center">
               Ofrecemos soluciones personalizadas para cada producto, con
               etiquetas adaptadas a distintos mercados y necesidades. Nuestras
               opciones de diferenciación maximizan el impacto visual y
@@ -378,98 +382,130 @@ export default function ServiciosPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <Card className="bg-[#121212] border-[#27272A]">
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src="/versatilidad_alimenticia.png"
-                  alt="Alimenticia"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">
+          <div className="space-y-6 xl:space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+              <div
+                className="rounded-lg overflow-hidden border"
+                style={{ backgroundColor: "#121212", borderColor: "#27272a" }}
+              >
+                <div className="h-48 bg-gray-700 flex items-center justify-center">
+                  <Image
+                    src="/versatilidad_alimenticia.png"
+                    alt="Productos Alimenticios"
+                    className="w-full h-full object-cover"
+                    width={300}
+                    height={200}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     Alimenticia
                   </h3>
+                  <p className="text-gray-300 text-sm">
+                    Etiquetas resistentes a la humedad, bajas temperaturas y
+                    grasas, cumpliendo con todas las normativas del sector.
+                  </p>
                 </div>
               </div>
-              <CardContent className="p-4 sm:p-6">
-                <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas resistentes a la humedad, bajas temperaturas y
-                  grasas, cumpliendo con todas las normativas del sector.
-                </CardDescription>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-[#121212] border-[#27272A]">
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src="/versatilidad_lactea.png"
-                  alt="Láctea"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">
+              <div
+                className="rounded-lg overflow-hidden border"
+                style={{ backgroundColor: "#121212", borderColor: "#27272a" }}
+              >
+                <div className="h-48 bg-gray-700 flex items-center justify-center">
+                  <Image
+                    src="/versatilidad_lactea.png"
+                    alt="Productos Lácteos"
+                    className="w-full h-full object-cover"
+                    width={300}
+                    height={200}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     Láctea
                   </h3>
+                  <p className="text-gray-300 text-sm">
+                    Etiquetas de alta precisión con acabados de seguridad y
+                    trazabilidad, cumpliendo con estrictas normativas.
+                  </p>
                 </div>
               </div>
-              <CardContent className="p-4 sm:p-6">
-                <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas de alta precisión con elementos de seguridad y
-                  trazabilidad, cumpliendo con estrictas normativas.
-                </CardDescription>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-[#121212] border-[#27272A]">
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src="/versatilidad_cosmetica.png"
-                  alt="Cosmética y Farmacéutica"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">
+              <div
+                className="rounded-lg overflow-hidden border"
+                style={{ backgroundColor: "#121212", borderColor: "#27272a" }}
+              >
+                <div className="h-48 bg-gray-700 flex items-center justify-center">
+                  <Image
+                    src="/bebidas_vinos_chiozzi.png"
+                    alt="Productos Cosméticos y Farmacéuticos"
+                    className="w-full h-full object-cover"
+                    width={300}
+                    height={200}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    Bebidas y Vinos
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Etiquetas que resisten humedad, frío y manipulación, con
+                    acabados especiales que realzan la presencia en góndola.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-6 lg:gap-8 justify-center xl:max-w-2xl xl:mx-auto">
+              <div
+                className="rounded-lg overflow-hidden border"
+                style={{ backgroundColor: "#121212", borderColor: "#27272a" }}
+              >
+                <div className="h-48 bg-gray-700 flex items-center justify-center">
+                  <Image
+                    src="/versatilidad_cosmetica.png"
+                    alt="Productos Cosméticos y Farmacéuticos 2"
+                    className="w-full h-full object-cover"
+                    width={300}
+                    height={200}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     Cosmética y Farmacéutica
                   </h3>
+                  <p className="text-gray-300 text-sm">
+                    Etiquetas premium con acabados especiales como stamping,
+                    relieves y laminados que destacan la identidad del producto.
+                  </p>
                 </div>
               </div>
-              <CardContent className="p-4 sm:p-6">
-                <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas premium con acabados especiales como stamping,
-                  relieves y barnizados que destacan la calidad del producto.
-                </CardDescription>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-[#121212] border-[#27272A]">
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-t-lg">
-                <Image
-                  src="/versatilidad_quimica.png"
-                  alt="Química"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">
+              <div
+                className="rounded-lg overflow-hidden border"
+                style={{ backgroundColor: "#121212", borderColor: "#27272a" }}
+              >
+                <div className="h-48 bg-gray-700 flex items-center justify-center">
+                  <Image
+                    src="/versatilidad_quimica.png"
+                    alt="Productos Químicos"
+                    className="w-full h-full object-cover"
+                    width={300}
+                    height={200}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
                     Química
                   </h3>
+                  <p className="text-gray-300 text-sm">
+                    Etiquetas de alto impacto visual con acabados metalizados,
+                    holográficos y texturas que transmiten exclusividad.
+                  </p>
                 </div>
               </div>
-              <CardContent className="p-4 sm:p-6">
-                <CardDescription className="text-sm sm:text-base text-[#9CA3AF]">
-                  Etiquetas de alto impacto visual con acabados metalizados,
-                  holográficos y texturas que transmiten exclusividad.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
