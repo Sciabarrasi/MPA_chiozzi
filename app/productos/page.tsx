@@ -450,7 +450,7 @@ export default function ProductosPage() {
             <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-secondary/30 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 flex flex-col h-full">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/laminado_chiozzi.png"
+                  src="/chiozzi_laminado.png"
                   alt="Terminaciones Laminado"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -490,121 +490,137 @@ export default function ProductosPage() {
         </div>
       </div>
 
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-primary rounded-full"></div>
-              <h2 className="text-3xl font-bold">DETALLES ESPECIALES</h2>
+      <section className="py-16" style={{ backgroundColor: "#1d1d1b" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <div className="text-center mb-4">
+              <div className="flex items-center justify-center mb-2">
+                <div className="w-1 h-8 bg-red-600 mr-4"></div>
+                <h2 className="text-3xl font-bold text-white">
+                  DETALLES ESPECIALES
+                </h2>
+              </div>
             </div>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:grid-flow-row lg:auto-rows-fr">
-              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={`/stamping_chiozzi.png`}
-                    alt="Stamping"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-primary transition-colors">
-                    Stamping
-                  </h3>
-                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
-                    Aplicación de láminas metálicas en frío sobre la etiqueta
-                    para destacar elementos clave y asociarse con lujo y
-                    exclusividad.
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              className="rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#121212" }}
+            >
+              <div className="h-48 bg-gray-800 overflow-hidden">
+                <Image
+                  src="/stamping_chiozzi.png"
+                  alt="Productos con Stamping"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                />
               </div>
-              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={`/chiozzi_productos_0178.png`}
-                    alt="Troquelados"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-secondary transition-colors">
-                    Troquelados
-                  </h3>
-                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
-                    Troquelados a medida, que se adaptan a tu envase.
-                    Creatividad y funcionalidad en el diseño de etiquetas.
-                  </p>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-highlight/50 hover:shadow-lg hover:shadow-highlight/10">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={`/microcortes_chiozzi.png`}
-                    alt="Microcortes de Seguridad"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-highlight transition-colors">
-                    Microcortes de Seguridad
-                  </h3>
-                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
-                    Evitá manipulaciones, asegurando la integridad y
-                    autenticidad del producto.
-                  </p>
-                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">Stamping</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Aplicación de láminas metálicas en frío sobre la etiqueta para
+                  destacar elementos clave y asociarse con lujo y exclusividad.
+                </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={`/sectorizadas_chiozzi.png`}
-                    alt="Impresiones Sectorizadas"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-primary transition-colors">
-                    Impresiones Sectorizadas
-                  </h3>
-                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
-                    Zonas específicas dentro de la etiqueta donde no aplicamos
-                    barniz ni protección, dejando ese espacio listo para que
-                    puedas imprimir, por ejemplo: fechas de vencimiento, lotes,
-                    códigos, o cualquier dato variable que tu producto necesite.
-                  </p>
-                </div>
+            <div
+              className="rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#121212" }}
+            >
+              <div className="h-48 bg-gray-800 overflow-hidden">
+                <Image
+                  src="/chiozzi_productos_0178.png"
+                  alt="Productos Troquelados"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                />
               </div>
-              <div className="group relative overflow-hidden rounded-xl bg-background border border-zinc-800/50 transition-all duration-300 hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={`/sobre_adhesivo_chiozzi.png`}
-                    alt="Impresión Sobre Adhesivo"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-60"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-secondary transition-colors">
-                    Impresión Sobre Adhesivo
-                  </h3>
-                  <p className="text-text-secondary group-hover:text-white/80 transition-colors">
-                    Mayor espacio para información adicional en el producto.
-                  </p>
-                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Troquelados
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Troquelados a medida, que se adaptan a tu envase. Creatividad
+                  y funcionalidad en el diseño de etiquetas.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#121212" }}
+            >
+              <div className="h-48 bg-gray-800 overflow-hidden">
+                <Image
+                  src="/microcortes_chiozzi.png"
+                  alt="Productos con Microcortes de Seguridad"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Microcortes de Seguridad
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Evita manipulaciones, asegurando la integridad y autenticidad
+                  del producto.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 lg:max-w-4xl lg:mx-auto">
+            <div
+              className="rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#121212" }}
+            >
+              <div className="h-48 bg-gray-800 overflow-hidden">
+                <Image
+                  src="/chiozzi_sectorizadas.png"
+                  alt="Impresiones Sectorizadas"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Impresiones Sectorizadas
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Zonas específicas en tu etiqueta donde no aplicamos base,
+                  ideales para fechas de vencimiento, lotes o códigos de barras
+                  variable que tu producto necesita.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#121212" }}
+            >
+              <div className="h-48 bg-gray-800 overflow-hidden">
+                <Image
+                  src="/chiozzi_adhesivo.png"
+                  alt="Impresión Sobre Adhesivo"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Impresión Sobre Adhesivo
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Mayor espacio para información adicional en el producto.
+                </p>
               </div>
             </div>
           </div>

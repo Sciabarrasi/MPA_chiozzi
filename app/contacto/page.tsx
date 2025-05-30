@@ -10,12 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
 
@@ -41,16 +35,12 @@ export default function ContactoPage() {
     setIsSubmitting(true);
 
     try {
-      // logic to send the form data
-
-      // after 1 second, show a success message
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast.success("Formulario enviado", {
         description: "Nos pondremos en contacto contigo a la brevedad.",
       });
 
-      // clean the form
       setFormData({
         nombre: "",
         email: "",
@@ -73,34 +63,6 @@ export default function ContactoPage() {
     }
   };
 
-  const faqItems = [
-    {
-      pregunta: "¿Cuál es el tiempo de entrega promedio?",
-      respuesta:
-        "El tiempo de entrega varía según el tipo de producto y la cantidad solicitada. En general, nuestros tiempos de entrega oscilan entre 7 y 15 días hábiles desde la aprobación final del diseño.",
-    },
-    {
-      pregunta: "¿Realizan envíos a todo el país?",
-      respuesta:
-        "Sí, realizamos envíos a todo el territorio nacional. Los costos y tiempos de envío varían según la localidad de destino.",
-    },
-    {
-      pregunta: "¿Ofrecen muestras de sus productos?",
-      respuesta:
-        "Sí, podemos proporcionar muestras de nuestros productos para que puedas evaluar la calidad antes de realizar un pedido mayor. Consulta con nuestro equipo de ventas para más detalles.",
-    },
-    {
-      pregunta: "¿Cuál es la cantidad mínima de pedido?",
-      respuesta:
-        "La cantidad mínima de pedido varía según el tipo de producto. Para etiquetas autoadhesivas, generalmente trabajamos con pedidos mínimos de 1000 unidades, pero esto puede variar según las especificaciones del proyecto.",
-    },
-    {
-      pregunta: "¿Qué formatos de archivo aceptan para los diseños?",
-      respuesta:
-        "Aceptamos archivos en formato AI, PDF, EPS y PSD. Recomendamos que los archivos estén en alta resolución (300 dpi) y con las fuentes convertidas a curvas/trazos.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <Toaster richColors position="top-center" />
@@ -109,7 +71,7 @@ export default function ContactoPage() {
       <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-[#E30613]/10 via-[#D35400]/15 to-[#CA8A04]/10">
         <div className="absolute inset-0">
           <Image
-            src="/trama-base.png"
+            src="/trama-base-degrade.png"
             alt="Fondo Nuestra Empresa"
             fill
             className="object-cover opacity-30"
@@ -365,38 +327,112 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-4 bg-[#18181B]">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-8 md:mb-12">
-            <div className="flex items-center gap-3 md:gap-4">
-              <div className="w-1.5 h-6 md:h-8 bg-[#E30613] rounded-full"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold">
-                PREGUNTAS FRECUENTES
+      <section
+        className="py-8 md:py-12 lg:py-16"
+        style={{ backgroundColor: "#18181b" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 lg:mb-8 text-center">
+            <div className="flex items-center justify-center mb-2">
+              <div className="w-1 h-8 bg-red-600 mr-4"></div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
+                NUESTRA UBICACIÓN
               </h2>
             </div>
+            <p className="text-gray-300 mt-4 mx-auto max-w-xl md:max-w-2xl">
+              Visitanos en nuestra oficina principal en Gálvez, Santa Fe.
+              Estamos estratégicamente ubicados para brindarte el mejor
+              servicio.
+            </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <Card className="bg-[#121212] border-[#27272A]">
-              <CardContent className="p-4 sm:p-6">
-                <Accordion type="single" collapsible className="space-y-2">
-                  {faqItems.map((item, index) => (
-                    <AccordionItem
-                      key={index}
-                      value={`item-${index}`}
-                      className="border-[#3F3F46] last:border-0"
-                    >
-                      <AccordionTrigger className="text-base sm:text-lg md:text-xl font-semibold text-white hover:no-underline py-3 sm:py-4">
-                        {item.pregunta}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm sm:text-base text-white/80 pb-3 sm:pb-4">
-                        {item.respuesta}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </CardContent>
-            </Card>
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="lg:col-span-2">
+              <div className="relative h-64 md:h-80 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.8234567890123!2d-61.2234567890123!3d-32.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5a1234567890a%3A0x1234567890abcdef!2sMitre%20901%2C%20G%C3%A1lvez%2C%20Santa%20Fe%2C%20Argentina!5e0!3m2!1ses!2sar!4v1234567890123!5m2!1ses!2sar"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                ></iframe>
+              </div>
+            </div>
+
+            <div className="space-y-4 lg:space-y-6">
+              <div className="bg-gray-800 p-4 lg:p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  Envíos a Todo el País
+                </h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-medium text-white">
+                        Cobertura Nacional
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Realizamos envíos a todas las provincias de Argentina
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-medium text-white">
+                        Envíos Personalizados
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Tiempos y costos de envío a acordar según tu pedido.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-medium text-white">Embalaje Seguro</h4>
+                      <p className="text-gray-300 text-sm">
+                        Protección especial para garantizar la calidad de tus etiquetas.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800 p-4 lg:p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  Métodos de Envío
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300 text-sm">
+                      Correo Argentino
+                    </span>
+                    <span className="text-red-500 text-sm font-medium">
+                      Disponible
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300 text-sm">OCA</span>
+                    <span className="text-red-500 text-sm font-medium">
+                      Disponible
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300 text-sm">Andreani</span>
+                    <span className="text-red-500 text-sm font-medium">
+                      Disponible
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
