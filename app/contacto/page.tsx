@@ -362,8 +362,8 @@ export default function ContactoPage() {
               </div>
             </div>
 
-            <div className="space-y-4 lg:space-y-6">
-              <div className="bg-gray-800 p-4 lg:p-6 rounded-lg">
+            <div className="flex items-center justify-center">
+              <div className="bg-gray-800 p-4 lg:p-6 rounded-lg w-full">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Envíos a Todo el País
                 </h3>
@@ -388,7 +388,7 @@ export default function ContactoPage() {
                         Envíos Personalizados
                       </h4>
                       <p className="text-gray-300 text-sm">
-                        Tiempos y costos de envío a acordar según tu pedido.
+                        Tiempos y costos de envío a acordar según tu pedido
                       </p>
                     </div>
                   </div>
@@ -396,39 +396,14 @@ export default function ContactoPage() {
                   <div className="flex items-start space-x-3">
                     <div className="w-5 h-5 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
                     <div>
-                      <h4 className="font-medium text-white">Embalaje Seguro</h4>
+                      <h4 className="font-medium text-white">
+                        Embalaje Seguro
+                      </h4>
                       <p className="text-gray-300 text-sm">
-                        Protección especial para garantizar la calidad de tus etiquetas.
+                        Protección especial para garantizar la calidad de tus
+                        etiquetas
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-800 p-4 lg:p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  Métodos de Envío
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300 text-sm">
-                      Correo Argentino
-                    </span>
-                    <span className="text-red-500 text-sm font-medium">
-                      Disponible
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300 text-sm">OCA</span>
-                    <span className="text-red-500 text-sm font-medium">
-                      Disponible
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300 text-sm">Andreani</span>
-                    <span className="text-red-500 text-sm font-medium">
-                      Disponible
-                    </span>
                   </div>
                 </div>
               </div>
