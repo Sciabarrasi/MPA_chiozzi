@@ -340,7 +340,7 @@ export default function ContactoPage() {
               </h2>
             </div>
             <p className="text-gray-300 mt-4 mx-auto max-w-xl md:max-w-2xl">
-              Visítanos en nuestra oficina principal en Gálvez, Santa Fe.
+              Visitanos en nuestra oficina principal en Gálvez, Santa Fe.
               Estamos estratégicamente ubicados para brindarte el mejor
               servicio.
             </p>
