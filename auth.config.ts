@@ -3,7 +3,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "./lib/prisma";
 import bcrypt from "bcryptjs";
 
-// Solución: Extender el tipo AuthOptions para incluir trustHost
 interface AmplifyAuthOptions extends AuthOptions {
   trustHost?: boolean;
 }
@@ -17,28 +16,31 @@ export const authOptions: AmplifyAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) {
-          throw new Error("Email y contraseña son requeridos");
+        try {
+          if (!credentials?.email || !credentials?.password) return null;
+
+          const userFound = await prisma.user.findUnique({
+            where: { email: credentials.email },
+          });
+
+          if (!userFound) return null;
+
+          const validPassword = await bcrypt.compare(
+            credentials.password,
+            userFound.password
+          );
+
+          if (!validPassword) return null;
+
+          return {
+            id: userFound.id.toString(),
+            name: userFound.name,
+            email: userFound.email,
+          };
+        } catch (error) {
+          console.error("Error en authorize:", error);
+          return null;
         }
-
-        const userFound = await prisma.user.findUnique({
-          where: { email: credentials.email },
-        });
-
-        if (!userFound) throw new Error("Usuario no encontrado");
-
-        const validPassword = await bcrypt.compare(
-          credentials.password,
-          userFound.password
-        );
-
-        if (!validPassword) throw new Error("Contraseña incorrecta");
-
-        return {
-          id: userFound.id.toString(),
-          name: userFound.name,
-          email: userFound.email,
-        };
       },
     }),
   ],
@@ -58,39 +60,40 @@ export const authOptions: AmplifyAuthOptions = {
           ...session.user,
           id: token.id as string,
           email: token.email as string,
-          name: token.name as string
-        }
+          name: token.name as string,
+        },
       };
     },
     async redirect({ url, baseUrl }) {
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       return baseUrl;
-    }
+    },
   },
   pages: {
     signIn: "/login",
     error: "/access-denied",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  trustHost: true, // Ahora sin warning
+  trustHost: true,
   useSecureCookies: true,
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
   },
-  debug: process.env.NODE_ENV === 'development',
+  debug: process.env.NODE_ENV === "development",
   cookies: {
     sessionToken: {
       name: `__Secure-next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'none',
-        path: '/',
+        sameSite: "none",
+        path: "/",
         secure: true,
-        domain: process.env.NODE_ENV === 'production' 
-          ? '.dnz9nmjhesehe.amplifyapp.com'
-          : undefined
-      }
-    }
-  }
+        domain:
+          process.env.NODE_ENV === "production"
+            ? ".dnz9nmjhesehe.amplifyapp.com"
+            : undefined,
+      },
+    },
+  },
 };
