@@ -4,7 +4,6 @@ dotenv.config();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
   
   env: {
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
