@@ -13,36 +13,39 @@ type JWTToken = {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Permitir el acceso libre a /api/users/register
   if (pathname === "/api/users/register") {
-    return NextResponse.next();
+    return NextResponse.next()
   }
 
-  // Definir las rutas protegidas
   const protectedRoutes = ['/api/users']
   const isProtected = protectedRoutes.some(route => pathname.startsWith(route))
 
   if (isProtected) {
-    const token = await getToken({ 
-      req: request,
-      secret: process.env.NEXTAUTH_SECRET
-    }) as JWTToken | null
+    try {
+      const token = await getToken({ 
+        req: request,
+        secret: process.env.NEXTAUTH_SECRET
+      }) as JWTToken | null
 
-    if (!token) {
-      const loginUrl = new URL('/access-denied', request.url)
-      loginUrl.searchParams.set('callbackUrl', request.nextUrl.pathname)
-      return NextResponse.redirect(loginUrl)
+      if (!token) {
+        const loginUrl = new URL('/access-denied', request.url)
+        loginUrl.searchParams.set('callbackUrl', request.nextUrl.pathname)
+        return NextResponse.redirect(loginUrl)
+      }
+
+      const requestHeaders = new Headers(request.headers)
+      requestHeaders.set('x-user-id', token.id)
+      requestHeaders.set('x-user-email', token.email)
+
+      return NextResponse.next({
+        request: {
+          headers: requestHeaders,
+        },
+      })
+    } catch (error) {
+      console.error("Error en middleware getToken:", error)
+      return new Response("Error interno en autenticación", { status: 500 })
     }
-
-    const requestHeaders = new Headers(request.headers)
-    requestHeaders.set('x-user-id', token.id)
-    requestHeaders.set('x-user-email', token.email)
-
-    return NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    })
   }
 
   return NextResponse.next()
