@@ -75,7 +75,6 @@ export const authOptions: AmplifyAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   trustHost: true,
-  useSecureCookies: true,
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
@@ -83,16 +82,35 @@ export const authOptions: AmplifyAuthOptions = {
   debug: process.env.NODE_ENV === "development",
   cookies: {
     sessionToken: {
-      name: `__Secure-next-auth.session-token`,
+      name: process.env.NODE_ENV === "production" 
+        ? "__Secure-next-auth.session-token"
+        : "next-auth.session-token",
       options: {
         httpOnly: true,
-        sameSite: "none",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         path: "/",
-        secure: true,
-        domain:
-          process.env.NODE_ENV === "production"
-            ? ".dnz9nmjhesehe.amplifyapp.com"
-            : undefined,
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+    callbackUrl: {
+      name: process.env.NODE_ENV === "production" 
+        ? "__Secure-next-auth.callback-url"
+        : "next-auth.callback-url",
+      options: {
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+    csrfToken: {
+      name: process.env.NODE_ENV === "production" 
+        ? "__Host-next-auth.csrf-token"
+        : "next-auth.csrf-token",
+      options: {
+        httpOnly: true,
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
       },
     },
   },
