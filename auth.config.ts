@@ -3,7 +3,11 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "./lib/prisma";
 import bcrypt from "bcryptjs";
 
-export const authOptions: AuthOptions = {
+interface ExtendedAuthOptions extends AuthOptions {
+  trustHost?: boolean;
+}
+
+export const authOptions: ExtendedAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -57,13 +61,31 @@ export const authOptions: AuthOptions = {
         }
       };
     },
+    async redirect({ url, baseUrl }) {
+      // Permite URLs relativas
+      if (url.startsWith("/")) return `${baseUrl}${url}`
+      return baseUrl
+    }
   },
   pages: {
     signIn: "/login",
     error: "/access-denied",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true, // Necesario para AWS Amplify
   session: {
     strategy: "jwt",
   },
+  debug: process.env.NODE_ENV === 'development', // Solo para desarrollo
+  cookies: {
+    sessionToken: {
+      name: `__Secure-next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production' // Solo HTTPS en producción
+      }
+    }
+  }
 };

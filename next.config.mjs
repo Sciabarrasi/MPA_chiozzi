@@ -7,8 +7,34 @@ const nextConfig = {
   images: {
     domains: [
       'hebbkx1anhila5yf.public.blob.vercel-storage.com',
-      'res.cloudinary.com'
+      'res.cloudinary.com',
+      'master.dnz9nmjhesehe.amplifyapp.com',
+      'echiozzi.com',
+      'www.echiozzi.com',
+      'localhost'
     ],
+  },
+
+  experimental: {
+    serverComponentsExternalPackages: ["@aws-sdk"],
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          }
+        ]
+      }
+    ]
   }
 };
 
