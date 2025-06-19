@@ -18,29 +18,13 @@ const nextConfig = {
     serverComponentsExternalPackages: ["@aws-sdk"],
   },
   async headers() {
-    const isProd = process.env.NODE_ENV === "production";
-
     return [
       {
         source: "/api/auth/:path*",
         headers: [
           {
-            key: "Access-Control-Allow-Origin",
-            value: isProd
-              ? "https://master.dnz9nmjhesehe.amplifyapp.com"
-              : "http://localhost:3000",
-          },
-          {
-            key: "Access-Control-Allow-Methods",
-            value: "GET, POST, OPTIONS",
-          },
-          {
-            key: "Access-Control-Allow-Headers",
-            value: "Content-Type, Authorization",
-          },
-          {
-            key: "Access-Control-Allow-Credentials",
-            value: "true",
+            key: "Cache-Control",
+            value: "no-store, max-age=0",
           },
         ],
       },
