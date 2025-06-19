@@ -4,6 +4,14 @@ dotenv.config();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
+  
+  env: {
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
+  
   images: {
     domains: [
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
@@ -13,10 +21,16 @@ const nextConfig = {
       "www.echiozzi.com",
       "localhost",
     ],
+    unoptimized: process.env.NODE_ENV === 'production',
   },
+  
   experimental: {
     serverComponentsExternalPackages: ["@aws-sdk"],
+    esmExternals: true,
   },
+  
+  trailingSlash: false,
+  
   async headers() {
     return [
       {
@@ -41,14 +55,18 @@ const nextConfig = {
       },
     ];
   },
-  webpack: (config) => {
-    config.externals = [
-      ...(config.externals || []),
-      {
-        "@aws-sdk/signature-v4-multi-region":
-          "commonjs @aws-sdk/signature-v4-multi-region",
-      },
-    ];
+  
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [
+        ...(config.externals || []),
+        {
+          "@aws-sdk/signature-v4-multi-region":
+            "commonjs @aws-sdk/signature-v4-multi-region",
+        },
+      ];
+    }
+    
     return config;
   },
 };
