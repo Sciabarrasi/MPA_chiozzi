@@ -14,29 +14,29 @@ const nextConfig = {
       'localhost'
     ],
   },
-
   experimental: {
-    serverComponentsExternalPackages: ["@aws-sdk"], 
+    serverComponentsExternalPackages: ["@aws-sdk"],
   },
-
   async headers() {
     return [
       {
-        source: '/api/:path*',
+        source: '/api/auth/:path*',
         headers: [
           { 
             key: 'Access-Control-Allow-Origin', 
-            value: [
-              'https://master.dnz9nmjhesehe.amplifyapp.com',
-              'https://echiozzi.com',
-              'https://www.echiozzi.com',
-              'https://api.cloudinary.com',
-              'https://res.cloudinary.com'
-            ].join(', ') 
+            value: 'https://master.dnz9nmjhesehe.amplifyapp.com' // Solo tu dominio
           },
           { 
             key: 'Access-Control-Allow-Methods', 
-            value: 'GET, POST, PUT, DELETE, OPTIONS' 
+            value: 'GET, POST, OPTIONS' 
+          },
+          { 
+            key: 'Access-Control-Allow-Headers', 
+            value: 'Content-Type, Authorization' 
+          },
+          { 
+            key: 'Access-Control-Allow-Credentials', 
+            value: 'true' // Crucial para cookies
           }
         ]
       },
@@ -44,10 +44,18 @@ const nextConfig = {
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' }
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }
         ]
       }
     ]
+  },
+  // Opcional: Si usas Prisma en Amplify
+  webpack: (config) => {
+    config.externals = [...(config.externals || []), {
+      '@aws-sdk/signature-v4-multi-region': 'commonjs @aws-sdk/signature-v4-multi-region'
+    }];
+    return config;
   }
 };
 

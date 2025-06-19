@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "./lib/prisma";
 import bcrypt from "bcryptjs";
 
+// Solución: Extender el tipo AuthOptions para incluir trustHost
 interface AmplifyAuthOptions extends AuthOptions {
   trustHost?: boolean;
 }
@@ -71,8 +72,8 @@ export const authOptions: AmplifyAuthOptions = {
     error: "/access-denied",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  trustHost: true,
-  useSecureCookies: process.env.NEXTAUTH_URL?.startsWith('https://'),
+  trustHost: true, // Ahora sin warning
+  useSecureCookies: true,
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
@@ -83,10 +84,12 @@ export const authOptions: AmplifyAuthOptions = {
       name: `__Secure-next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
-        secure: process.env.NODE_ENV === 'production',
-        domain: process.env.NODE_ENV === 'production' ? '.amplifyapp.com' : undefined
+        secure: true,
+        domain: process.env.NODE_ENV === 'production' 
+          ? '.dnz9nmjhesehe.amplifyapp.com'
+          : undefined
       }
     }
   }
