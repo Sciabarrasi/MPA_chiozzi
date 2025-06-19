@@ -8,7 +8,7 @@ const nextConfig = {
     domains: [
       'hebbkx1anhila5yf.public.blob.vercel-storage.com',
       'res.cloudinary.com',
-      'master.d12fg2zw920c0m.amplifyapp.com',
+      'master.dnz9nmjhesehe.amplifyapp.com',
       'echiozzi.com',
       'www.echiozzi.com',
       'localhost'
