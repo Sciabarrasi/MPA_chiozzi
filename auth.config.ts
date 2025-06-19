@@ -3,11 +3,11 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "./lib/prisma";
 import bcrypt from "bcryptjs";
 
-interface ExtendedAuthOptions extends AuthOptions {
+interface AmplifyAuthOptions extends AuthOptions {
   trustHost?: boolean;
 }
 
-export const authOptions: ExtendedAuthOptions = {
+export const authOptions: AmplifyAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -62,9 +62,8 @@ export const authOptions: ExtendedAuthOptions = {
       };
     },
     async redirect({ url, baseUrl }) {
-      // Permite URLs relativas
-      if (url.startsWith("/")) return `${baseUrl}${url}`
-      return baseUrl
+      if (url.startsWith("/")) return `${baseUrl}${url}`;
+      return baseUrl;
     }
   },
   pages: {
@@ -72,11 +71,13 @@ export const authOptions: ExtendedAuthOptions = {
     error: "/access-denied",
   },
   secret: process.env.NEXTAUTH_SECRET,
-  trustHost: true, // Necesario para AWS Amplify
+  trustHost: true,
+  useSecureCookies: process.env.NEXTAUTH_URL?.startsWith('https://'),
   session: {
     strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
   },
-  debug: process.env.NODE_ENV === 'development', // Solo para desarrollo
+  debug: process.env.NODE_ENV === 'development',
   cookies: {
     sessionToken: {
       name: `__Secure-next-auth.session-token`,
@@ -84,7 +85,8 @@ export const authOptions: ExtendedAuthOptions = {
         httpOnly: true,
         sameSite: 'lax',
         path: '/',
-        secure: process.env.NODE_ENV === 'production' // Solo HTTPS en producción
+        secure: process.env.NODE_ENV === 'production',
+        domain: process.env.NODE_ENV === 'production' ? '.amplifyapp.com' : undefined
       }
     }
   }
