@@ -7,10 +7,10 @@ frontend:
         - echo "Environment check - NEXTAUTH_SECRET exists:" $([[ -n "$NEXTAUTH_SECRET" ]] && echo "true" || echo "false")
         - echo "Environment check - DATABASE_URL exists:" $([[ -n "$DATABASE_URL" ]] && echo "true" || echo "false")
         - rm -rf node_modules/.prisma
-        - npx prisma generate
+        - DATABASE_URL="$DATABASE_URL" npx prisma generate
     build:
       commands:
-        - npm run build
+        - DATABASE_URL="$DATABASE_URL" npm run build
   artifacts:
     baseDirectory: .next
     files:
