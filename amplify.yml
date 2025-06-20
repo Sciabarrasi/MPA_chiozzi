@@ -4,19 +4,16 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        - echo "=== DEBUGGING ENVIRONMENT ==="
-        - echo "All environment variables:"
-        - env | grep -E "(DATABASE_URL|NEXTAUTH)" || echo "No matching variables found"
-        - echo "DATABASE_URL value: $DATABASE_URL"
-        - echo "DATABASE_URL length: ${#DATABASE_URL}"
-        - echo "=== END DEBUGGING ==="
-        - echo "Environment check - NEXTAUTH_SECRET exists:" $([[ -n "$NEXTAUTH_SECRET" ]] && echo "true" || echo "false")
-        - echo "Environment check - DATABASE_URL exists:" $([[ -n "$DATABASE_URL" ]] && echo "true" || echo "false")
+        - echo "Creating .env file for build process"
+        - echo "DATABASE_URL=$DATABASE_URL" > .env
+        - echo "NEXTAUTH_SECRET=$NEXTAUTH_SECRET" >> .env
+        - echo "NEXTAUTH_URL=$NEXTAUTH_URL" >> .env
+        - cat .env
         - rm -rf node_modules/.prisma
-        - DATABASE_URL="$DATABASE_URL" npx prisma generate
+        - npx prisma generate
     build:
       commands:
-        - DATABASE_URL="$DATABASE_URL" npm run build
+        - npm run build
   artifacts:
     baseDirectory: .next
     files:
