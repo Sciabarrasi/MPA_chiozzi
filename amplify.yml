@@ -6,6 +6,7 @@ frontend:
         - npm ci
         - echo "Environment check - NEXTAUTH_SECRET exists:" $([[ -n "$NEXTAUTH_SECRET" ]] && echo "true" || echo "false")
         - echo "Environment check - DATABASE_URL exists:" $([[ -n "$DATABASE_URL" ]] && echo "true" || echo "false")
+        - npx prisma generate
     build:
       commands:
         - npm run build
