@@ -15,7 +15,6 @@ const nextConfig = {
     domains: [
       "hebbkx1anhila5yf.public.blob.vercel-storage.com",
       "res.cloudinary.com",
-      "master.dnz9nmjhesehe.amplifyapp.com",
       "echiozzi.com",
       "www.echiozzi.com",
       "localhost",
@@ -23,9 +22,17 @@ const nextConfig = {
     unoptimized: process.env.NODE_ENV === 'production',
   },
   
+  output: 'standalone',
+  swcMinify: true,
+  compress: true,
+  
+  poweredByHeader: false,
+  
   experimental: {
     serverComponentsExternalPackages: ["@aws-sdk"],
     esmExternals: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react'],
   },
   
   trailingSlash: false,
@@ -50,6 +57,28 @@ const nextConfig = {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
           },
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on"
+          },
+        ],
+      },
+      {
+        source: "/favicon.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
     ];
@@ -66,8 +95,17 @@ const nextConfig = {
       ];
     }
     
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './src',
+    };
+    
     return config;
   },
+  
+  ...(process.env.NODE_ENV === 'development' && {
+    reactStrictMode: true,
+  }),
 };
 
 export default nextConfig;
