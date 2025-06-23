@@ -1,5 +1,6 @@
-import type React from "react"
-import { Button } from "@/components/ui/button"
+import type React from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ContactSection: React.FC = () => {
   return (
@@ -12,16 +13,17 @@ const ContactSection: React.FC = () => {
             próximo proyecto
           </span>
         </p>
-        <Button
-          className="text-white px-8 py-6 text-lg"
-          style={{ backgroundColor: "#ED7D00"}}
-        >
-          Hablemos
-        </Button>
+        <Link className="text-white px-8 py-6 text-lg" href="/contacto">
+          <Button
+            className="text-white px-8 py-6 text-lg"
+            style={{ backgroundColor: "#ED7D00" }}
+          >
+            Hablemos
+          </Button>
+        </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactSection
-
+export default ContactSection;
