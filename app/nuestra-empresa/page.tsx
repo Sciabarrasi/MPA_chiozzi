@@ -490,7 +490,7 @@ export default function NuestraEmpresaPage() {
               <DownloadButton
                 text="Descargar Política de Calidad"
                 filePath="/docs/politica-de-calidad.pdf"
-                fileName="Política de Caliad.pdf"
+                fileName="Política de Calidad.pdf"
               />
             </div>
 

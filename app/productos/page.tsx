@@ -365,7 +365,7 @@ export default function ProductosPage() {
               </div>
               <div className="p-6 flex-grow">
                 <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-highlight transition-colors flex items-center">
-                  Secotrizado
+                  Sectorizado
                 </h3>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                   Combinación de barnices mate y brilloso para resaltar detalles
