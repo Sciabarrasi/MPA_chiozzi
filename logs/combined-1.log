@@ -1,0 +1,200 @@
+2025-06-23T18:09:45: 
+2025-06-23T18:09:45: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:09:45: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:09:45: 
+2025-06-23T18:09:47:  ⨯ Failed to start server
+2025-06-23T18:09:47: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:09:47:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:09:47:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:09:47:     at Server.listen (node:net:1953:7)
+2025-06-23T18:09:47:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:09:47:     at new Promise (<anonymous>)
+2025-06-23T18:09:47:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:09:47:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:09:47:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:09:47:   code: 'EADDRINUSE',
+2025-06-23T18:09:47:   errno: -98,
+2025-06-23T18:09:47:   syscall: 'listen',
+2025-06-23T18:09:47:   address: '::',
+2025-06-23T18:09:47:   port: 3000
+2025-06-23T18:09:47: }
+2025-06-23T18:09:51: 
+2025-06-23T18:09:51: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:09:51: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:09:51: 
+2025-06-23T18:09:52:  ⨯ Failed to start server
+2025-06-23T18:09:52: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:09:52:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:09:52:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:09:52:     at Server.listen (node:net:1953:7)
+2025-06-23T18:09:52:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:09:52:     at new Promise (<anonymous>)
+2025-06-23T18:09:52:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:09:52:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:09:52:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:09:52:   code: 'EADDRINUSE',
+2025-06-23T18:09:52:   errno: -98,
+2025-06-23T18:09:52:   syscall: 'listen',
+2025-06-23T18:09:52:   address: '::',
+2025-06-23T18:09:52:   port: 3000
+2025-06-23T18:09:52: }
+2025-06-23T18:09:56: 
+2025-06-23T18:09:56: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:09:56: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:09:56: 
+2025-06-23T18:09:56:  ⨯ Failed to start server
+2025-06-23T18:09:56: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:09:56:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:09:56:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:09:56:     at Server.listen (node:net:1953:7)
+2025-06-23T18:09:56:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:09:56:     at new Promise (<anonymous>)
+2025-06-23T18:09:56:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:09:56:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:09:56:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:09:56:   code: 'EADDRINUSE',
+2025-06-23T18:09:56:   errno: -98,
+2025-06-23T18:09:56:   syscall: 'listen',
+2025-06-23T18:09:56:   address: '::',
+2025-06-23T18:09:56:   port: 3000
+2025-06-23T18:09:56: }
+2025-06-23T18:10:00: 
+2025-06-23T18:10:00: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:00: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:00: 
+2025-06-23T18:10:00:  ⨯ Failed to start server
+2025-06-23T18:10:00: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:00:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:00:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:00:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:00:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:00:     at new Promise (<anonymous>)
+2025-06-23T18:10:00:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:00:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:00:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:00:   code: 'EADDRINUSE',
+2025-06-23T18:10:00:   errno: -98,
+2025-06-23T18:10:00:   syscall: 'listen',
+2025-06-23T18:10:00:   address: '::',
+2025-06-23T18:10:00:   port: 3000
+2025-06-23T18:10:00: }
+2025-06-23T18:10:04: 
+2025-06-23T18:10:04: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:04: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:04: 
+2025-06-23T18:10:05:  ⨯ Failed to start server
+2025-06-23T18:10:05: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:05:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:05:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:05:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:05:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:05:     at new Promise (<anonymous>)
+2025-06-23T18:10:05:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:05:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:05:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:05:   code: 'EADDRINUSE',
+2025-06-23T18:10:05:   errno: -98,
+2025-06-23T18:10:05:   syscall: 'listen',
+2025-06-23T18:10:05:   address: '::',
+2025-06-23T18:10:05:   port: 3000
+2025-06-23T18:10:05: }
+2025-06-23T18:10:09: 
+2025-06-23T18:10:09: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:09: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:09: 
+2025-06-23T18:10:09:  ⨯ Failed to start server
+2025-06-23T18:10:09: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:09:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:09:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:09:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:09:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:09:     at new Promise (<anonymous>)
+2025-06-23T18:10:09:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:09:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:09:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:09:   code: 'EADDRINUSE',
+2025-06-23T18:10:09:   errno: -98,
+2025-06-23T18:10:09:   syscall: 'listen',
+2025-06-23T18:10:09:   address: '::',
+2025-06-23T18:10:09:   port: 3000
+2025-06-23T18:10:09: }
+2025-06-23T18:10:13: 
+2025-06-23T18:10:13: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:13: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:13: 
+2025-06-23T18:10:13:  ⨯ Failed to start server
+2025-06-23T18:10:13: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:13:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:13:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:13:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:13:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:13:     at new Promise (<anonymous>)
+2025-06-23T18:10:13:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:13:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:13:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:13:   code: 'EADDRINUSE',
+2025-06-23T18:10:13:   errno: -98,
+2025-06-23T18:10:13:   syscall: 'listen',
+2025-06-23T18:10:13:   address: '::',
+2025-06-23T18:10:13:   port: 3000
+2025-06-23T18:10:13: }
+2025-06-23T18:10:17: 
+2025-06-23T18:10:17: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:17: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:17: 
+2025-06-23T18:10:18:  ⨯ Failed to start server
+2025-06-23T18:10:18: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:18:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:18:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:18:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:18:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:18:     at new Promise (<anonymous>)
+2025-06-23T18:10:18:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:18:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:18:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:18:   code: 'EADDRINUSE',
+2025-06-23T18:10:18:   errno: -98,
+2025-06-23T18:10:18:   syscall: 'listen',
+2025-06-23T18:10:18:   address: '::',
+2025-06-23T18:10:18:   port: 3000
+2025-06-23T18:10:18: }
+2025-06-23T18:10:22: 
+2025-06-23T18:10:22: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:22: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:22: 
+2025-06-23T18:10:22:  ⨯ Failed to start server
+2025-06-23T18:10:22: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:22:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:22:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:22:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:22:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:22:     at new Promise (<anonymous>)
+2025-06-23T18:10:22:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:22:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:22:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:22:   code: 'EADDRINUSE',
+2025-06-23T18:10:22:   errno: -98,
+2025-06-23T18:10:22:   syscall: 'listen',
+2025-06-23T18:10:22:   address: '::',
+2025-06-23T18:10:22:   port: 3000
+2025-06-23T18:10:22: }
+2025-06-23T18:10:26: 
+2025-06-23T18:10:26: > proyecto_chiozzi@0.1.0 start
+2025-06-23T18:10:26: > NODE_OPTIONS='--max-old-space-size=512' next start
+2025-06-23T18:10:26: 
+2025-06-23T18:10:26:  ⨯ Failed to start server
+2025-06-23T18:10:26: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T18:10:26:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T18:10:26:     at listenInCluster (node:net:1865:12)
+2025-06-23T18:10:26:     at Server.listen (node:net:1953:7)
+2025-06-23T18:10:26:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T18:10:26:     at new Promise (<anonymous>)
+2025-06-23T18:10:26:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T18:10:26:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T18:10:26:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T18:10:26:   code: 'EADDRINUSE',
+2025-06-23T18:10:26:   errno: -98,
+2025-06-23T18:10:26:   syscall: 'listen',
+2025-06-23T18:10:26:   address: '::',
+2025-06-23T18:10:26:   port: 3000
+2025-06-23T18:10:26: }

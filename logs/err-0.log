@@ -1,0 +1,363 @@
+2025-06-23T18:24:56: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:24:56:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:24:56:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:24:56:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:00: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:00:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:00:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:00:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:05: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:05:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:05:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:05:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:09: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:09:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:09:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:09:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:14: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:14:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:14:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:14:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:18: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:18:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:18:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:18:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:23: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:23:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:23:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:23:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:27: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:27:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:27:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:27:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:32: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:32:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:32:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:32:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:25:36: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+2025-06-23T18:25:36:     at setupFsCheck (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-utils/filesystem.js:151:19)
+2025-06-23T18:25:36:     at async initialize (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/router-server.js:63:23)
+2025-06-23T18:25:36:     at async Server.<anonymous> (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:249:36)
+2025-06-23T18:31:45:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2025-06-23T19:15:54:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2025-06-23T19:39:51:  ⨯ Failed to start server
+2025-06-23T19:39:51: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:39:51:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:39:51:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:39:51:     at Server.listen (node:net:1953:7)
+2025-06-23T19:39:51:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:39:51:     at new Promise (<anonymous>)
+2025-06-23T19:39:51:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:39:51:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:39:51:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:39:51:   code: 'EADDRINUSE',
+2025-06-23T19:39:51:   errno: -98,
+2025-06-23T19:39:51:   syscall: 'listen',
+2025-06-23T19:39:51:   address: '::',
+2025-06-23T19:39:51:   port: 3000
+2025-06-23T19:39:51: }
+2025-06-23T19:39:55:  ⨯ Failed to start server
+2025-06-23T19:39:55: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:39:55:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:39:55:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:39:55:     at Server.listen (node:net:1953:7)
+2025-06-23T19:39:55:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:39:55:     at new Promise (<anonymous>)
+2025-06-23T19:39:55:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:39:55:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:39:55:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:39:55:   code: 'EADDRINUSE',
+2025-06-23T19:39:55:   errno: -98,
+2025-06-23T19:39:55:   syscall: 'listen',
+2025-06-23T19:39:55:   address: '::',
+2025-06-23T19:39:55:   port: 3000
+2025-06-23T19:39:55: }
+2025-06-23T19:40:00:  ⨯ Failed to start server
+2025-06-23T19:40:00: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:00:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:00:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:00:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:00:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:00:     at new Promise (<anonymous>)
+2025-06-23T19:40:00:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:00:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:00:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:00:   code: 'EADDRINUSE',
+2025-06-23T19:40:00:   errno: -98,
+2025-06-23T19:40:00:   syscall: 'listen',
+2025-06-23T19:40:00:   address: '::',
+2025-06-23T19:40:00:   port: 3000
+2025-06-23T19:40:00: }
+2025-06-23T19:40:04:  ⨯ Failed to start server
+2025-06-23T19:40:04: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:04:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:04:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:04:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:04:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:04:     at new Promise (<anonymous>)
+2025-06-23T19:40:04:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:04:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:04:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:04:   code: 'EADDRINUSE',
+2025-06-23T19:40:04:   errno: -98,
+2025-06-23T19:40:04:   syscall: 'listen',
+2025-06-23T19:40:04:   address: '::',
+2025-06-23T19:40:04:   port: 3000
+2025-06-23T19:40:04: }
+2025-06-23T19:40:08:  ⨯ Failed to start server
+2025-06-23T19:40:08: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:08:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:08:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:08:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:08:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:08:     at new Promise (<anonymous>)
+2025-06-23T19:40:08:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:08:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:08:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:08:   code: 'EADDRINUSE',
+2025-06-23T19:40:08:   errno: -98,
+2025-06-23T19:40:08:   syscall: 'listen',
+2025-06-23T19:40:08:   address: '::',
+2025-06-23T19:40:08:   port: 3000
+2025-06-23T19:40:08: }
+2025-06-23T19:40:13:  ⨯ Failed to start server
+2025-06-23T19:40:13: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:13:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:13:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:13:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:13:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:13:     at new Promise (<anonymous>)
+2025-06-23T19:40:13:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:13:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:13:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:13:   code: 'EADDRINUSE',
+2025-06-23T19:40:13:   errno: -98,
+2025-06-23T19:40:13:   syscall: 'listen',
+2025-06-23T19:40:13:   address: '::',
+2025-06-23T19:40:13:   port: 3000
+2025-06-23T19:40:13: }
+2025-06-23T19:40:17:  ⨯ Failed to start server
+2025-06-23T19:40:17: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:17:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:17:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:17:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:17:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:17:     at new Promise (<anonymous>)
+2025-06-23T19:40:17:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:17:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:17:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:17:   code: 'EADDRINUSE',
+2025-06-23T19:40:17:   errno: -98,
+2025-06-23T19:40:17:   syscall: 'listen',
+2025-06-23T19:40:17:   address: '::',
+2025-06-23T19:40:17:   port: 3000
+2025-06-23T19:40:17: }
+2025-06-23T19:40:22:  ⨯ Failed to start server
+2025-06-23T19:40:22: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:22:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:22:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:22:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:22:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:22:     at new Promise (<anonymous>)
+2025-06-23T19:40:22:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:22:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:22:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:22:   code: 'EADDRINUSE',
+2025-06-23T19:40:22:   errno: -98,
+2025-06-23T19:40:22:   syscall: 'listen',
+2025-06-23T19:40:22:   address: '::',
+2025-06-23T19:40:22:   port: 3000
+2025-06-23T19:40:22: }
+2025-06-23T19:40:26:  ⨯ Failed to start server
+2025-06-23T19:40:26: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:26:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:26:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:26:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:26:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:26:     at new Promise (<anonymous>)
+2025-06-23T19:40:26:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:26:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:26:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:26:   code: 'EADDRINUSE',
+2025-06-23T19:40:26:   errno: -98,
+2025-06-23T19:40:26:   syscall: 'listen',
+2025-06-23T19:40:26:   address: '::',
+2025-06-23T19:40:26:   port: 3000
+2025-06-23T19:40:26: }
+2025-06-23T19:40:31:  ⨯ Failed to start server
+2025-06-23T19:40:31: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:40:31:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:40:31:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:40:31:     at Server.listen (node:net:1953:7)
+2025-06-23T19:40:31:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:40:31:     at new Promise (<anonymous>)
+2025-06-23T19:40:31:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:40:31:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:40:31:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:40:31:   code: 'EADDRINUSE',
+2025-06-23T19:40:31:   errno: -98,
+2025-06-23T19:40:31:   syscall: 'listen',
+2025-06-23T19:40:31:   address: '::',
+2025-06-23T19:40:31:   port: 3000
+2025-06-23T19:40:31: }
+2025-06-23T19:54:15:  ⨯ Failed to start server
+2025-06-23T19:54:15: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:15:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:15:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:15:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:15:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:15:     at new Promise (<anonymous>)
+2025-06-23T19:54:15:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:15:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:15:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:15:   code: 'EADDRINUSE',
+2025-06-23T19:54:15:   errno: -98,
+2025-06-23T19:54:15:   syscall: 'listen',
+2025-06-23T19:54:15:   address: '::',
+2025-06-23T19:54:15:   port: 3000
+2025-06-23T19:54:15: }
+2025-06-23T19:54:19:  ⨯ Failed to start server
+2025-06-23T19:54:19: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:19:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:19:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:19:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:19:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:19:     at new Promise (<anonymous>)
+2025-06-23T19:54:19:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:19:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:19:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:19:   code: 'EADDRINUSE',
+2025-06-23T19:54:19:   errno: -98,
+2025-06-23T19:54:19:   syscall: 'listen',
+2025-06-23T19:54:19:   address: '::',
+2025-06-23T19:54:19:   port: 3000
+2025-06-23T19:54:19: }
+2025-06-23T19:54:24:  ⨯ Failed to start server
+2025-06-23T19:54:24: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:24:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:24:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:24:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:24:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:24:     at new Promise (<anonymous>)
+2025-06-23T19:54:24:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:24:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:24:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:24:   code: 'EADDRINUSE',
+2025-06-23T19:54:24:   errno: -98,
+2025-06-23T19:54:24:   syscall: 'listen',
+2025-06-23T19:54:24:   address: '::',
+2025-06-23T19:54:24:   port: 3000
+2025-06-23T19:54:24: }
+2025-06-23T19:54:28:  ⨯ Failed to start server
+2025-06-23T19:54:28: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:28:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:28:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:28:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:28:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:28:     at new Promise (<anonymous>)
+2025-06-23T19:54:28:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:28:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:28:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:28:   code: 'EADDRINUSE',
+2025-06-23T19:54:28:   errno: -98,
+2025-06-23T19:54:28:   syscall: 'listen',
+2025-06-23T19:54:28:   address: '::',
+2025-06-23T19:54:28:   port: 3000
+2025-06-23T19:54:28: }
+2025-06-23T19:54:32:  ⨯ Failed to start server
+2025-06-23T19:54:33: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:33:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:33:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:33:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:33:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:33:     at new Promise (<anonymous>)
+2025-06-23T19:54:33:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:33:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:33:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:33:   code: 'EADDRINUSE',
+2025-06-23T19:54:33:   errno: -98,
+2025-06-23T19:54:33:   syscall: 'listen',
+2025-06-23T19:54:33:   address: '::',
+2025-06-23T19:54:33:   port: 3000
+2025-06-23T19:54:33: }
+2025-06-23T19:54:37:  ⨯ Failed to start server
+2025-06-23T19:54:37: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:37:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:37:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:37:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:37:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:37:     at new Promise (<anonymous>)
+2025-06-23T19:54:37:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:37:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:37:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:37:   code: 'EADDRINUSE',
+2025-06-23T19:54:37:   errno: -98,
+2025-06-23T19:54:37:   syscall: 'listen',
+2025-06-23T19:54:37:   address: '::',
+2025-06-23T19:54:37:   port: 3000
+2025-06-23T19:54:37: }
+2025-06-23T19:54:41:  ⨯ Failed to start server
+2025-06-23T19:54:41: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:41:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:41:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:41:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:41:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:41:     at new Promise (<anonymous>)
+2025-06-23T19:54:41:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:41:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:41:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:41:   code: 'EADDRINUSE',
+2025-06-23T19:54:41:   errno: -98,
+2025-06-23T19:54:41:   syscall: 'listen',
+2025-06-23T19:54:41:   address: '::',
+2025-06-23T19:54:41:   port: 3000
+2025-06-23T19:54:41: }
+2025-06-23T19:54:46:  ⨯ Failed to start server
+2025-06-23T19:54:46: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:46:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:46:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:46:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:46:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:46:     at new Promise (<anonymous>)
+2025-06-23T19:54:46:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:46:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:46:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:46:   code: 'EADDRINUSE',
+2025-06-23T19:54:46:   errno: -98,
+2025-06-23T19:54:46:   syscall: 'listen',
+2025-06-23T19:54:46:   address: '::',
+2025-06-23T19:54:46:   port: 3000
+2025-06-23T19:54:46: }
+2025-06-23T19:54:50:  ⨯ Failed to start server
+2025-06-23T19:54:50: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:50:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:50:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:50:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:50:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:50:     at new Promise (<anonymous>)
+2025-06-23T19:54:50:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:50:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:50:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:50:   code: 'EADDRINUSE',
+2025-06-23T19:54:50:   errno: -98,
+2025-06-23T19:54:50:   syscall: 'listen',
+2025-06-23T19:54:50:   address: '::',
+2025-06-23T19:54:50:   port: 3000
+2025-06-23T19:54:50: }
+2025-06-23T19:54:54:  ⨯ Failed to start server
+2025-06-23T19:54:54: Error: listen EADDRINUSE: address already in use :::3000
+2025-06-23T19:54:54:     at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+2025-06-23T19:54:54:     at listenInCluster (node:net:1865:12)
+2025-06-23T19:54:54:     at Server.listen (node:net:1953:7)
+2025-06-23T19:54:54:     at /root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:280:16
+2025-06-23T19:54:54:     at new Promise (<anonymous>)
+2025-06-23T19:54:54:     at startServer (/root/proyecto_chiozzi/node_modules/next/dist/server/lib/start-server.js:191:11)
+2025-06-23T19:54:54:     at Module.nextStart (/root/proyecto_chiozzi/node_modules/next/dist/cli/next-start.js:25:40)
+2025-06-23T19:54:54:     at /root/proyecto_chiozzi/node_modules/next/dist/bin/next:105:856 {
+2025-06-23T19:54:54:   code: 'EADDRINUSE',
+2025-06-23T19:54:54:   errno: -98,
+2025-06-23T19:54:54:   syscall: 'listen',
+2025-06-23T19:54:54:   address: '::',
+2025-06-23T19:54:54:   port: 3000
+2025-06-23T19:54:54: }
+2025-06-24T09:34:22:  ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
