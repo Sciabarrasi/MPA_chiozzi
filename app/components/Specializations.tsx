@@ -13,7 +13,7 @@ const SpecializationsSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden flex items-center justify-center">
               <Image
-                src="/Chiozzi_046.png"
+                src="/Chiozzi-046.png"
                 alt="Especialidades Chiozzi"
                 width={600}
                 height={400}

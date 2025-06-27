@@ -412,7 +412,7 @@ export default function NuestraEmpresaPage() {
             <div className="relative order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-6 md:p-8 mb-6 md:mb-0">
               <div className="relative order-1 md:order-2 flex items-center justify-center bg-zinc-800/50 rounded-lg p-6 md:p-8 mb-6 md:mb-0">
                 <Image
-                  src="/Logo_Iso_Iram_Blanco.png"
+                  src="/Logo-Iso-Iram-Blanco.png"
                   alt="Certificación ISO 9001"
                   width={350}
                   height={350}

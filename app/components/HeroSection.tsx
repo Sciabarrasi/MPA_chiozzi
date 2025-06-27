@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
     <section className="relative h-screen">
       <div className="absolute inset-0">
         <Image
-          src="/bg-chiozzi_178.png"
+          src="/bg-chiozzi-178.png"
           alt="Chiozzi Hero Background"
           fill
           priority

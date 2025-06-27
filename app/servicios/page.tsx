@@ -21,7 +21,7 @@ export default function ServiciosPage() {
       <section className="pt-24 md:pt-28 pb-12 md:pb-16 px-4 relative bg-gradient-to-br from-[#E30613]/10 via-[#D35400]/15 to-[#CA8A04]/10">
         <div className="absolute inset-0">
           <Image
-            src="/Chiozzi_046.png"
+            src="/Chiozzi-046.png"
             alt="Fondo Servicios"
             fill
             className="object-cover opacity-30"
@@ -111,7 +111,7 @@ export default function ServiciosPage() {
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#E30613]/10 mt-6 md:mt-0">
               <Image
-                src="/chiozzi_preprensa.png"
+                src="/chiozzi-preprensa.png"
                 alt="Diseño y Preprensa"
                 fill
                 className="object-cover"
@@ -135,7 +135,7 @@ export default function ServiciosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#D35400]/10 mt-6 md:mt-0">
               <Image
-                src="/flexografica_chiozzi.png"
+                src="/flexografica-chiozzi.png"
                 alt="Impresión Flexográfica"
                 fill
                 className="object-cover"
@@ -353,7 +353,7 @@ export default function ServiciosPage() {
             </div>
             <div className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl shadow-[#ED7D00]/10 mt-6 md:mt-0">
               <Image
-                src="/precision_chiozzi.png"
+                src="/precision-chiozzi.png"
                 alt="Precisión y Exactitud"
                 fill
                 className="object-cover"
@@ -390,7 +390,7 @@ export default function ServiciosPage() {
               >
                 <div className="h-48 bg-gray-700 flex items-center justify-center">
                   <Image
-                    src="/versatilidad_alimenticia.png"
+                    src="/versatilidad-alimenticia.png"
                     alt="Productos Alimenticios"
                     className="w-full h-full object-cover"
                     width={300}
@@ -414,7 +414,7 @@ export default function ServiciosPage() {
               >
                 <div className="h-48 bg-gray-700 flex items-center justify-center">
                   <Image
-                    src="/versatilidad_lactea.png"
+                    src="/versatilidad-lactea.png"
                     alt="Productos Lácteos"
                     className="w-full h-full object-cover"
                     width={300}
@@ -438,7 +438,7 @@ export default function ServiciosPage() {
               >
                 <div className="h-48 bg-gray-700 flex items-center justify-center">
                   <Image
-                    src="/bebidas_vinos_chiozzi.png"
+                    src="/bebidas-vinos-chiozzi.png"
                     alt="Productos Cosméticos y Farmacéuticos"
                     className="w-full h-full object-cover"
                     width={300}
@@ -464,7 +464,7 @@ export default function ServiciosPage() {
               >
                 <div className="h-48 bg-gray-700 flex items-center justify-center">
                   <Image
-                    src="/versatilidad_cosmetica.png"
+                    src="/versatilidad-cosmetica.png"
                     alt="Productos Cosméticos y Farmacéuticos 2"
                     className="w-full h-full object-cover"
                     width={300}
@@ -488,7 +488,7 @@ export default function ServiciosPage() {
               >
                 <div className="h-48 bg-gray-700 flex items-center justify-center">
                   <Image
-                    src="/versatilidad_quimica.png"
+                    src="/versatilidad-quimica.png"
                     alt="Productos Químicos"
                     className="w-full h-full object-cover"
                     width={300}

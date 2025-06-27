@@ -24,7 +24,7 @@ export default function ProductosPage() {
       <section className="pt-28 pb-16 px-4 relative bg-gradient-to-br from-primary/10 via-secondary/15 to-yellow-600/10">
         <div className="absolute inset-0">
           <Image
-            src="/chiozzi_productos_0014.png"
+            src="/chiozzi-productos-0014.png"
             alt="Fondo Nuestra Empresa"
             fill
             className="object-cover opacity-30"
@@ -103,7 +103,7 @@ export default function ProductosPage() {
               <div className="relative h-72 overflow-hidden">
                 <div id="autoadhesivas-material-opp-blanco" className="absolute inset-0">
                   <Image
-                    src="/chiozzi_productos_0014.png"
+                    src="/chiozzi-productos-0014.png"
                     alt="Etiquetas Autoadhesivas OPP Blanco"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -139,7 +139,7 @@ export default function ProductosPage() {
                           className="absolute inset-0 flex items-center justify-center"
                         >
                           <Image
-                            src="/chiozzi_productos_0014.png"
+                            src="/chiozzi-productos-0014.png"
                             alt="Etiquetas Autoadhesivas OPP Blanco"
                             fill
                             className="object-contain max-h-full max-w-full"
@@ -180,7 +180,7 @@ export default function ProductosPage() {
               <div className="relative h-72 overflow-hidden">
                 <div id="no-autoadhesivas-material-colgantes" className="absolute inset-0">
                   <Image
-                    src="/chiozzi_productos_0310.png"
+                    src="/chiozzi-productos-0310.png"
                     alt="Etiquetas Colgantes"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -215,7 +215,7 @@ export default function ProductosPage() {
                           className="absolute inset-0 flex items-center justify-center"
                         >
                           <Image
-                            src="/chiozzi_productos_0310.png"
+                            src="/chiozzi-productos-0310.png"
                             alt="Etiquetas Colgantes"
                             fill
                             className="object-contain max-h-full max-w-full"
@@ -251,7 +251,7 @@ export default function ProductosPage() {
               <div className="relative h-72 overflow-hidden">
                 <div id="flowpack-material-alimentos" className="absolute inset-0">
                   <Image
-                    src="/chiozzi_productos_0140.png"
+                    src="/chiozzi-productos-0140.png"
                     alt="Flowpack para Alimentos"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -287,7 +287,7 @@ export default function ProductosPage() {
                           className="absolute inset-0 flex items-center justify-center"
                         >
                           <Image
-                            src="/chiozzi_productos_0140.png"
+                            src="/chiozzi-productos-0140.png"
                             alt="Flowpack para Alimentos"
                             fill
                             className="object-contain max-h-full max-w-full"
@@ -323,7 +323,7 @@ export default function ProductosPage() {
             <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col h-full">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/terminacion_barniz.png"
+                  src="/terminacion-barniz.png"
                   alt="Terminaciones Premium"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -391,7 +391,7 @@ export default function ProductosPage() {
             <div className="group bg-zinc-900/80 rounded-xl overflow-hidden border border-zinc-800 hover:border-secondary/30 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 flex flex-col h-full">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/chiozzi_laminado.png"
+                  src="/chiozzi-laminado.png"
                   alt="Terminaciones Laminado"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -451,7 +451,7 @@ export default function ProductosPage() {
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <Image
-                  src="/stamping_chiozzi.png"
+                  src="/stamping-chiozzi.png"
                   alt="Productos con Stamping"
                   className="w-full h-full object-cover"
                   width={300}
@@ -473,7 +473,7 @@ export default function ProductosPage() {
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <Image
-                  src="/chiozzi_productos_0178.png"
+                  src="/chiozzi-productos-0178.png"
                   alt="Productos Troquelados"
                   className="w-full h-full object-cover"
                   width={300}
@@ -497,7 +497,7 @@ export default function ProductosPage() {
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <Image
-                  src="/microcortes_chiozzi.png"
+                  src="/microcortes-chiozzi.png"
                   alt="Productos con Microcortes de Seguridad"
                   className="w-full h-full object-cover"
                   width={300}
@@ -523,7 +523,7 @@ export default function ProductosPage() {
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <Image
-                  src="/chiozzi_sectorizadas.png"
+                  src="/chiozzi-sectorizadas.png"
                   alt="Impresiones Sectorizadas"
                   className="w-full h-full object-cover"
                   width={300}
@@ -548,7 +548,7 @@ export default function ProductosPage() {
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <Image
-                  src="/chiozzi_adhesivo.png"
+                  src="/chiozzi-adhesivo.png"
                   alt="Impresión Sobre Adhesivo"
                   className="w-full h-full object-cover"
                   width={300}
