@@ -255,19 +255,19 @@ export default function NuestraEmpresaPage() {
                 title: "Preprensa",
                 description:
                   "Expertos en transformar ideas en diseños listos para imprimir. Ajustamos colores, medidas y detalles para que en máquina todo salga perfecto.",
-                image: "/preprensa_chiozzi.png",
+                image: "/preprensa-chiozzi.png",
               },
               {
                 title: "Producción",
                 description:
                   "Responsables de hacer que tus etiquetas cobren forma. Copiado, montaje e impresión con tecnología, precisión y experiencia.",
-                image: "/produccion_chiozzi.png",
+                image: "/produccion-chiozzi.png",
               },
               {
                 title: "Control y Despacho",
                 description:
                   "Equipo experto en controlar hasta el último detalle. Controlamos, empaquetamos, rotulamos y enviamos con el mismo cuidado con el que producimos.",
-                image: "/control_despacho_chiozzi.png",
+                image: "/control-despacho-chiozzi.png",
               },
             ].map((department, index) => (
               <Card

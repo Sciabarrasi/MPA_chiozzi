@@ -23,17 +23,17 @@ const ServicesSection: React.FC = () => {
           <ServiceCard
             title="Etiquetas Autoadhesivas"
             description="Impresión de alta calidad para todo tipo de productos y superficies."
-            imageUrl="/chiozzi_productos_0014.png"
+            imageUrl="/chiozzi-productos-0014.png"
           />
           <ServiceCard
             title="Etiquetas No Autoadhesivas"
             description="Soluciones personalizadas con acabados premium y materiales especiales."
-            imageUrl="/chiozzi_productos_0310.png"
+            imageUrl="/chiozzi-productos-0310.png"
           />
           <ServiceCard
             title="Flowpack"
             description="Tecnología de última generación para resultados excepcionales."
-            imageUrl="/chiozzi_productos_0140.png"
+            imageUrl="/chiozzi-productos-0140.png"
           />
         </div>
       </div>
